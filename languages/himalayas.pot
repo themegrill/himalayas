@@ -1,0 +1,934 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Himalayas\n"
+"POT-Creation-Date: 2015-08-06 12:38+0545\n"
+"PO-Revision-Date: 2015-08-06 12:45+0545\n"
+"Last-Translator: \n"
+"Language-Team: ThemeGrill <themegrill@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:28
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:31
+msgid "It looks like nothing was found at this location. Try the search below."
+msgstr ""
+
+#: 404.php:35
+msgid "404"
+msgstr ""
+
+#: 404.php:37
+msgid "error"
+msgstr ""
+
+#: comments.php:31
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:38 comments.php:55
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:39 comments.php:56
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:40 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr ""
+
+#: content-page.php:24 content-single.php:41
+msgid "Pages:"
+msgstr ""
+
+#: content.php:45 content.php:50 inc/header-functions.php:62
+#: inc/widgets/widgets.php:238 inc/widgets/widgets.php:409
+#: inc/widgets/widgets.php:959
+msgid "Read more"
+msgstr ""
+
+#: functions.php:44
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:45
+msgid "Footer Menu"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
+msgid "Select Layout"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:20
+msgid "Icon class"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:22
+msgid "Our Team Designation"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:32
+msgid "Default Layout"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:37 inc/widgets/widgets.php:21
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:42 inc/widgets/widgets.php:31
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:47
+msgid "No Sidebar Full Width"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:52
+msgid "No Sidebar Content Centered"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:59
+msgid "fontawesome Icons"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:66
+msgid "team designation"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:113
+msgid "If featured image is not used than display the icon in Services. </br>"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:117
+#, php-format
+msgid ""
+"<a href=\"%s\" target=\"_blank\">Refer here</a> for icon class. For example: "
+"<strong>fa-mobile</strong>"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:124
+msgid "Show designation in Our Team Widget. </br>"
+msgstr ""
+
+#: inc/customizer.php:14
+msgid "Contain all the Header related options"
+msgstr ""
+
+#: inc/customizer.php:16
+msgid "Himalayas Header Options"
+msgstr ""
+
+#: inc/customizer.php:22
+msgid "Header Sticky/non-sticky"
+msgstr ""
+
+#: inc/customizer.php:23
+msgid "Header is sticky by default."
+msgstr ""
+
+#: inc/customizer.php:34
+msgid "Check to make header non-sticky"
+msgstr ""
+
+#: inc/customizer.php:41
+msgid "Header Transparency"
+msgstr ""
+
+#: inc/customizer.php:42
+msgid "By default Header is transparent when slider is used."
+msgstr ""
+
+#: inc/customizer.php:53
+msgid "Make header non transparent."
+msgstr ""
+
+#: inc/customizer.php:59
+msgid "Header Title/Tagline and Logo"
+msgstr ""
+
+#: inc/customizer.php:61
+msgid ""
+"<strong>Note:</strong> The recommended height for header logo image is 68px."
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "Header Logo Image Upload"
+msgstr ""
+
+#: inc/customizer.php:86
+msgid "Choose the required option"
+msgstr ""
+
+#: inc/customizer.php:89
+msgid "Header Logo Only"
+msgstr ""
+
+#: inc/customizer.php:90
+msgid "Header Text Only"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "Show Both"
+msgstr ""
+
+#: inc/customizer.php:92
+msgid "Disable"
+msgstr ""
+
+#: inc/customizer.php:103
+msgid "Contain all the slider related options"
+msgstr ""
+
+#: inc/customizer.php:104
+msgid "Himalayas Slider Options"
+msgstr ""
+
+#: inc/customizer.php:109
+msgid "Slider Settings"
+msgstr ""
+
+#: inc/customizer.php:111
+msgid "Note"
+msgstr ""
+
+#: inc/customizer.php:111
+msgid ""
+"1. To display the Slider first check Enable the slider below. Now create the "
+"page for each slider and enter title, text and featured image. Choose that "
+"pages in the dropdown options."
+msgstr ""
+
+#: inc/customizer.php:111
+msgid ""
+"2. The recommended size for the slider image is 1600 x 780 pixels. For "
+"better functioning of slider use equal size images for each slide."
+msgstr ""
+
+#: inc/customizer.php:111
+msgid ""
+"3. If page do not have featured Image than that page will not included in "
+"slider show."
+msgstr ""
+
+#: inc/customizer.php:122
+msgid "Enable the slider"
+msgstr ""
+
+#: inc/customizer.php:136
+msgid "Slider"
+msgstr ""
+
+#: inc/customizer.php:150
+msgid "Contain all the Design related options"
+msgstr ""
+
+#: inc/customizer.php:151
+msgid "Himalayas Design Options"
+msgstr ""
+
+#: inc/customizer.php:219
+msgid "Default layout"
+msgstr ""
+
+#: inc/customizer.php:231
+msgid ""
+"Select default layout. This layout will be reflected in whole site archives, "
+"categories, search page etc. The layout for a single post and page can be "
+"controlled from below options"
+msgstr ""
+
+#: inc/customizer.php:246
+msgid "Default layout for pages only"
+msgstr ""
+
+#: inc/customizer.php:258
+msgid ""
+"Select default layout for pages. This layout will be reflected in all pages "
+"unless unique layout is set for specific page"
+msgstr ""
+
+#: inc/customizer.php:273
+msgid "Default layout for single posts only"
+msgstr ""
+
+#: inc/customizer.php:285
+msgid ""
+"Select default layout for single posts. This layout will be reflected in all "
+"single posts unless unique layout is set for specific post"
+msgstr ""
+
+#: inc/customizer.php:301
+msgid "Primary color option"
+msgstr ""
+
+#: inc/customizer.php:312
+msgid ""
+"This will reflect in links, buttons and many others. Choose a color to match "
+"your site"
+msgstr ""
+
+#: inc/customizer.php:320
+msgid "Footer Layout Options"
+msgstr ""
+
+#: inc/customizer.php:331
+msgid "Select the Footer Layout"
+msgstr ""
+
+#: inc/customizer.php:335
+msgid "Choose Footer Layout One"
+msgstr ""
+
+#: inc/customizer.php:336
+msgid "Choose Footer Layout Two"
+msgstr ""
+
+#: inc/customizer.php:357
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/customizer.php:369
+msgid "Write your custom css"
+msgstr ""
+
+#: inc/customizer.php:381
+msgid "Contain additional options"
+msgstr ""
+
+#: inc/customizer.php:383
+msgid "Himalayas Additional Options"
+msgstr ""
+
+#: inc/customizer.php:389
+msgid "Hide Blog posts from the front page"
+msgstr ""
+
+#: inc/customizer.php:400
+msgid "Check to hide blog posts/static page on front page"
+msgstr ""
+
+#: inc/customizer.php:407
+msgid "Excerpts or Full Posts option"
+msgstr ""
+
+#: inc/customizer.php:418
+msgid ""
+"Toggle between displaying excerpts and full posts on your blog and archives."
+msgstr ""
+
+#: inc/customizer.php:422
+msgid "Show full post content"
+msgstr ""
+
+#: inc/customizer.php:423
+msgid "Show excerpt"
+msgstr ""
+
+#: inc/customizer.php:438
+msgid "Theme Info"
+msgstr ""
+
+#: inc/customizer.php:442
+msgid "Support Forum"
+msgstr ""
+
+#: inc/customizer.php:446
+msgid "Documentation"
+msgstr ""
+
+#: inc/customizer.php:450
+msgid "View Demo"
+msgstr ""
+
+#: inc/customizer.php:454
+msgid "Rate this theme"
+msgstr ""
+
+#: inc/customizer.php:466
+msgid "Himalayas Important Links"
+msgstr ""
+
+#: inc/customizer.php:478
+msgid "Important Links"
+msgstr ""
+
+#: inc/customizer.php:546
+msgid "View PRO version"
+msgstr ""
+
+#: inc/functions.php:204
+#, php-format
+msgid ""
+"<span class=\"posted-on\"><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"> "
+"%3$s</a></span>"
+msgstr ""
+
+#: inc/functions.php:214
+msgid "0 Comment"
+msgstr ""
+
+#: inc/functions.php:214
+msgid "1 Comment"
+msgstr ""
+
+#: inc/functions.php:214
+msgid " % Comments"
+msgstr ""
+
+#: inc/functions.php:224
+msgid "Edit"
+msgstr ""
+
+#: inc/functions.php:335
+msgid "Pingback:"
+msgstr ""
+
+#: inc/functions.php:335
+msgid "(Edit)"
+msgstr ""
+
+#: inc/functions.php:350
+msgid "Post author"
+msgstr ""
+
+#: inc/functions.php:353
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/functions.php:361
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/functions.php:366
+msgid "Reply"
+msgstr ""
+
+#: inc/functions.php:386
+msgid "WordPress"
+msgstr ""
+
+#: inc/functions.php:388
+msgid "ThemeGrill"
+msgstr ""
+
+#: inc/functions.php:390
+#, php-format
+msgid "Copyright &copy; %1$s %2$s."
+msgstr ""
+
+#: inc/functions.php:390
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: inc/functions.php:390
+#, php-format
+msgid "Powered by %s."
+msgstr ""
+
+#: inc/functions.php:482
+#, php-format
+msgid "Category: %s"
+msgstr ""
+
+#: inc/functions.php:484
+#, php-format
+msgid "Tag: %s"
+msgstr ""
+
+#: inc/functions.php:486
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: inc/functions.php:488
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: inc/functions.php:488
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/functions.php:490
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: inc/functions.php:490
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/functions.php:492
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: inc/functions.php:492
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/functions.php:495
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr ""
+
+#: inc/functions.php:497
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr ""
+
+#: inc/functions.php:499
+msgctxt "post format archive title"
+msgid "Images"
+msgstr ""
+
+#: inc/functions.php:501
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr ""
+
+#: inc/functions.php:503
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr ""
+
+#: inc/functions.php:505
+msgctxt "post format archive title"
+msgid "Links"
+msgstr ""
+
+#: inc/functions.php:507
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr ""
+
+#: inc/functions.php:509
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr ""
+
+#: inc/functions.php:511
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr ""
+
+#: inc/functions.php:514
+#, php-format
+msgid "Archives: %s"
+msgstr ""
+
+#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
+#: inc/functions.php:518
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: inc/functions.php:520
+msgid "Archives"
+msgstr ""
+
+#: inc/widgets/widgets.php:23
+msgid "Shows widgets at Right side."
+msgstr ""
+
+#: inc/widgets/widgets.php:33
+msgid "Shows widgets at Left side."
+msgstr ""
+
+#: inc/widgets/widgets.php:41
+msgid "Front Page Sidebar"
+msgstr ""
+
+#: inc/widgets/widgets.php:43
+msgid "Show widgets at Front Page Content Section"
+msgstr ""
+
+#: inc/widgets/widgets.php:51
+msgid "Error 404 Page Sidebar"
+msgstr ""
+
+#: inc/widgets/widgets.php:53
+msgid "Shows widgets on Error 404 page."
+msgstr ""
+
+#: inc/widgets/widgets.php:61
+msgid "Footer Sidebar One"
+msgstr ""
+
+#: inc/widgets/widgets.php:63 inc/widgets/widgets.php:73
+#: inc/widgets/widgets.php:83
+msgid "Shows widgets on footer."
+msgstr ""
+
+#: inc/widgets/widgets.php:71
+msgid "Footer Sidebar Two"
+msgstr ""
+
+#: inc/widgets/widgets.php:81
+msgid "Footer Sidebar Three"
+msgstr ""
+
+#: inc/widgets/widgets.php:106
+msgid "Show your about page."
+msgstr ""
+
+#: inc/widgets/widgets.php:108
+msgid "TG: About Widget"
+msgstr ""
+
+#: inc/widgets/widgets.php:130
+msgid ""
+"Note: Enter the About Section ID and use same for Menu item. Only used for "
+"One Page Menu."
+msgstr ""
+
+#: inc/widgets/widgets.php:133
+msgid "About Section ID:"
+msgstr ""
+
+#: inc/widgets/widgets.php:138 inc/widgets/widgets.php:293
+#: inc/widgets/widgets.php:607 inc/widgets/widgets.php:792
+#: inc/widgets/widgets.php:1045 inc/widgets/widgets.php:1229
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/widgets.php:142 inc/widgets/widgets.php:297
+#: inc/widgets/widgets.php:611 inc/widgets/widgets.php:795
+#: inc/widgets/widgets.php:1048 inc/widgets/widgets.php:1233
+msgid "Description:"
+msgstr ""
+
+#: inc/widgets/widgets.php:145
+msgid "Select a page to display Title, Excerpt and Featured image."
+msgstr ""
+
+#: inc/widgets/widgets.php:146 inc/widgets/widgets.php:1237
+msgid "Page"
+msgstr ""
+
+#: inc/widgets/widgets.php:150 inc/widgets/widgets.php:483
+#: inc/widgets/widgets.php:814
+msgid "Button Text:"
+msgstr ""
+
+#: inc/widgets/widgets.php:155 inc/widgets/widgets.php:487
+#: inc/widgets/widgets.php:818
+msgid "Button Redirect Link:"
+msgstr ""
+
+#: inc/widgets/widgets.php:160
+msgid "Button Icon Class:"
+msgstr ""
+
+#: inc/widgets/widgets.php:166
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\">Refer here</a> For Icon Class"
+msgstr ""
+
+#: inc/widgets/widgets.php:267
+msgid "Display some pages as services."
+msgstr ""
+
+#: inc/widgets/widgets.php:269
+msgid "TG: Service Widget"
+msgstr ""
+
+#: inc/widgets/widgets.php:285
+msgid ""
+"Note: Enter the Service Section ID and use same for Menu item. Only used for "
+"One Page Menu."
+msgstr ""
+
+#: inc/widgets/widgets.php:288
+msgid "Service Section ID:"
+msgstr ""
+
+#: inc/widgets/widgets.php:301 inc/widgets/widgets.php:615
+#: inc/widgets/widgets.php:1052
+msgid "Number of pages to display:"
+msgstr ""
+
+#: inc/widgets/widgets.php:305
+msgid ""
+"Note: Create the pages and select Services Template to display Services "
+"pages."
+msgstr ""
+
+#: inc/widgets/widgets.php:434
+msgid "Use this widget to show the call to action section."
+msgstr ""
+
+#: inc/widgets/widgets.php:436
+msgid "TG: Call To Action Widget"
+msgstr ""
+
+#: inc/widgets/widgets.php:459 inc/widgets/widgets.php:771
+#: inc/widgets/widgets.php:1024
+msgid "DESIGN SETTINGS :"
+msgstr ""
+
+#: inc/widgets/widgets.php:460 inc/widgets/widgets.php:772
+#: inc/widgets/widgets.php:1026
+msgid "Background Color:"
+msgstr ""
+
+#: inc/widgets/widgets.php:464 inc/widgets/widgets.php:777
+msgid "Image:"
+msgstr ""
+
+#: inc/widgets/widgets.php:473 inc/widgets/widgets.php:786
+#: inc/widgets/widgets.php:1039
+msgid "Upload Image"
+msgstr ""
+
+#: inc/widgets/widgets.php:476 inc/widgets/widgets.php:789
+#: inc/widgets/widgets.php:1042
+msgid "OTHER SETTINGS :"
+msgstr ""
+
+#: inc/widgets/widgets.php:478
+msgid "Call to Action Main Text"
+msgstr ""
+
+#: inc/widgets/widgets.php:480
+msgid "Call to Action Additional Text"
+msgstr ""
+
+#: inc/widgets/widgets.php:490
+msgid "Choose the layout"
+msgstr ""
+
+#: inc/widgets/widgets.php:493
+msgid "Layout One"
+msgstr ""
+
+#: inc/widgets/widgets.php:494
+msgid "Layout Two"
+msgstr ""
+
+#: inc/widgets/widgets.php:581
+msgid "Display some pages as Portfolio"
+msgstr ""
+
+#: inc/widgets/widgets.php:583
+msgid "TG: Portfolio"
+msgstr ""
+
+#: inc/widgets/widgets.php:599
+msgid "Note: Enter the Portfolio Section ID and use same for Menu item."
+msgstr ""
+
+#: inc/widgets/widgets.php:602
+msgid "Portfolio Section ID:"
+msgstr ""
+
+#: inc/widgets/widgets.php:619
+msgid ""
+"Note: Create the pages and select Portfolio Template to display Portfolio "
+"pages."
+msgstr ""
+
+#: inc/widgets/widgets.php:734
+msgid "Display latest posts or posts of specific category"
+msgstr ""
+
+#: inc/widgets/widgets.php:736
+msgid "TG: Featured Posts"
+msgstr ""
+
+#: inc/widgets/widgets.php:764
+msgid ""
+"Note: Enter the Featured Post Section ID and use same for Menu item. Only "
+"used for One Page Menu."
+msgstr ""
+
+#: inc/widgets/widgets.php:766
+msgid "Featured Post Section ID:"
+msgstr ""
+
+#: inc/widgets/widgets.php:799
+msgid "Number of posts to display:"
+msgstr ""
+
+#: inc/widgets/widgets.php:804
+msgid "Show latest Posts"
+msgstr ""
+
+#: inc/widgets/widgets.php:805
+msgid "Show posts from a category"
+msgstr ""
+
+#: inc/widgets/widgets.php:809
+msgid "Select category"
+msgstr ""
+
+#: inc/widgets/widgets.php:929
+msgid "Posted in "
+msgstr ""
+
+#: inc/widgets/widgets.php:934
+msgid "by "
+msgstr ""
+
+#: inc/widgets/widgets.php:939
+msgid "on "
+msgstr ""
+
+#: inc/widgets/widgets.php:947
+#, php-format
+msgid "<span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"> %3$s</a></span>"
+msgstr ""
+
+#: inc/widgets/widgets.php:995
+msgid "Show your Team Members."
+msgstr ""
+
+#: inc/widgets/widgets.php:997
+msgid "TG: Our Team Widget"
+msgstr ""
+
+#: inc/widgets/widgets.php:1018
+msgid ""
+"Note: Enter the Our Team Section ID and use same for Menu item. Only used "
+"for One Page Menu."
+msgstr ""
+
+#: inc/widgets/widgets.php:1020
+msgid "Our Team Section ID:"
+msgstr ""
+
+#: inc/widgets/widgets.php:1030
+msgid "Background Image:"
+msgstr ""
+
+#: inc/widgets/widgets.php:1055
+msgid ""
+"Note: Create the pages and select Our Team Template to display Our Team "
+"pages."
+msgstr ""
+
+#: inc/widgets/widgets.php:1201
+msgid "Show your Contact page."
+msgstr ""
+
+#: inc/widgets/widgets.php:1203
+msgid "TG: Contact Us Widget"
+msgstr ""
+
+#: inc/widgets/widgets.php:1221
+msgid ""
+"Note: Enter the Contact Section ID and use same for Menu item. Only used for "
+"One Page Menu."
+msgstr ""
+
+#: inc/widgets/widgets.php:1224
+msgid "Contact Section ID:"
+msgstr ""
+
+#: inc/widgets/widgets.php:1236
+msgid "Select a Contact page."
+msgstr ""
+
+#: inc/widgets/widgets.php:1240
+msgid "Use Contact Form Plugin and enter the shortcode here:"
+msgstr ""
+
+#: inc/widgets/widgets.php:1242
+msgid "Shortcode"
+msgstr ""
+
+#: navigation.php:24 navigation.php:36
+msgid "&larr; Previous"
+msgstr ""
+
+#: navigation.php:25 navigation.php:37
+msgid "Next &rarr;"
+msgstr ""
+
+#: navigation.php:44
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr ""
+
+#: navigation.php:45
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr ""
+
+#: no-results.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: no-results.php:22
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: no-results.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: search.php:26
+msgid "Search Results:"
+msgstr ""
+
+#: searchform.php:11
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:12
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: sidebar-left.php:18 sidebar.php:18
+msgid "Example Widget"
+msgstr ""
+
+#: sidebar-left.php:19
+#, php-format
+msgid ""
+"This is an example widget to show how the Left Sidebar looks by default. You "
+"can add custom widgets from the %swidgets screen%s in the admin. If custom "
+"widgets is added than this will be replaced by those widgets."
+msgstr ""
+
+#: sidebar.php:19
+#, php-format
+msgid ""
+"This is an example widget to show how the Right Sidebar looks by default. "
+"You can add custom widgets from the %swidgets screen%s in the admin. If "
+"custom widgets is added than this will be replaced by those widgets."
+msgstr ""
