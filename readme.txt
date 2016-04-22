@@ -51,6 +51,7 @@ and we will include it within the theme from next version update.
 
 == CHANGE LOG ==
 = Version 1.0.7=
+* Tweaks - Updated Font Awesome to version 4.6.1.
 
 = Version 1.0.6=
 * Fix - Widget: Our Team issue is fixed.

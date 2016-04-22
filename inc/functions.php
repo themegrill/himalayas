@@ -16,7 +16,7 @@ function himalayas_scripts() {
 	wp_enqueue_style( 'himalayas-google-fonts', '//fonts.googleapis.com/css?family=Crimson+Text:700|Roboto:400,700,900,300' );
 
 	// Load fontawesome
-	wp_enqueue_style( 'himalayas-fontawesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.3.0' );
+	wp_enqueue_style( 'himalayas-fontawesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.6.1' );
 
 	/**
 	* Loads our main stylesheet.
