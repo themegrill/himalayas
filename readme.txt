@@ -50,6 +50,8 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == CHANGE LOG ==
+= Version 1.0.7=
+
 = Version 1.0.6=
 * Fix - Widget: Our Team issue is fixed.
 * Fix - Slider top part overlapped with non-transparent header issue fixed.
