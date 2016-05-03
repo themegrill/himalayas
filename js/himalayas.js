@@ -34,7 +34,7 @@ jQuery(document).ready(function() {
         end: function() {
             //I get fired when the animation is ending
         },
-        scrollChange: function(jQuerycurrentListItem) {
+        scrollChange: function() {
             //I get fired when you enter a section and I pass the list item of the section
         }
     });
@@ -42,7 +42,7 @@ jQuery(document).ready(function() {
     //******************************* Scroll to top *************************//
 
     jQuery('.scrollup').click(function() {
-        jQuery("html, body").animate({
+        jQuery('html, body').animate({
             scrollTop: 0
         }, 2000);
         return false;
