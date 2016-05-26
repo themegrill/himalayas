@@ -296,7 +296,131 @@ class Himalayas_Admin {
 					</tr>
 				</thead>
 				<tbody>
-
+					<tr>
+						<td><h3><?php esc_html_e('Use as One Page theme', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Parallax Scrolling', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Slider', 'foodhunt'); ?></h3></td>
+						<td><?php esc_html_e('4 Slides', 'foodhunt'); ?></td>
+						<td><?php esc_html_e('Unlimited Slides', 'foodhunt'); ?></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Slider Settings', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><?php esc_html_e('Slides type, duration & delay time', 'foodhunt'); ?></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Header Video', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Slider text layout', 'foodhunt'); ?></h3></td>
+						<td><?php esc_html_e('1', 'foodhunt'); ?></td>
+						<td><?php esc_html_e('2', 'foodhunt'); ?></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Google Fonts', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><?php esc_html_e('500+', 'foodhunt'); ?></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Color Palette', 'foodhunt'); ?></h3></td>
+						<td><?php esc_html_e('Primary Color Option', 'foodhunt'); ?></span></td>
+						<td><?php esc_html_e('Primary color option & 18+', 'foodhunt'); ?></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Font Size options', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('WooCommerce Compatible', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('WPML Compatible', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Footer Copyright Editor', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Demo Content', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Support', 'foodhunt'); ?></h3></td>
+						<td><?php esc_html_e('Forum', 'foodhunt'); ?></span></td>
+						<td><?php esc_html_e('Emails/Priority Support Ticket', 'foodhunt'); ?></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: About Widget', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Service Widget', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Call To Action Widget', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Portfolio', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Featured Posts', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Our Team Widget', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Contact Us Widget', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Image Gallery Widget', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Testimonial Widget', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Our Clients', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Fun Facts', 'foodhunt'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
 				</tbody>
 			</table>
 
