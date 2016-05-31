@@ -351,8 +351,8 @@ class Himalayas_Admin {
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Color Palette', 'foodhunt'); ?></h3></td>
-						<td><?php esc_html_e('Primary Color Option', 'foodhunt'); ?></span></td>
-						<td><?php esc_html_e('Primary color option & 18+', 'foodhunt'); ?></span></td>
+						<td><?php esc_html_e('Primary Color Option', 'foodhunt'); ?></td>
+						<td><?php esc_html_e('Primary color option & 18+', 'foodhunt'); ?></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Font Size options', 'foodhunt'); ?></h3></td>
@@ -381,8 +381,8 @@ class Himalayas_Admin {
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Support', 'foodhunt'); ?></h3></td>
-						<td><?php esc_html_e('Forum', 'foodhunt'); ?></span></td>
-						<td><?php esc_html_e('Emails/Priority Support Ticket', 'foodhunt'); ?></span></td>
+						<td><?php esc_html_e('Forum', 'foodhunt'); ?></td>
+						<td><?php esc_html_e('Emails/Priority Support Ticket', 'foodhunt'); ?></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: About Widget', 'foodhunt'); ?></h3></td>
