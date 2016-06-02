@@ -277,15 +277,19 @@ class Himalayas_Admin {
 
 			<p class="about-description"><?php esc_html_e( 'This theme recommends following plugins:', 'himalayas' ); ?></p>
 			<ol>
-				<li><?php printf(__('<a href="%s" target="_blank">Contact Form 7</a>', 'himalayas'), esc_url('https://wordpress.org/plugins/contact-form-7/')); ?></li>
-				<li><?php printf(__('<a href="%s" target="_blank">WP-PageNavi</a>', 'himalayas'), esc_url('https://wordpress.org/plugins/wp-pagenavi/')); ?></li>
-				<li><?php printf(__('<a href="%s" target="_blank">WooCommerce</a>', 'himalayas'), esc_url('https://wordpress.org/plugins/woocommerce/')); ?></li>
-				<li>
-					<?php printf(__('<a href="%s" target="_blank">Polylang</a>', 'himalayas'), esc_url('https://wordpress.org/plugins/polylang/')); ?>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/social-icons/' ); ?>" target="_blank"><?php esc_html_e( 'Social Icons', 'himalayas' ); ?></a>
+					<?php esc_html_e(' by ThemeGrill', 'himalayas'); ?>
+				</li>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/easy-social-sharing/' ); ?>" target="_blank"><?php esc_html_e( 'Easy Social Sharing', 'himalayas' ); ?></a>
+					<?php esc_html_e(' by ThemeGrill', 'himalayas'); ?>
+				</li>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/contact-form-7/' ); ?>" target="_blank"><?php esc_html_e( 'Contact Form 7', 'himalayas' ); ?></a></li>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/wp-pagenavi/' ); ?>" target="_blank"><?php esc_html_e( 'WP-PageNavi', 'himalayas' ); ?></a></li>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/woocommerce/' ); ?>" target="_blank"><?php esc_html_e( 'WooCommerce', 'himalayas' ); ?></a></li>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/polylang/' ); ?>" target="_blank"><?php esc_html_e( 'Polylang', 'himalayas' ); ?></a>
 					<?php esc_html_e('Fully Compatible in Pro Version', 'himalayas'); ?>
 				</li>
-				<li>
-					<?php printf(__('<a href="%s" target="_blank">WMPL</a>', 'himalayas'), esc_url('https://wpml.org/')); ?>
+				<li><a href="<?php echo esc_url( 'https://wpml.org/' ); ?>" target="_blank"><?php esc_html_e( 'WPML', 'himalayas' ); ?></a>
 					<?php esc_html_e('Fully Compatible in Pro Version', 'himalayas'); ?>
 				</li>
 			</ol>
