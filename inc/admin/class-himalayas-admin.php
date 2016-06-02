@@ -151,31 +151,31 @@ class Himalayas_Admin {
 			<div class="changelog point-releases">
 				<div class="under-the-hood two-col">
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Theme Customizer', 'himalayas' ); ?></h3>
+						<h3><?php esc_html_e( 'Theme Customizer', 'himalayas' ); ?></h3>
 						<p><?php esc_html_e( 'All Theme Options are available via Customize screen.', 'himalayas' ) ?></p>
 						<p><a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-secondary"><?php esc_html_e( 'Customize', 'himalayas' ); ?></a></p>
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Documentation', 'himalayas' ); ?></h3>
+						<h3><?php esc_html_e( 'Documentation', 'himalayas' ); ?></h3>
 						<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'himalayas' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/theme-instruction/himalayas/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'himalayas' ); ?></a></p>
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Got theme support question?', 'himalayas' ); ?></h3>
+						<h3><?php esc_html_e( 'Got theme support question?', 'himalayas' ); ?></h3>
 						<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'himalayas' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support', 'himalayas' ); ?></a></p>
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Need more features?', 'himalayas' ); ?></h3>
+						<h3><?php esc_html_e( 'Need more features?', 'himalayas' ); ?></h3>
 						<p><?php esc_html_e( 'Upgrade to PRO version for more exciting features.', 'himalayas' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/themes/himalayas-pro/' ); ?>" class="button button-secondary"><?php esc_html_e( 'View PRO version', 'himalayas' ); ?></a></p>
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Got sales related question?', 'himalayas' ); ?></h3>
+						<h3><?php esc_html_e( 'Got sales related question?', 'himalayas' ); ?></h3>
 						<p><?php esc_html_e( 'Please send it via our sales contact page.', 'himalayas' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/contact/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Contact Page', 'himalayas' ); ?></a></p>
 					</div>
@@ -183,7 +183,7 @@ class Himalayas_Admin {
 					<div class="col">
 						<h3>
 							<?php
-							echo esc_html_e( 'Translate', 'himalayas' );
+							esc_html_e( 'Translate', 'himalayas' );
 							echo ' ' . $theme->display( 'Name' );
 							?>
 						</h3>
@@ -203,10 +203,10 @@ class Himalayas_Admin {
 			<div class="return-to-dashboard himalayas">
 				<?php if ( current_user_can( 'update_core' ) && isset( $_GET['updated'] ) ) : ?>
 					<a href="<?php echo esc_url( self_admin_url( 'update-core.php' ) ); ?>">
-						<?php is_multisite() ? esc_html_e( 'Return to Updates' ) : esc_html_e( 'Return to Dashboard &rarr; Updates' ); ?>
+						<?php is_multisite() ? esc_html_e( 'Return to Updates', 'himalayas' ) : esc_html_e( 'Return to Dashboard &rarr; Updates', 'himalayas' ); ?>
 					</a> |
 				<?php endif; ?>
-				<a href="<?php echo esc_url( self_admin_url() ); ?>"><?php is_blog_admin() ? esc_html_e( 'Go to Dashboard &rarr; Home' ) : esc_html_e( 'Go to Dashboard' ); ?></a>
+				<a href="<?php echo esc_url( self_admin_url() ); ?>"><?php is_blog_admin() ? esc_html_e( 'Go to Dashboard &rarr; Home', 'himalayas' ) : esc_html_e( 'Go to Dashboard', 'himalayas' ); ?></a>
 			</div>
 		</div>
 		<?php
@@ -223,7 +223,7 @@ class Himalayas_Admin {
 
 			<?php $this->intro(); ?>
 
-			<p class="about-description"><?php esc_html_e( 'View changelog below.', 'himalayas' ); ?></p>
+			<p class="about-description"><?php esc_html_e( 'View changelog below:', 'himalayas' ); ?></p>
 
 			<?php
 				$changelog_file = apply_filters( 'himalayas_changelog_file', get_template_directory() . '/readme.txt' );
@@ -275,7 +275,7 @@ class Himalayas_Admin {
 
 			<?php $this->intro(); ?>
 
-			<p class="about-description"><?php esc_html_e( 'This theme recommends following plugins.', 'himalayas' ); ?></p>
+			<p class="about-description"><?php esc_html_e( 'This theme recommends following plugins:', 'himalayas' ); ?></p>
 			<ol>
 				<li><?php printf(__('<a href="%s" target="_blank">Contact Form 7</a>', 'himalayas'), esc_url('https://wordpress.org/plugins/contact-form-7/')); ?></li>
 				<li><?php printf(__('<a href="%s" target="_blank">WP-PageNavi</a>', 'himalayas'), esc_url('https://wordpress.org/plugins/wp-pagenavi/')); ?></li>
@@ -315,127 +315,127 @@ class Himalayas_Admin {
 				</thead>
 				<tbody>
 					<tr>
-						<td><h3><?php esc_html_e('Use as One Page theme', 'foodhunt'); ?></h3></td>
+						<td><h3><?php esc_html_e('Use as One Page theme', 'himalayas'); ?></h3></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e('Parallax Scrolling', 'foodhunt'); ?></h3></td>
+						<td><h3><?php esc_html_e('Parallax Scrolling', 'himalayas'); ?></h3></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e('Slider', 'foodhunt'); ?></h3></td>
-						<td><?php esc_html_e('4 Slides', 'foodhunt'); ?></td>
-						<td><?php esc_html_e('Unlimited Slides', 'foodhunt'); ?></td>
+						<td><h3><?php esc_html_e('Slider', 'himalayas'); ?></h3></td>
+						<td><?php esc_html_e('4 Slides', 'himalayas'); ?></td>
+						<td><?php esc_html_e('Unlimited Slides', 'himalayas'); ?></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e('Slider Settings', 'foodhunt'); ?></h3></td>
+						<td><h3><?php esc_html_e('Slider Settings', 'himalayas'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></span></td>
-						<td><?php esc_html_e('Slides type, duration & delay time', 'foodhunt'); ?></td>
+						<td><?php esc_html_e('Slides type, duration & delay time', 'himalayas'); ?></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e('Header Video', 'foodhunt'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></span></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e('Slider text layout', 'foodhunt'); ?></h3></td>
-						<td><?php esc_html_e('1', 'foodhunt'); ?></td>
-						<td><?php esc_html_e('2', 'foodhunt'); ?></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e('Google Fonts', 'foodhunt'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></span></td>
-						<td><?php esc_html_e('500+', 'foodhunt'); ?></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e('Color Palette', 'foodhunt'); ?></h3></td>
-						<td><?php esc_html_e('Primary Color Option', 'foodhunt'); ?></td>
-						<td><?php esc_html_e('Primary color option & 18+', 'foodhunt'); ?></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e('Font Size options', 'foodhunt'); ?></h3></td>
+						<td><h3><?php esc_html_e('Header Video', 'himalayas'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e('WooCommerce Compatible', 'foodhunt'); ?></h3></td>
+						<td><h3><?php esc_html_e('Slider text layout', 'himalayas'); ?></h3></td>
+						<td><?php esc_html_e('1', 'himalayas'); ?></td>
+						<td><?php esc_html_e('2', 'himalayas'); ?></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Google Fonts', 'himalayas'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><?php esc_html_e('500+', 'himalayas'); ?></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Color Palette', 'himalayas'); ?></h3></td>
+						<td><?php esc_html_e('Primary Color Option', 'himalayas'); ?></td>
+						<td><?php esc_html_e('Primary color option & 18+', 'himalayas'); ?></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Font Size options', 'himalayas'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e('WPML Compatible', 'foodhunt'); ?></h3></td>
+						<td><h3><?php esc_html_e('WooCommerce Compatible', 'himalayas'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e('Footer Copyright Editor', 'foodhunt'); ?></h3></td>
+						<td><h3><?php esc_html_e('WPML Compatible', 'himalayas'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e('Demo Content', 'foodhunt'); ?></h3></td>
+						<td><h3><?php esc_html_e('Footer Copyright Editor', 'himalayas'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e('Support', 'foodhunt'); ?></h3></td>
-						<td><?php esc_html_e('Forum', 'foodhunt'); ?></td>
-						<td><?php esc_html_e('Emails/Priority Support Ticket', 'foodhunt'); ?></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e('TG: About Widget', 'foodhunt'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e('TG: Service Widget', 'foodhunt'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e('TG: Call To Action Widget', 'foodhunt'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e('TG: Portfolio', 'foodhunt'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e('TG: Featured Posts', 'foodhunt'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e('TG: Our Team Widget', 'foodhunt'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e('TG: Contact Us Widget', 'foodhunt'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e('TG: Image Gallery Widget', 'foodhunt'); ?></h3></td>
+						<td><h3><?php esc_html_e('Demo Content', 'himalayas'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e('TG: Testimonial Widget', 'foodhunt'); ?></h3></td>
+						<td><h3><?php esc_html_e('Support', 'himalayas'); ?></h3></td>
+						<td><?php esc_html_e('Forum', 'himalayas'); ?></td>
+						<td><?php esc_html_e('Emails/Priority Support Ticket', 'himalayas'); ?></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: About Widget', 'himalayas'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Service Widget', 'himalayas'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Call To Action Widget', 'himalayas'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Portfolio', 'himalayas'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Featured Posts', 'himalayas'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Our Team Widget', 'himalayas'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Contact Us Widget', 'himalayas'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Image Gallery Widget', 'himalayas'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e('TG: Our Clients', 'foodhunt'); ?></h3></td>
+						<td><h3><?php esc_html_e('TG: Testimonial Widget', 'himalayas'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e('TG: Fun Facts', 'foodhunt'); ?></h3></td>
+						<td><h3><?php esc_html_e('TG: Our Clients', 'himalayas'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Fun Facts', 'himalayas'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
