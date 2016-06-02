@@ -112,11 +112,11 @@ class Himalayas_Admin {
 		$major_version = substr( $himalayas_version, 0, 3 );
 		?>
 		<div class="himalayas-theme-info">
-				<h1>
-					<?php esc_html_e('About', 'himalayas'); ?>
-					<?php echo $theme->display( 'Name' ); ?>
-					<?php printf( esc_html__( '%s', 'himalayas' ), $major_version ); ?>
-				</h1>
+			<h1>
+				<?php esc_html_e('About', 'himalayas'); ?>
+				<?php echo $theme->display( 'Name' ); ?>
+				<?php printf( '%s', $major_version ); ?>
+			</h1>
 
 			<div class="welcome-description-wrap">
 				<div class="about-text"><?php echo $theme->display( 'Description' ); ?></div>
@@ -130,11 +130,11 @@ class Himalayas_Admin {
 		<p class="himalayas-actions">
 			<a href="<?php echo esc_url( 'http://themegrill.com/themes/himalayas/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'himalayas' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'himalayas_pro_theme_url', 'http://demo.themegrill.com/himalayas/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'himalayas' ); ?></a>
+			<a href="<?php echo esc_url( 'http://demo.themegrill.com/himalayas/' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'himalayas' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'himalayas_pro_theme_url', 'http://themegrill.com/themes/himalayas-pro/' ) ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'himalayas' ); ?></a>
+			<a href="<?php echo esc_url( 'http://themegrill.com/themes/himalayas-pro/' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'himalayas' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'himalayas_pro_theme_url', 'http://wordpress.org/support/view/theme-reviews/himalayas?filter=5' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'himalayas' ); ?></a>
+			<a href="<?php echo esc_url( 'https://wordpress.org/support/view/theme-reviews/himalayas?filter=5#postform' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'himalayas' ); ?></a>
 		</p>
 
 		<h2 class="nav-tab-wrapper">
