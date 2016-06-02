@@ -474,6 +474,13 @@ class Himalayas_Admin {
 						<td><span class="dashicons dashicons-no"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td class="btn-wrapper">
+							<a href="<?php echo esc_url( apply_filters( 'himalayas_pro_theme_url', 'http://themegrill.com/themes/himalayas-pro/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Pro', 'himalayas' ); ?></a>
+						</td>
+					</tr>
 				</tbody>
 			</table>
 
