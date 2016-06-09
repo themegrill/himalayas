@@ -51,7 +51,7 @@ and we will include it within the theme from next version update.
 
 == CHANGE LOG ==
 = Version 1.0.7=
-* Tweaks - Updated Font Awesome to version 4.6.1.
+* Tweaks - Updated Font Awesome to version 4.6.3.
 * Feature - Theme is now compatible with WooCommerce.
 
 = Version 1.0.6=
