@@ -110,4 +110,14 @@ require_once( HIMALAYAS_INCLUDES_DIR . '/customizer.php' );
 require_once( HIMALAYAS_ADMIN_DIR . '/meta-boxes.php' );
 // Load Widgets and Widgetized Area
 require_once( HIMALAYAS_WIDGETS_DIR . '/widgets.php' );
-?>
+
+/**
+ * Assign the Himalayas version to a variable.
+ */
+$theme            = wp_get_theme( 'himalayas' );
+$himalayas_version = $theme['Version'];
+
+/* Calling in the admin area for the Welcome Page */
+if ( is_admin() ) {
+	require get_template_directory() . '/inc/admin/class-himalayas-admin.php';
+}
