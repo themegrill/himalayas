@@ -398,6 +398,11 @@ class Himalayas_Admin {
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('WooCommerce Compatible', 'himalayas'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Woocommerce Page Layout', 'himalayas'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
