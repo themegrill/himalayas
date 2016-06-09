@@ -50,7 +50,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version 1.0.7 =
+= Version 1.0.7 - June 9, 2016 =
 * Tweaks - Updated Font Awesome to version 4.6.3.
 * Tweaks - Introduced welcome page for theme.
 * Tweaks - POT file update.
