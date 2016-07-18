@@ -1,3 +1,4 @@
+
 == HIMALAYAS  ==
 
 Himalayas is modern style free one page parallax responsive WordPress theme. Inform your visitors all they need to know right from your home page without requiring to go to the other pages. Himalayas can be used for business, portfolio, corporate, agency, photography, freelancers and almost any kind of sites. Get free support at http://themegrill.com/support-forum/ and check the demo at http://demo.themegrill.com/himalayas/
@@ -49,21 +50,24 @@ and we will include it within the theme from next version update.
 
 /**********************************************************/
 
-== CHANGE LOG ==
+== Changelog ==
 = Version TBD =
 * Tweaks - Enhancement for the media uploader scripts used in widgets.
 
-= Version 1.0.7=
-* Tweaks - Updated Font Awesome to version 4.6.1.
+= Version 1.0.7 - June 9, 2016 =
+* Tweaks - Updated Font Awesome to version 4.6.3.
+* Tweaks - Introduced welcome page for theme.
+* Tweaks - POT file update.
+* Feature - Theme is now compatible with WooCommerce.
 
-= Version 1.0.6=
+= Version 1.0.6 =
 * Fix - Widget: Our Team issue is fixed.
 * Fix - Slider top part overlapped with non-transparent header issue fixed.
 * Tweaks - Theme information is properly organized in Customize panel.
 * Tweaks - Language file updated.
 * Feature - Primary Color hover effect is added.
 
-= Version 1.0.5=
+= Version 1.0.5 =
 * Fix - TG: Featured Post widget issue fixed.
 * Fix - Some CSS adjustment.
 * Fix - Search icon alignment.
@@ -74,29 +78,30 @@ and we will include it within the theme from next version update.
 * Deprecated - Parallax effect in small device is removed.
 * Tweaks - Font Awesome is updated to version 4.5.
 
-= Version 1.0.4.1=
+= Version 1.0.4.1 =
 * Menu Bug fixed.
 * Header reponsive bug fixed.
 
-= Version 1.0.4=
+= Version 1.0.4 =
 * Responsive menu issue fixed.
 * Some fixes for better SEO.
 
-= Version 1.0.3=
+= Version 1.0.3 =
 * Slider page order fixed.
 * Some theme related links added in Customizer panel.
 * Removed unwanted 'registered image size'.
 * Some CSS adjustment.
 * Screenshot image changed.
 
-= Version 1.0.2=
+= Version 1.0.2 =
 * Title-tag backward compatibility is removed.
 * Missing escaping is included.
 * Color Picker and Image uploader script are loaded only on required admin pages.
 * Screenshot is changed.
 * Minor styling fixes.
 
-= Version 1.0.1=
+
+= Version 1.0.1 =
 * Removed deprecated function for WP_Widget class and used the __construct() instead as per WordPress 4.3
 * Slider Removed from the blog page.
 * Error in Search page is fixed.

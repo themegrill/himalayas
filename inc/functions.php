@@ -16,7 +16,7 @@ function himalayas_scripts() {
 	wp_enqueue_style( 'himalayas-google-fonts', '//fonts.googleapis.com/css?family=Crimson+Text:700|Roboto:400,700,900,300' );
 
 	// Load fontawesome
-	wp_enqueue_style( 'himalayas-fontawesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.6.1' );
+	wp_enqueue_style( 'himalayas-fontawesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.6.3' );
 
 	/**
 	* Loads our main stylesheet.
@@ -557,3 +557,34 @@ function himalayas_archive_description( $before = '', $after = '' ) {
 	}
 }
 endif;
+
+/**************************************************************************************/
+
+/**
+ * Making the theme Woocommrece compatible
+ */
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+
+add_action('woocommerce_before_main_content', 'himalayas_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'himalayas_wrapper_end', 10);
+
+add_action( 'woocommerce_sidebar', 'himalayas_get_sidebar', 10 );
+
+function himalayas_wrapper_start() {
+   $himalayas_woo_layout = himalayas_layout_class();
+
+  echo '<div id="content" class="site-content"><main id="main" class="clearfix ' . $himalayas_woo_layout . '"><div class="tg-container"><div id="primary">';
+}
+
+function himalayas_wrapper_end() {
+  echo '</div>';
+}
+function himalayas_get_sidebar() {
+   himalayas_sidebar_select();
+   echo '</div></main></div>';
+}
+
+add_theme_support( 'woocommerce' );
