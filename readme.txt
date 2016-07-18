@@ -50,6 +50,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == CHANGE LOG ==
+= Version TBD =
+* Tweaks - Enhancement for the media uploader scripts used in widgets.
+
 = Version 1.0.7=
 * Tweaks - Updated Font Awesome to version 4.6.1.
 
