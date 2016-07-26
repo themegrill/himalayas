@@ -461,16 +461,16 @@ class himalayas_call_to_action_widget extends WP_Widget {
          <input class="my-color-picker" type="text" data-default-color="#32c4d1" id="<?php echo $this->get_field_id( 'background_color' ); ?>" name="<?php echo $this->get_field_name( 'background_color' ); ?>" value="<?php echo  $background_color; ?>" />
       </p>
       <p>
-         <label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php _e( 'Image:', 'himalayas' ); ?> </label> <br />
-
-         <?php
-         if ( $instance[ 'background_image' ]  != '' ) :
-            echo '<img id="' . $this->get_field_id( 'background_image' . 'preview') . '"src="' . $instance[ 'background_image' ] . '"style="max-width: 250px;" /><br />';
-         endif;
-         ?>
-         <input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo $instance[ 'background_image' ]; ?>" style="margin-top: 5px;"/>
-
-         <input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php _e( 'Upload Image', 'himalayas' ) ?>" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
+         <label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php esc_html_e( 'Image:', 'himalayas' ); ?> </label> <br />
+         <div class="media-uploader" id="<?php echo $this->get_field_id( 'background_image' ); ?>">
+	         <div class="custom_media_preview">
+	            <?php if ( $background_image != '' ) : ?>
+	               <img class="custom_media_preview_default" src="<?php echo esc_url( $instance[ 'background_image' ] ); ?>" style="max-width:100%;" />
+	            <?php endif; ?>
+	         </div>
+	         <input type="text" class="widefat custom_media_input" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url( $instance[ 'background_image' ] ); ?>" style="margin-top:5px;" />
+	         <button class="custom_media_upload button button-secondary button-large" id="<?php echo $this->get_field_id( 'background_image' ); ?>" data-choose="<?php esc_attr_e( 'Choose an image', 'himalayas' ); ?>" data-update="<?php esc_attr_e( 'Use image', 'himalayas' ); ?>" style="width:100%;margin-top:6px;margin-right:30px;"><?php esc_html_e( 'Select an Image', 'himalayas' ); ?></button>
+	      </div>
       </p>
 
       <strong><?php _e( 'OTHER SETTINGS :', 'himalayas' ); ?></strong><br />
@@ -774,16 +774,16 @@ class himalayas_featured_posts_widget extends WP_Widget {
       </p>
 
       <p>
-         <label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php _e( 'Image:', 'himalayas' ); ?> </label> <br />
-
-         <?php
-         if ( $background_image  != '' ) :
-            echo '<img id="' . $this->get_field_id( 'background_image' . 'preview' ) . '"src="' . $background_image . '"style="max-width: 250px;" /><br />';
-         endif;
-         ?>
-         <input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo $background_image; ?>" style="margin-top: 5px;"/>
-
-         <input type="button" class="button button-primary custom_media_button" id="custom_media_button_portfolio" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php _e( 'Upload Image', 'himalayas' ) ?>" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
+         <label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php esc_html_e( 'Image:', 'himalayas' ); ?> </label> <br />
+         <div class="media-uploader" id="<?php echo $this->get_field_id( 'background_image' ); ?>">
+	         <div class="custom_media_preview">
+	            <?php if ( $background_image != '' ) : ?>
+	               <img class="custom_media_preview_default" src="<?php echo esc_url( $instance[ 'background_image' ] ); ?>" style="max-width:100%;" />
+	            <?php endif; ?>
+	         </div>
+	         <input type="text" class="widefat custom_media_input" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url( $instance[ 'background_image' ] ); ?>" style="margin-top:5px;" />
+	         <button class="custom_media_upload button button-secondary button-large" id="<?php echo $this->get_field_id( 'background_image' ); ?>" data-choose="<?php esc_attr_e( 'Choose an image', 'himalayas' ); ?>" data-update="<?php esc_attr_e( 'Use image', 'himalayas' ); ?>" style="width:100%;margin-top:6px;margin-right:30px;"><?php esc_html_e( 'Select an Image', 'himalayas' ); ?></button>
+	      </div>
       </p>
 
       <strong><?php _e( 'OTHER SETTINGS :', 'himalayas' ); ?></strong><br />
@@ -1026,17 +1026,18 @@ class himalayas_our_team_widget extends WP_Widget {
          <label for="<?php echo $this->get_field_id( 'background_color' ); ?>"><?php _e( 'Background Color:', 'himalayas' ); ?></label><br />
          <input class="my-color-picker" type="text" data-default-color="#575757" id="<?php echo $this->get_field_id( 'background_color' ); ?>" name="<?php echo $this->get_field_name( 'background_color' ); ?>" value="<?php echo  $background_color; ?>" />
       </p>
+
       <p>
-         <label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php _e( 'Background Image:', 'himalayas' ); ?> </label> <br />
-
-         <?php
-         if ( $instance[ 'background_image' ]  != '' ) :
-            echo '<img id="' . $this->get_field_id( 'background_image' . 'preview') . '"src="' . $instance[ 'background_image' ] . '"style="max-width: 250px;" /><br />';
-         endif;
-         ?>
-         <input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo $instance[ 'background_image' ]; ?>" style="margin-top: 5px;"/>
-
-         <input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php _e( 'Upload Image', 'himalayas' ) ?>" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
+         <label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php esc_html_e( 'Background Image:', 'himalayas' ); ?> </label> <br />
+         <div class="media-uploader" id="<?php echo $this->get_field_id( 'background_image' ); ?>">
+	         <div class="custom_media_preview">
+	            <?php if ( $background_image != '' ) : ?>
+	               <img class="custom_media_preview_default" src="<?php echo esc_url( $instance[ 'background_image' ] ); ?>" style="max-width:100%;" />
+	            <?php endif; ?>
+	         </div>
+	         <input type="text" class="widefat custom_media_input" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url( $instance[ 'background_image' ] ); ?>" style="margin-top:5px;" />
+	         <button class="custom_media_upload button button-secondary button-large" id="<?php echo $this->get_field_id( 'background_image' ); ?>" data-choose="<?php esc_attr_e( 'Choose an image', 'himalayas' ); ?>" data-update="<?php esc_attr_e( 'Use image', 'himalayas' ); ?>" style="width:100%;margin-top:6px;margin-right:30px;"><?php esc_html_e( 'Select an Image', 'himalayas' ); ?></button>
+	      </div>
       </p>
 
       <strong><?php _e( 'OTHER SETTINGS :', 'himalayas' ); ?></strong><br />
