@@ -34,7 +34,7 @@ Himalayas is distributed under the terms of the GNU GPL
 == THEME USAGE ==
 
 = Theme Instruction =
-Get theme instruction at http://themegrill.com/theme-instruction/himalayas/
+Get theme instruction at http://docs.themegrill.com/himalayas/
 
 = Free Support =
 Get free support at http://themegrill.com/support-forum
@@ -45,8 +45,7 @@ All available options can be used from Appearance->Customize
 /**********************************************************/
 
 == TRANSLATIONS ==
-If you've translated this theme into your language, feel free to send the translation over to themegrill@gmail.com
-and we will include it within the theme from next version update.
+If you want to translate this theme to your language, refer to: https://translate.wordpress.org/projects/wp-themes/himalayas
 
 /**********************************************************/
 
