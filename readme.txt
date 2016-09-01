@@ -50,7 +50,7 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.0.8 - 2016-09-01 =
 * Tweaks - Enhancement for the media uploader scripts used in widgets.
 
 = Version 1.0.7 - June 9, 2016 =
