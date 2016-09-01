@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Himalayas 1.0.7\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2016-06-09 07:46:38+00:00\n"
+"POT-Creation-Date: 2016-09-01 04:55:04+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -378,7 +378,7 @@ msgstr ""
 msgid "TG: Our Team Widget"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:460 inc/widgets/widgets.php:1203
+#: inc/admin/class-himalayas-admin.php:460 inc/widgets/widgets.php:1204
 msgid "TG: Contact Us Widget"
 msgstr ""
 
@@ -832,13 +832,13 @@ msgstr ""
 
 #: inc/widgets/widgets.php:138 inc/widgets/widgets.php:293
 #: inc/widgets/widgets.php:607 inc/widgets/widgets.php:792
-#: inc/widgets/widgets.php:1045 inc/widgets/widgets.php:1229
+#: inc/widgets/widgets.php:1046 inc/widgets/widgets.php:1230
 msgid "Title:"
 msgstr ""
 
 #: inc/widgets/widgets.php:142 inc/widgets/widgets.php:297
 #: inc/widgets/widgets.php:611 inc/widgets/widgets.php:795
-#: inc/widgets/widgets.php:1048 inc/widgets/widgets.php:1233
+#: inc/widgets/widgets.php:1049 inc/widgets/widgets.php:1234
 msgid "Description:"
 msgstr ""
 
@@ -846,7 +846,7 @@ msgstr ""
 msgid "Select a page to display Title, Excerpt and Featured image."
 msgstr ""
 
-#: inc/widgets/widgets.php:146 inc/widgets/widgets.php:1237
+#: inc/widgets/widgets.php:146 inc/widgets/widgets.php:1238
 msgid "Page"
 msgstr ""
 
@@ -883,7 +883,7 @@ msgid "Service Section ID:"
 msgstr ""
 
 #: inc/widgets/widgets.php:301 inc/widgets/widgets.php:615
-#: inc/widgets/widgets.php:1052
+#: inc/widgets/widgets.php:1053
 msgid "Number of pages to display:"
 msgstr ""
 
@@ -911,13 +911,23 @@ msgstr ""
 msgid "Image:"
 msgstr ""
 
-#: inc/widgets/widgets.php:473 inc/widgets/widgets.php:786
+#: inc/widgets/widgets.php:472 inc/widgets/widgets.php:785
 #: inc/widgets/widgets.php:1039
-msgid "Upload Image"
+msgid "Choose an image"
+msgstr ""
+
+#: inc/widgets/widgets.php:472 inc/widgets/widgets.php:785
+#: inc/widgets/widgets.php:1039
+msgid "Use image"
+msgstr ""
+
+#: inc/widgets/widgets.php:472 inc/widgets/widgets.php:785
+#: inc/widgets/widgets.php:1039
+msgid "Select an Image"
 msgstr ""
 
 #: inc/widgets/widgets.php:476 inc/widgets/widgets.php:789
-#: inc/widgets/widgets.php:1042
+#: inc/widgets/widgets.php:1043
 msgid "OTHER SETTINGS :"
 msgstr ""
 
@@ -1019,39 +1029,39 @@ msgstr ""
 msgid "Our Team Section ID:"
 msgstr ""
 
-#: inc/widgets/widgets.php:1030
+#: inc/widgets/widgets.php:1031
 msgid "Background Image:"
 msgstr ""
 
-#: inc/widgets/widgets.php:1055
+#: inc/widgets/widgets.php:1056
 msgid ""
 "Note: Create the pages and select Our Team Template to display Our Team "
 "pages."
 msgstr ""
 
-#: inc/widgets/widgets.php:1201
+#: inc/widgets/widgets.php:1202
 msgid "Show your Contact page."
 msgstr ""
 
-#: inc/widgets/widgets.php:1221
+#: inc/widgets/widgets.php:1222
 msgid ""
 "Note: Enter the Contact Section ID and use same for Menu item. Only used "
 "for One Page Menu."
 msgstr ""
 
-#: inc/widgets/widgets.php:1224
+#: inc/widgets/widgets.php:1225
 msgid "Contact Section ID:"
 msgstr ""
 
-#: inc/widgets/widgets.php:1236
+#: inc/widgets/widgets.php:1237
 msgid "Select a Contact page."
 msgstr ""
 
-#: inc/widgets/widgets.php:1240
+#: inc/widgets/widgets.php:1241
 msgid "Use Contact Form Plugin and enter the shortcode here:"
 msgstr ""
 
-#: inc/widgets/widgets.php:1242
+#: inc/widgets/widgets.php:1243
 msgid "Shortcode"
 msgstr ""
 
