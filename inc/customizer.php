@@ -434,15 +434,19 @@ function himalayas_customize_register($wp_customize) {
 		 //Add Theme instruction, Support Forum, Demo Link, Rating Link
 		 $important_links = array(
 			'view-pro' => array(
-			   'link' => esc_url('http://themegrill.com/themes/himalayas/'),
+			   'link' => esc_url('http://themegrill.com/themes/himalayas-pro/'),
 			   'text' => __('View Pro', 'himalayas'),
 			),
+			'theme-info' => array(
+               'link' => esc_url('http://themegrill.com/themes/himalayas/'),
+               'text' => esc_html__('Theme Info', 'himalayas'),
+            ),
 			'support' => array(
 			   'link' => esc_url('http://themegrill.com/support-forum/'),
 			   'text' => __('Support Forum', 'himalayas'),
 			),
 			'documentation' => array(
-			   'link' => esc_url('http://themegrill.com/theme-instruction/himalayas/'),
+			   'link' => esc_url('http://docs.themegrill.com/himalayas/'),
 			   'text' => __('Documentation', 'himalayas'),
 			),
 			'demo' => array(
