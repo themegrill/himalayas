@@ -366,7 +366,7 @@ function himalayas_customize_register($wp_customize) {
    ));
    $wp_customize->add_control(
 	new HIMALAYAS_Custom_CSS_Control($wp_customize, 'himalayas_custom_css', array(
-		  'label' => __('Write your custom css', 'himalayas'),
+		  'label' => __('Write your Custom CSS', 'himalayas'),
 		  'section' => 'himalayas_custom_css_setting',
 		  'settings' => 'himalayas_custom_css'
 	))

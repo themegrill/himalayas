@@ -20,7 +20,7 @@ function himalayas_widgets_init() {
    register_sidebar( array(
       'name'            => esc_html__( 'Right Sidebar', 'himalayas' ),
       'id'              => 'himalayas_right_sidebar',
-      'description'     => __( 'Shows widgets at Right side.', 'himalayas' ),
+      'description'     => esc_html__( 'Shows widgets at Right side.', 'himalayas' ),
       'before_widget'   => '<aside id="%1$s" class="widget %2$s clearfix">',
       'after_widget'    => '</aside>',
       'before_title'    => '<h4 class="widget-title"><span>',
@@ -30,7 +30,7 @@ function himalayas_widgets_init() {
    register_sidebar( array(
       'name'            => esc_html__( 'Left Sidebar', 'himalayas' ),
       'id'              => 'himalayas_left_sidebar',
-      'description'     => __( 'Shows widgets at Left side.', 'himalayas' ),
+      'description'     => esc_html__( 'Shows widgets at Left side.', 'himalayas' ),
       'before_widget'   => '<aside id="%1$s" class="widget %2$s clearfix">',
       'after_widget'    => '</aside>',
       'before_title'    => '<h4 class="widget-title"><span>',
@@ -40,7 +40,7 @@ function himalayas_widgets_init() {
    register_sidebar( array(
       'name'            => esc_html__( 'Front Page Sidebar', 'himalayas' ),
       'id'              => 'himalayas_front_page_section',
-      'description'     => __( 'Show widgets at Front Page Content Section', 'himalayas' ),
+      'description'     => esc_html__( 'Show widgets at Front Page Content Section', 'himalayas' ),
       'before_widget'   => '<section id="%1$s" class="widget %2$s clearfix">',
       'after_widget'    => '</section>',
       'before_title'    => '<h2 class="main-title">',
@@ -50,7 +50,7 @@ function himalayas_widgets_init() {
    register_sidebar( array(
       'name'            => esc_html__( 'Error 404 Page Sidebar', 'himalayas' ),
       'id'              => 'himalayas_error_404_page_sidebar',
-      'description'     => __( 'Shows widgets on Error 404 page.', 'himalayas' ),
+      'description'     => esc_html__( 'Shows widgets on Error 404 page.', 'himalayas' ),
       'before_widget'   => '<aside id="%1$s" class="widget %2$s clearfix">',
       'after_widget'    => '</aside>',
       'before_title'    => '<h3 class="widget-title"><span>',
@@ -60,7 +60,7 @@ function himalayas_widgets_init() {
    register_sidebar( array(
       'name'            => esc_html__( 'Footer Sidebar One', 'himalayas' ),
       'id'              => 'himalayas_footer_sidebar_one',
-      'description'     => __( 'Shows widgets on footer.', 'himalayas' ),
+      'description'     => esc_html__( 'Shows widgets on footer sidebar one.', 'himalayas' ),
       'before_widget'   => '<aside id="%1$s" class="widget %2$s clearfix">',
       'after_widget'    => '</aside>',
       'before_title'    => '<h4 class="widget-title"><span>',
@@ -70,7 +70,7 @@ function himalayas_widgets_init() {
    register_sidebar( array(
       'name'            => esc_html__( 'Footer Sidebar Two', 'himalayas' ),
       'id'              => 'himalayas_footer_sidebar_two',
-      'description'     => __( 'Shows widgets on footer.', 'himalayas' ),
+      'description'     => esc_html__( 'Shows widgets on footer sidebar two.', 'himalayas' ),
       'before_widget'   => '<aside id="%1$s" class="widget %2$s clearfix">',
       'after_widget'    => '</aside>',
       'before_title'    => '<h4 class="widget-title"><span>',
@@ -80,7 +80,7 @@ function himalayas_widgets_init() {
    register_sidebar( array(
       'name'            => esc_html__( 'Footer Sidebar Three', 'himalayas' ),
       'id'              => 'himalayas_footer_sidebar_three',
-      'description'     => __( 'Shows widgets on footer.', 'himalayas' ),
+      'description'     => esc_html__( 'Shows widgets on footer sidebar three.', 'himalayas' ),
       'before_widget'   => '<aside id="%1$s" class="widget %2$s clearfix">',
       'after_widget'    => '</aside>',
       'before_title'    => '<h4 class="widget-title"><span>',
