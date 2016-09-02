@@ -50,14 +50,12 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
-* Tweaks - Enhancement for the media uploader scripts used in widgets.
-
-= Version 1.0.7 - June 9, 2016 =
+= Version 1.0.7 - 2016-09-02 =
 * Tweaks - Updated Font Awesome to version 4.6.3.
 * Tweaks - Introduced welcome page for theme.
 * Tweaks - POT file update.
 * Feature - Theme is now compatible with WooCommerce.
+* Tweaks - Enhancement for the media uploader scripts used in widgets.
 
 = Version 1.0.6 =
 * Fix - Widget: Our Team issue is fixed.
