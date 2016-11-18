@@ -61,6 +61,12 @@ function himalayas_setup() {
 	// Adding excerpt option box for pages as well
 	add_post_type_support( 'page', 'excerpt' );
 
+	// Adds the support for the Custom Logo introduced in WordPress 4.5
+	add_theme_support( 'custom-logo', array(
+		'flex-width' => true,
+		'flex-height' => true,
+	));
+
 	/*
     * Switch default core markup for search form, comment form, and comments
     * to output valid HTML5.

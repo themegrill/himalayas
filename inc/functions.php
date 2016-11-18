@@ -588,3 +588,15 @@ function himalayas_get_sidebar() {
 }
 
 add_theme_support( 'woocommerce' );
+
+// Displays the site logo
+if ( ! function_exists( 'himalayas_the_custom_logo' ) ) {
+/**
+ * Displays the optional custom logo.
+ */
+function himalayas_the_custom_logo() {
+	if ( function_exists( 'the_custom_logo' )  && ( get_theme_mod( 'himalayas_logo','' ) == '') ) {
+    	the_custom_logo();
+    }
+  }
+}
