@@ -71,7 +71,7 @@ function himalayas_customize_register($wp_customize) {
 			new WP_Customize_Image_Control($wp_customize, 'himalayas_logo', array(
 				'label' 		=> __( 'Header Logo Image Upload', 'himalayas' ),
 				'section' 	=> 'himalayas_header_title_logo',
-				'description' => __( '<strong>Note:</strong> The recommended height for header logo image is 68px.', 'himalayas' ),
+				'description' => sprintf(__( '%sInfo:%s This option will be removed in upcoming update. Please go to Site Identity section to upload the theme logo.', 'himalayas'  ), '<strong>', '</strong>'),
 				'settings' 	=> 'himalayas_logo'
 			))
 		);
