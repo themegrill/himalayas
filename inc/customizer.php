@@ -338,7 +338,8 @@ function himalayas_customize_register($wp_customize) {
 	));
 
    // Custom CSS setting
-   class HIMALAYAS_Custom_CSS_Control extends WP_Customize_Control {
+	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
+    class HIMALAYAS_Custom_CSS_Control extends WP_Customize_Control {
 
 	  public $type = 'custom_css';
 
@@ -371,6 +372,7 @@ function himalayas_customize_register($wp_customize) {
 		  'settings' => 'himalayas_custom_css'
 	))
    );
+ }
    // End of the Design Options
 
  /**************************************************************************************/
