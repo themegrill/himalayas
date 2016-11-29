@@ -591,7 +591,7 @@ add_theme_support( 'woocommerce' );
 /**
   * Migrate any existing theme CSS codes added in Customize Options to the core option added in WordPress 4.7
   */
- function himalayas_customm_css_migrate() {
+ function himalayas_custom_css_migrate() {
 
  	if ( function_exists( 'wp_update_custom_css_post' ) ) {
 		$custom_css = get_theme_mod( 'himalayas_custom_css' );
@@ -606,6 +606,6 @@ add_theme_support( 'woocommerce' );
 	}
 }
 
- add_action( 'after_setup_theme', 'himalayas_customm_css_migrate' );
+ add_action( 'after_setup_theme', 'himalayas_custom_css_migrate' );
 
 
