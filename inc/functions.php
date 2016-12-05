@@ -177,6 +177,10 @@ function himalayas_body_class( $himalayas_header_class ) {
 	if( get_theme_mod( 'himalayas_header_logo_placement', 'header_text_only' ) == 'show_both' ) {
 		$himalayas_header_class[] = ' show-both';
 	}
+	//responsive menu class
+	if( get_theme_mod( 'himalayas_new_menu', '' ) == 1 ){
+      $himalayas_header_class[] = 'better-responsive-menu';
+   }
 
 	return $himalayas_header_class;
 }
@@ -557,6 +561,7 @@ function himalayas_archive_description( $before = '', $after = '' ) {
 	}
 }
 endif;
+
 
 /**************************************************************************************/
 
