@@ -92,6 +92,23 @@ function himalayas_customize_register($wp_customize) {
 		 'disable' => __('Disable', 'himalayas')
 	  )
    ));
+   // New Responsive Menu
+   $wp_customize->add_section('himalayas_new_menu_style', array(
+      'priority' => 340,
+      'title' => esc_html__('Responsive Menu Style', 'himalayas'),
+      'panel' => 'himalayas_header_options'
+   ));
+   $wp_customize->add_setting('himalayas_new_menu', array(
+      'default' => 0,
+      'capability' => 'edit_theme_options',
+      'sanitize_callback' => 'himalayas_sanitize_checkbox'
+   ));
+   $wp_customize->add_control('himalayas_new_menu', array(
+      'type' => 'checkbox',
+      'label' => esc_html__('Switch to new responsive menu', 'himalayas'),
+      'section' => 'himalayas_new_menu_style',
+      'settings' => 'himalayas_new_menu'
+   ));
 	// End of the Header Options
 
  /**************************************************************************************/

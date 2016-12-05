@@ -50,6 +50,10 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+
+= Version TBD =
+ *Feature- Responsive menu added.
+
 = Version 1.0.7 - 2016-09-02 =
 * Tweaks - Updated Font Awesome to version 4.6.3.
 * Tweaks - Introduced welcome page for theme.
