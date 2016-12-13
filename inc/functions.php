@@ -606,6 +606,4 @@ add_theme_support( 'woocommerce' );
 	}
 }
 
- add_action( 'after_setup_theme', 'himalayas_custom_css_migrate' );
-
-
+add_action( 'after_setup_theme', 'himalayas_custom_css_migrate' );
