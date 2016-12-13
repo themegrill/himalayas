@@ -50,8 +50,9 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
- 
+
 = Version TBD =
+* Feature - Migrated the Custom Logo from theme options to the Site Logo in Site Identity section
 * Feature - Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7
 
 = Version 1.0.7 - 2016-09-02 =
