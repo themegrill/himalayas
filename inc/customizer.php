@@ -60,12 +60,13 @@ function himalayas_customize_register($wp_customize) {
 		'priority'  => 320,
 		'panel' => 'himalayas_header_options'
 	));
-	if ( !function_exists('the_custom_logo') || ( get_theme_mod('himalayas_logo', '') != '' ) ) {
+
+	if ( ! function_exists('the_custom_logo') ) {
 		$wp_customize->add_setting('himalayas_logo', array(
 			'default' => '',
-		  'capability' => 'edit_theme_options',
-		  'sanitize_callback' => 'himalayas_sanitize_url',
-		  'sanitize_js_callback' => 'himalayas_sanitize_js_url'
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'himalayas_sanitize_url',
+			'sanitize_js_callback' => 'himalayas_sanitize_js_url'
 		));
 		$wp_customize->add_control(
 			new WP_Customize_Image_Control($wp_customize, 'himalayas_logo', array(
