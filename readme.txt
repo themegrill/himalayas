@@ -51,8 +51,9 @@ If you want to translate this theme to your language, refer to: https://translat
 
 == Changelog ==
 
-= Version 1.0.8 TBD =
+= Version TBD =
 * Feature - Added the Custom Site Logo feature introduced in WordPress 4.5
+* Feature - Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7
 
 = Version 1.0.7 - 2016-09-02 =
 * Tweaks - Updated Font Awesome to version 4.6.3.
