@@ -119,6 +119,7 @@ function himalayas_customize_register($wp_customize) {
 		'himalayas_header_media_placement',
 		array(
 			'label'    => esc_html__( 'Choose the required option', 'himalayas' ),
+			'description'    => esc_html__( 'Info: Please make header non-sticky to display the Header Media just above the Site Title/Text.', 'himalayas' ),
 			'section'  => 'himalayas_header_media',
 			'type'     => 'radio',
 			'choices'  => array(
