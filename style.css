@@ -1260,6 +1260,23 @@ Header css
 .menu-search-wrapper {
     float: right;
 }
+
+#wp-custom-header-video {
+    display: block;
+    min-height: 300px;
+    min-height: 75vh;
+    width: 100%;
+}
+.wp-custom-header{
+    position: relative;
+    text-align: center;
+}
+.wp-custom-header-video-button{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 /*--------------------------------------------------------------
 Menu css
 --------------------------------------------------------------*/

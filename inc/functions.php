@@ -639,3 +639,17 @@ function himalayas_site_logo_migrate() {
 }
 
 add_action( 'after_setup_theme', 'himalayas_site_logo_migrate' );
+
+// Video Header introduced in WordPress 4.7
+if ( ! function_exists( 'himalayas_the_custom_header_markup' ) ) {
+	/**
+	* Displays the optional custom media headers.
+	*/
+	function himalayas_the_custom_header_markup() {
+		if ( function_exists('the_custom_header_markup') ) {
+			the_custom_header_markup();
+		} else {
+			the_header_image_tag();
+		}
+	}
+}

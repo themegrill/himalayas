@@ -51,6 +51,9 @@ If you want to translate this theme to your language, refer to: https://translat
 
 == Changelog ==
 
+= Version - TBD =
+* Feature - Adds Support for Video Header introduced in WordPress 4.7
+
 = Version 1.0.8 - 2016-12-13 =
 * Feature - Migrated the Custom Logo from theme options to the Site Logo in Site Identity section
 * Feature - Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7

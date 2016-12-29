@@ -94,6 +94,40 @@ function himalayas_customize_register($wp_customize) {
 		 'disable' => __('Disable', 'himalayas')
 	  )
    ));
+
+   // Media Section
+	$wp_customize->add_section(
+		'himalayas_header_media',
+		array(
+			'priority'   => 325,
+			'title'      => esc_html__( 'Header Media Position', 'himalayas' ),
+			'panel'      => 'himalayas_header_options'
+		)
+	);
+
+	// Header Media Placement
+	$wp_customize->add_setting(
+		'himalayas_header_media_placement',
+		array(
+			'default'            => 'header_media_blow_main_menu',
+			'capability'         => 'edit_theme_options',
+			'sanitize_callback'  => 'himalayas_radio_sanitize'
+		)
+	);
+
+	$wp_customize->add_control(
+		'himalayas_header_media_placement',
+		array(
+			'label'    => esc_html__( 'Choose the required option', 'himalayas' ),
+			'section'  => 'himalayas_header_media',
+			'type'     => 'radio',
+			'choices'  => array(
+				'header_media_above_site_title' => esc_html__( 'Position One: Display Header Media just above the site Title/Text', 'himalayas' ),
+				'header_media_blow_main_menu' => esc_html__( 'Postion Two: Dispaly Header Media just below the Main/Primary Menu', 'himalayas' ),
+			)
+		)
+	);
+
 	// End of the Header Options
 
  /**************************************************************************************/
