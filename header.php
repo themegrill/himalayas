@@ -25,9 +25,7 @@ wp_head();
 <?php	do_action( 'himalayas_before' ); ?>
 <div id="page" class="hfeed site">
 	<?php do_action( 'himalayas_before_header' ); ?>
-	<?php if ( ( get_theme_mod( 'himalayas_header_media_placement', 'header_media_blow_main_menu' ) == 'header_media_above_site_title' )  && ( get_theme_mod( 'himalayas_sticky_on_off', 0 ) == 1 ) ) {
-		himalayas_the_custom_header_markup();
-	} ?>
+
 	<header id="masthead" class="site-header clearfix" role="banner">
 		<div class="header-wrapper clearfix">
 			<div class="tg-container">
@@ -96,8 +94,8 @@ wp_head();
 
       } ?>
 	</header>
-	<?php if ( get_theme_mod( 'himalayas_header_media_placement', 'header_media_blow_main_menu' ) == 'header_media_blow_main_menu' ) {
-		himalayas_the_custom_header_markup();
-	} ?>
+
+	<?php himalayas_the_custom_header_markup(); ?>
+
    <?php do_action( 'himalayas_after_header' ); ?>
    <?php do_action( 'himalayas_before_main' ); ?>
