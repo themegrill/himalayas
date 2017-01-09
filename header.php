@@ -90,12 +90,12 @@ wp_head();
 			</div><!-- tg-container -->
 		</div><!-- header-wrapepr end -->
 
+		<?php himalayas_the_custom_header_markup(); ?>
+
 		<?php if( get_theme_mod( 'himalayas_slide_on_off' ) == 1 && is_front_page() ) {				himalayas_featured_image_slider();
 
       } ?>
 	</header>
-
-	<?php himalayas_the_custom_header_markup(); ?>
 
    <?php do_action( 'himalayas_after_header' ); ?>
    <?php do_action( 'himalayas_before_main' ); ?>

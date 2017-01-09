@@ -74,16 +74,6 @@ function himalayas_setup() {
    add_theme_support('html5', array(
       'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
    ));
-
-   // Add Image Headers / Video Headers in 4.7
-	add_theme_support( 'custom-header', array(
-		'width'                => 2000,
-		'height'               => 400,
-		'flex-height'          => true,
-		'header-text'          => true,
-		'video'                => true,
-		'header-text'          => false,
-	) );
 }
 endif;
 
@@ -123,6 +113,7 @@ define( 'HIMALAYAS_ADMIN_IMAGES_URL', HIMALAYAS_ADMIN_URL . '/images' );
 require_once( HIMALAYAS_INCLUDES_DIR . '/functions.php' );
 require_once( HIMALAYAS_INCLUDES_DIR . '/header-functions.php' );
 require_once( HIMALAYAS_INCLUDES_DIR . '/customizer.php' );
+require_once( HIMALAYAS_INCLUDES_DIR . '/custom-header.php' );
 require_once( HIMALAYAS_ADMIN_DIR . '/meta-boxes.php' );
 // Load Widgets and Widgetized Area
 require_once( HIMALAYAS_WIDGETS_DIR . '/widgets.php' );
