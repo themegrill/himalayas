@@ -26,11 +26,14 @@ add_action( 'after_setup_theme', 'himalayas_custom_header_setup' );
 // Filter the get_header_image_tag() for option of adding the link back to home page option
 function himalayas_header_image_markup( $html, $header, $attr ) {
 	$output = '';
-	$header_image = get_header_image();
 
-	if( ! empty( $header_image ) ) {
+	if ( get_theme_mod( 'himalayas_slide_on_off', '' ) == 0 ) {
+		$header_image = get_header_image();
 
-		$output .= '<div class="header-image-wrap"><img src="' . esc_url( $header_image ) . '" class="header-image" width="' . get_custom_header()->width . '" height="' .  get_custom_header()->height . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '"></div>';
+		if( ! empty( $header_image ) ) {
+
+			$output .= '<div class="header-image-wrap"><img src="' . esc_url( $header_image ) . '" class="header-image" width="' . get_custom_header()->width . '" height="' .  get_custom_header()->height . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '"></div>';
+		}
 	}
 
 	return $output;
@@ -40,22 +43,3 @@ function himalayas_header_image_markup_filter() {
 	add_filter( 'get_header_image_tag', 'himalayas_header_image_markup', 10, 3 );
 }
 add_action( 'himalayas_header_image_markup_render','himalayas_header_image_markup_filter' );
-
-// Video Header introduced in WordPress 4.7
-if ( ! function_exists( 'himalayas_the_custom_header_markup' ) ) {
-	/**
-	* Displays the optional custom media headers.
-	*/
-	function himalayas_the_custom_header_markup() {
-		if ( function_exists('the_custom_header_markup') ) {
-			do_action( 'himalayas_header_image_markup_render' );
-			the_custom_header_markup();
-		} else {
-			$header_image = get_header_image();
-			if( ! empty( $header_image ) ) { ?>
-				<div class="header-image-wrap"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></div>
-			<?php
-			}
-		}
-	}
-}
