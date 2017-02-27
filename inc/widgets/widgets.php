@@ -443,6 +443,7 @@ class himalayas_call_to_action_widget extends WP_Widget {
       $defaults[ 'text_additional' ] = '';
       $defaults[ 'button_text' ] = '';
       $defaults[ 'button_url' ] = '';
+      $defaults[ 'new_tab' ] = '0';
       $defaults[ 'select' ] = 'cta-text-style-1';
 
       $instance = wp_parse_args( (array) $instance, $defaults );
@@ -453,6 +454,7 @@ class himalayas_call_to_action_widget extends WP_Widget {
       $text_main = esc_textarea( $instance[ 'text_main' ] );
       $button_text = esc_attr( $instance[ 'button_text' ] );
       $button_url = esc_url( $instance[ 'button_url' ] );
+      $new_tab = esc_attr( $instance[ 'new_tab' ] ? 'checked="checked"' : '');
       $select = $instance[ 'select' ];
       ?>
       <p>
@@ -487,6 +489,10 @@ class himalayas_call_to_action_widget extends WP_Widget {
          <label for="<?php echo $this->get_field_id('button_url'); ?>"><?php _e( 'Button Redirect Link:', 'himalayas' ); ?></label>
          <input id="<?php echo $this->get_field_id('button_url'); ?>" name="<?php echo $this->get_field_name('button_url'); ?>" type="text" value="<?php echo $button_url; ?>" />
       </p>
+      <p>
+      <input class="checkbox" id="<?php echo $this->get_field_id( 'new_tab' ); ?>" name="<?php echo $this->get_field_name( 'new_tab' ); ?>" type="checkbox" <?php echo $new_tab; ?> />
+      <label for="<?php echo $this->get_field_id('new_tab'); ?>"><?php esc_html_e( 'Check to display link in new tab.', 'himalayas' ); ?></label>
+      </p>
       <?php _e( 'Choose the layout','himalayas' ); ?>
       <p>
          <select id="<?php echo $this->get_field_id('select'); ?>" name="<?php echo $this->get_field_name('select'); ?>">
@@ -515,6 +521,7 @@ class himalayas_call_to_action_widget extends WP_Widget {
 
       $instance[ 'button_text' ] = sanitize_text_field( $new_instance[ 'button_text' ] );
       $instance[ 'button_url' ] = esc_url_raw( $new_instance[ 'button_url' ] );
+      $instance[ 'new_tab' ] = isset( $new_instance[ 'new_tab' ] ) ? 1 : 0;
       $instance[ 'select' ] = $new_instance[ 'select' ];
 
       return $instance;
@@ -531,9 +538,14 @@ class himalayas_call_to_action_widget extends WP_Widget {
       $text_additional = empty( $instance['text_additional'] ) ? '' : $instance['text_additional'];
       $button_text = isset( $instance[ 'button_text' ] ) ? $instance[ 'button_text' ] : '';
       $button_url = empty( $instance[ 'button_url' ] ) ? '#' : $instance[ 'button_url' ];
+      $new_tab = !empty( $instance[ 'new_tab' ] ) ? 'true' : 'false';
       $select = isset( $instance[ 'select' ] ) ? $instance[ 'select' ] : '';
 
       echo $before_widget;
+      $target_blank = '';
+      if ($new_tab== 'true') {
+         $target_blank = 'target="_blank"';
+      }
       $bg_image_style = '';
       if ( !empty( $background_image ) ) {
          $bg_image_style .= 'background-image:url(' . $background_image . ');background-repeat:no-repeat;background-size:cover;background-attachment:fixed;';
@@ -561,7 +573,7 @@ class himalayas_call_to_action_widget extends WP_Widget {
                   <?php } ?>
                </div>
                <?php if( !empty( $button_text ) ) { ?>
-                  <a class="cta-text-btn" href="<?php echo $button_url; ?>" title="<?php echo esc_attr( $button_text ); ?>"><?php echo esc_html( $button_text ); ?></a>
+                  <a class="cta-text-btn" href="<?php echo $button_url; ?>" <?php echo $target_blank; ?> title="<?php echo esc_attr( $button_text ); ?>"><?php echo esc_html( $button_text ); ?></a>
                <?php } ?>
             </div>
          </div>
