@@ -168,7 +168,7 @@ function himalayas_body_class( $himalayas_header_class ) {
 	else {
 		$himalayas_header_class[] = 'stick';
 	}
-	if( get_theme_mod( 'himalayas_slide_on_off', 0 ) == 1 && is_front_page() && get_theme_mod( 'himalayas_trans_off', 0 ) != 1 ) {
+	if( ( get_theme_mod( 'himalayas_slide_on_off', 0 ) == 1 && is_front_page() && get_theme_mod( 'himalayas_trans_off', 0 ) != 1 ) || ( function_exists( 'the_custom_header_markup' ) && is_front_page() && (has_header_video() || has_header_image()) && get_theme_mod( 'himalayas_trans_off', 0 ) != 1 ) ) {
 		$himalayas_header_class[] = ' transparent';
 	}
 	else {

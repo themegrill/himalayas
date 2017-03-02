@@ -94,6 +94,7 @@ function himalayas_customize_register($wp_customize) {
 		 'disable' => __('Disable', 'himalayas')
 	  )
    ));
+
 	// End of the Header Options
 
  /**************************************************************************************/

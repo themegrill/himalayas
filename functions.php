@@ -113,6 +113,7 @@ define( 'HIMALAYAS_ADMIN_IMAGES_URL', HIMALAYAS_ADMIN_URL . '/images' );
 require_once( HIMALAYAS_INCLUDES_DIR . '/functions.php' );
 require_once( HIMALAYAS_INCLUDES_DIR . '/header-functions.php' );
 require_once( HIMALAYAS_INCLUDES_DIR . '/customizer.php' );
+require_once( HIMALAYAS_INCLUDES_DIR . '/custom-header.php' );
 require_once( HIMALAYAS_ADMIN_DIR . '/meta-boxes.php' );
 // Load Widgets and Widgetized Area
 require_once( HIMALAYAS_WIDGETS_DIR . '/widgets.php' );
