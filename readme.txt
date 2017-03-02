@@ -53,6 +53,7 @@ If you want to translate this theme to your language, refer to: https://translat
 
 = Version - TBD =
 * Feature - Adds Support for Video Header introduced in WordPress 4.7
+* Tweaks - Added option on CTA to open in new tab.
 
 = Version 1.0.8 - 2016-12-13 =
 * Feature - Migrated the Custom Logo from theme options to the Site Logo in Site Identity section
