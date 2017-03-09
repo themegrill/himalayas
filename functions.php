@@ -119,6 +119,13 @@ require_once( HIMALAYAS_ADMIN_DIR . '/meta-boxes.php' );
 require_once( HIMALAYAS_WIDGETS_DIR . '/widgets.php' );
 
 /**
+ * Load Demo Importer Configs.
+ */
+if ( class_exists( 'TG_Demo_Importer' ) ) {
+	require get_template_directory() . '/inc/demo-config.php';
+}
+
+/**
  * Assign the Himalayas version to a variable.
  */
 $theme            = wp_get_theme( 'himalayas' );
