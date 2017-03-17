@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function himalayas_demo_importer_packages( $packages ) {
 	$new_packages = array(
 		'himalayas-free' => array(
-			'name'    => __( 'Himalayas', 'himalayas' ),
+			'name'    => esc_html__( 'Himalayas', 'himalayas' ),
 			'preview' => 'https://demo.themegrill.com/himalayas/',
 		),
 	);
