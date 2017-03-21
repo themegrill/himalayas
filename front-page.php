@@ -6,9 +6,8 @@
  * @subpackage Himalayas
  * @since Himalayas 1.0
  */
-?>
 
-<?php get_header(); ?>
+get_header(); ?>
 
 	<div id="content" class="site-content">
 		<?php

@@ -385,7 +385,7 @@ function himalayas_footer_copyright() {
 
 	$wp_link = '<a href="http://wordpress.org" target="_blank" title="' . esc_attr__( 'WordPress', 'himalayas' ) . '">' . __( 'WordPress', 'himalayas' ) . '</a>';
 
-	$tg_link =  '<a href="'. 'http://themegrill.com/themes/himalayas' .'" target="_blank" title="'.esc_attr__( 'ThemeGrill', 'himalayas' ).'" rel="designer">'.__( 'ThemeGrill', 'himalayas') .'</a>';
+	$tg_link =  '<a href="'. 'https://themegrill.com/themes/himalayas' .'" target="_blank" title="'.esc_attr__( 'ThemeGrill', 'himalayas' ).'" rel="designer">'.__( 'ThemeGrill', 'himalayas') .'</a>';
 
 	$default_footer_value = '<span class="copyright-text">' . sprintf( __( 'Copyright &copy; %1$s %2$s.', 'himalayas' ), date( 'Y' ), $site_link ).' '.sprintf( __( 'Theme: %1$s by %2$s.', 'himalayas' ), 'Himalayas', $tg_link ).' '.sprintf( __( 'Powered by %s.', 'himalayas' ), $wp_link ) . '</span>';
 

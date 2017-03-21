@@ -1,7 +1,7 @@
 
 == HIMALAYAS  ==
 
-Himalayas is modern style free one page parallax responsive WordPress theme. Inform your visitors all they need to know right from your home page without requiring to go to the other pages. Himalayas can be used for business, portfolio, corporate, agency, photography, freelancers and almost any kind of sites. Get free support at http://themegrill.com/support-forum/ and check the demo at http://demo.themegrill.com/himalayas/
+Himalayas is modern style free one page parallax responsive WordPress theme. Inform your visitors all they need to know right from your home page without requiring to go to the other pages. Himalayas can be used for business, portfolio, corporate, agency, photography, freelancers and almost any kind of sites. Get free support at https://themegrill.com/support-forum/ and check the demo at https://demo.themegrill.com/himalayas/
 
 /**********************************************************/
 
@@ -34,10 +34,10 @@ Himalayas is distributed under the terms of the GNU GPL
 == THEME USAGE ==
 
 = Theme Instruction =
-Get theme instruction at http://docs.themegrill.com/himalayas/
+Get theme instruction at https://docs.themegrill.com/himalayas/
 
 = Free Support =
-Get free support at http://themegrill.com/support-forum
+Get free support at https://themegrill.com/support-forum
 
 = Theme Features Usage =
 All available options can be used from Appearance->Customize

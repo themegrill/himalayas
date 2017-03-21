@@ -128,11 +128,11 @@ class Himalayas_Admin {
 		</div>
 
 		<p class="himalayas-actions">
-			<a href="<?php echo esc_url( 'http://themegrill.com/themes/himalayas/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'himalayas' ); ?></a>
+			<a href="<?php echo esc_url( 'https://themegrill.com/themes/himalayas/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'himalayas' ); ?></a>
 
-			<a href="<?php echo esc_url( 'http://demo.themegrill.com/himalayas/' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'himalayas' ); ?></a>
+			<a href="<?php echo esc_url( 'https://demo.themegrill.com/himalayas/' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'himalayas' ); ?></a>
 
-			<a href="<?php echo esc_url( 'http://themegrill.com/themes/himalayas-pro/' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'himalayas' ); ?></a>
+			<a href="<?php echo esc_url( 'https://themegrill.com/themes/himalayas-pro/' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'himalayas' ); ?></a>
 
 			<a href="<?php echo esc_url( 'https://wordpress.org/support/view/theme-reviews/himalayas?filter=5#postform' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'himalayas' ); ?></a>
 		</p>
@@ -190,25 +190,25 @@ class Himalayas_Admin {
 					<div class="col">
 						<h3><?php esc_html_e( 'Documentation', 'himalayas' ); ?></h3>
 						<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'himalayas' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/theme-instruction/himalayas/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'himalayas' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://themegrill.com/theme-instruction/himalayas/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'himalayas' ); ?></a></p>
 					</div>
 
 					<div class="col">
 						<h3><?php esc_html_e( 'Got theme support question?', 'himalayas' ); ?></h3>
 						<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'himalayas' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support', 'himalayas' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support', 'himalayas' ); ?></a></p>
 					</div>
 
 					<div class="col">
 						<h3><?php esc_html_e( 'Need more features?', 'himalayas' ); ?></h3>
 						<p><?php esc_html_e( 'Upgrade to PRO version for more exciting features.', 'himalayas' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/themes/himalayas-pro/' ); ?>" class="button button-secondary"><?php esc_html_e( 'View PRO version', 'himalayas' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://themegrill.com/themes/himalayas-pro/' ); ?>" class="button button-secondary"><?php esc_html_e( 'View PRO version', 'himalayas' ); ?></a></p>
 					</div>
 
 					<div class="col">
 						<h3><?php esc_html_e( 'Got sales related question?', 'himalayas' ); ?></h3>
 						<p><?php esc_html_e( 'Please send it via our sales contact page.', 'himalayas' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/contact/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Contact Page', 'himalayas' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'https://themegrill.com/contact/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Contact Page', 'himalayas' ); ?></a></p>
 					</div>
 
 					<div class="col">
@@ -485,7 +485,7 @@ class Himalayas_Admin {
 						<td></td>
 						<td></td>
 						<td class="btn-wrapper">
-							<a href="<?php echo esc_url( apply_filters( 'himalayas_pro_theme_url', 'http://themegrill.com/themes/himalayas-pro/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Pro', 'himalayas' ); ?></a>
+							<a href="<?php echo esc_url( apply_filters( 'himalayas_pro_theme_url', 'https://themegrill.com/themes/himalayas-pro/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Pro', 'himalayas' ); ?></a>
 						</td>
 					</tr>
 				</tbody>
