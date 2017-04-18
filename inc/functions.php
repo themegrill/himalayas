@@ -587,8 +587,6 @@ function himalayas_get_sidebar() {
    echo '</div></main></div>';
 }
 
-add_theme_support( 'woocommerce' );
-
 // Displays the site logo
 if ( ! function_exists( 'himalayas_the_custom_logo' ) ) {
 	/**
