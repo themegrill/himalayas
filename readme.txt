@@ -51,7 +51,7 @@ If you want to translate this theme to your language, refer to: https://translat
 
 == Changelog ==
 
-= Version - TBD =
+= Version 1.0.9 - 2017-04-28 =
 * Feature - Adds Support for Video Header introduced in WordPress 4.7
 * Tweaks - Added option on CTA to open in new tab.
 * Feature - Added compatibility for ThemeGrill Demo Importer plugin
