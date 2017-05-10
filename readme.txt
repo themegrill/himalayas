@@ -22,6 +22,7 @@ Resources packed within the theme.
 * jQuery-One-Page-Nav by Trevor Davis | MIT/GPL Licensed
 * jQuery Parallax by Ian Lunn | MIT/GPL Licensed
 * Bxslider by Steven Wanderski released under the MIT license
+* TGM-Plugin-Activation by Thomas Griffin, Gary Jones, Juliette Reinders Folmer | GPL v2 Licensed
 * Other custom js files are our own creation and is licensed under the same license as this theme.
 
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/gpl-3.0.txt), version 3 or later.
@@ -50,7 +51,7 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.1.0 - 2017-05-10 =
 * Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
 
 = Version 1.0.9 - 2017-04-28 =
