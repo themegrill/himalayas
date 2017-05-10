@@ -50,6 +50,8 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
 
 = Version 1.0.9 - 2017-04-28 =
 * Feature - Adds Support for Video Header introduced in WordPress 4.7
