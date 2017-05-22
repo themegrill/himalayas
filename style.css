@@ -3894,12 +3894,18 @@ iframe#wp-custom-header-video {
         padding-right: 1%;
     }
     .menu-toggle {
-        background: rgba(0, 0, 0, 0) url("images/toggle.png") no-repeat scroll center center;
         display: block;
         height: 30px;
         margin-top: 19px;
         width: 30px;
         cursor: pointer;
+        color: #fff;
+        font-size: 22px;
+    }
+
+    .menu-toggle::before {
+        content: '\f0c9';
+        font-family: FontAwesome;
     }
     .menu-search-wrapper {
         float: none;
