@@ -33,7 +33,7 @@ function himalayas_scripts() {
 	}
 
 	// Register bxslider Script
-	wp_register_script( 'himalayas-bxslider', HIMALAYAS_JS_URL . '/jquery.bxslider/jquery.bxslider.min.js', array( 'jquery' ), false, true );
+	wp_register_script( 'himalayas-bxslider', HIMALAYAS_JS_URL . '/jquery.bxslider/jquery.bxslider.min.js', array( 'jquery' ), '4.2.12', true );
 
 	$slider = 0;
 	for( $i=1; $i<=4; $i++ ) {

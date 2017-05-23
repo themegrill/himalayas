@@ -1,0 +1,20 @@
+{
+  "name": "himalayas",
+  "description": "One Page Parallax Theme",
+  "main": "Gruntfile.js",
+  "license": "GPL-3.0+",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bxslider-4": "^4.2.12",
+    "font-awesome": "^4.7.0",
+    "jQuery-One-Page-Nav": "^3.0.0"
+  }
+}

@@ -92,6 +92,55 @@ module.exports = function( grunt ){
 				dest: 'himalayas',
 				expand: true
 			}
+		},
+
+		// Copy
+		copy: {
+			facss: {
+				files: [{
+					cwd: 'bower_components/font-awesome/css',  // set working folder / root to copy
+					src: '**/*.css',           // copy all files and subfolders
+					dest: 'font-awesome/css/',    // destination folder
+					expand: true           // required when using cwd
+				}]
+			},
+			fafonts: {
+				files: [{
+					cwd: 'bower_components/font-awesome/fonts',  // set working folder / root to copy
+					src: '**/*',           // copy all files and subfolders
+					dest: 'font-awesome/fonts/',    // destination folder
+					expand: true           // required when using cwd
+				}]
+			},
+			bxsliderjs: {
+				files: [{
+					cwd: 'bower_components/bxslider-4/dist/',  // set working folder / root to copy
+					src: ['**/*.js', '!vendor/*.js'],           // copy all files and subfolders
+					dest: 'js/jquery.bxslider/',    // destination folder
+					expand: true           // required when using cwd
+				}]
+			},
+			bxslidercss: {
+				files: [{
+					cwd: 'bower_components/bxslider-4/dist',  // set working folder / root to copy
+					src: '**/*.css',           // copy all files and subfolders
+					dest: 'js/jquery.bxslider/',    // destination folder
+					expand: true           // required when using cwd
+				}]
+			},
+			onepagenav: {
+				files: [{
+					cwd: 'bower_components/jQuery-One-Page-Nav/',  // set working folder / root to copy
+					src: 'jquery.nav.js',           // copy all files and subfolders
+					dest: 'js/',    // destination folder
+					expand: true           // required when using cwd
+				}]
+			}
+		},
+		bower: {
+			update: {
+				//just run 'grunt bower:install' and you'll see files from your Bower packages in lib directory
+			}
 		}
 	});
 
@@ -100,10 +149,17 @@ module.exports = function( grunt ){
 	grunt.loadNpmTasks( 'grunt-checktextdomain' );
 	grunt.loadNpmTasks( 'grunt-contrib-compress' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
+	grunt.loadNpmTasks( 'grunt-contrib-copy' );
+	grunt.loadNpmTasks(	'grunt-bower-task' );
 
 	// Register tasks
 	grunt.registerTask( 'default', [
 		'jshint'
+	]);
+
+	grunt.registerTask(	'update', [
+		'bower',
+		'copy',
 	]);
 
 	grunt.registerTask( 'dev', [
