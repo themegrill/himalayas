@@ -90,7 +90,7 @@ wp_head();
 			</div><!-- tg-container -->
 		</div><!-- header-wrapepr end -->
 
-		<?php if ( function_exists( 'the_custom_header_markup' ) && ( get_theme_mod( 'himalayas_slide_on_off', '' ) == 0 ) || ( ( get_theme_mod( 'himalayas_slide_on_off', '' ) == 1 ) && ! is_front_page() ) ) :
+		<?php if ( function_exists( 'the_custom_header_markup' ) && ( ( get_theme_mod( 'himalayas_slide_on_off', '' ) == 0 ) || ( ( get_theme_mod( 'himalayas_slide_on_off', '' ) == 1 ) && ! is_front_page() ) ) ) :
 			do_action( 'himalayas_header_image_markup_render' );
 			the_custom_header_markup();
 		else :
