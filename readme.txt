@@ -51,8 +51,9 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
-= Version TBD=
-* Tweaks - Updated bxslider to `v4.2.12`
+= Version 1.1.1 - 2017-05-24 =
+* Fix - Custom header markup function
+* Tweaks - Updated library files
 
 = Version 1.1.0 - 2017-05-10 =
 * Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
