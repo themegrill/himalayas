@@ -437,7 +437,7 @@ function himalayas_darkcolor($hex, $steps) {
 	return $return;
 }
 
-add_action( 'wp_head', 'himalayas_custom_css' 100 );
+add_action( 'wp_head', 'himalayas_custom_css', 100 );
 /**
  * Hooks the Custom Internal CSS to head section
  */
