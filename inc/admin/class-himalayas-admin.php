@@ -134,7 +134,7 @@ class Himalayas_Admin {
 
 			<a href="<?php echo esc_url( 'https://themegrill.com/themes/himalayas-pro/' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'himalayas' ); ?></a>
 
-			<a href="<?php echo esc_url( 'https://wordpress.org/support/view/theme-reviews/himalayas?filter=5#postform' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'himalayas' ); ?></a>
+			<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/himalayas/reviews/?filter=5' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'himalayas' ); ?></a>
 		</p>
 
 		<h2 class="nav-tab-wrapper">
