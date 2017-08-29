@@ -51,6 +51,9 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweaks - Introduce selective refresh for site title and description
+
 = Version 1.1.1 - 2017-05-24 =
 * Fix - Custom header markup function
 * Tweaks - Updated library files
