@@ -153,7 +153,7 @@ function himalayas_customize_register($wp_customize) {
 			'render_callback' => '',
 		) );
 	}
-	
+
    // Slider Page Select
    for( $i = 1; $i <= 4; $i++ ) {
 		$wp_customize->add_setting('himalayas_slide'.$i, array(
@@ -325,21 +325,22 @@ function himalayas_customize_register($wp_customize) {
 
 	// primary color options
    $wp_customize->add_section('himalayas_primary_color_setting', array(
-	  'panel' => 'himalayas_design_options',
+	  'panel'    => 'himalayas_design_options',
 	  'priority' => 530,
-	  'title' => __('Primary color option', 'himalayas')
+	  'title'    => __('Primary color option', 'himalayas')
    ));
 
    $wp_customize->add_setting('himalayas_primary_color', array(
-	  'default' => '#32c4d1',
-	  'capability' => 'edit_theme_options',
-	  'sanitize_callback' => 'himalayas_color_option_hex_sanitize',
+	  'default'              => '#32c4d1',
+	  'capability'           => 'edit_theme_options',
+	  'transport'            => 'postMessage',
+	  'sanitize_callback'    => 'himalayas_color_option_hex_sanitize',
 	  'sanitize_js_callback' => 'himalayas_color_escaping_option_sanitize'
    ));
 
    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'himalayas_primary_color', array(
-	  'label' => __('This will reflect in links, buttons and many others. Choose a color to match your site', 'himalayas'),
-	  'section' => 'himalayas_primary_color_setting',
+	  'label'    => __('This will reflect in links, buttons and many others. Choose a color to match your site', 'himalayas'),
+	  'section'  => 'himalayas_primary_color_setting',
 	  'settings' => 'himalayas_primary_color'
    )));
 
