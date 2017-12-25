@@ -7,6 +7,9 @@
  * @since Himalayas 1.0
  */
 function himalayas_customize_register($wp_customize) {
+	// Transport postMessage variable set
+    $customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
@@ -131,8 +134,9 @@ function himalayas_customize_register($wp_customize) {
 
 	// Enable or Disable the Slider
 	$wp_customize->add_setting('himalayas_slide_on_off', array(
-		'default' => '',
-	  'capability' => 'edit_theme_options',
+	  'default'           => '',
+	  'capability'        => 'edit_theme_options',
+	  'transport'         => $customizer_selective_refresh,
 	  'sanitize_callback' => 'himalayas_sanitize_checkbox'
 	));
 	$wp_customize->add_control('himalayas_slide_on_off', array(
@@ -142,6 +146,14 @@ function himalayas_customize_register($wp_customize) {
 		'priority' => 6
 	));
 
+	// Selective refresh for slider activation
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'himalayas_slide_on_off', array(
+			'selector'        => '.bx-wrapper',
+			'render_callback' => '',
+		) );
+	}
+	
    // Slider Page Select
    for( $i = 1; $i <= 4; $i++ ) {
 		$wp_customize->add_setting('himalayas_slide'.$i, array(
