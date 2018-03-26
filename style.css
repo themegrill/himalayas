@@ -2904,7 +2904,8 @@ Video background css
     margin-bottom: 0;
 }
 
-.contact-content .wpcf7 {
+.contact-content .wpcf7,
+.contact-content .everest-forms {
     display: none;
 }
 
