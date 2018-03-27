@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Setup demo importer packages.
  *
  * @param  array $packages
+ *
  * @return array
  */
 function himalayas_demo_importer_packages( $packages ) {
@@ -24,8 +25,14 @@ function himalayas_demo_importer_packages( $packages ) {
 			'name'    => esc_html__( 'Himalayas', 'himalayas' ),
 			'preview' => 'https://demo.themegrill.com/himalayas/',
 		),
+		'himalayas-pro'  => array(
+			'name'     => esc_html__( 'Himalayas Pro', 'himalayas' ),
+			'preview'  => 'https://demo.themegrill.com/himalayas-pro/',
+			'pro_link' => 'https://themegrill.com/themes/himalayas/',
+		),
 	);
 
 	return array_merge( $new_packages, $packages );
 }
+
 add_filter( 'themegrill_demo_importer_packages', 'himalayas_demo_importer_packages' );
