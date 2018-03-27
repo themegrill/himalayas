@@ -6,7 +6,11 @@
  * @subpackage Himalayas
  * @since      Himalayas 1.0
  */
+
 function himalayas_customize_register( $wp_customize ) {
+	// Transport postMessage variable set
+	$customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
+
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
@@ -133,14 +137,24 @@ function himalayas_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'himalayas_slide_on_off', array(
 		'default'           => '',
 		'capability'        => 'edit_theme_options',
+		'transport'         => $customizer_selective_refresh,
 		'sanitize_callback' => 'himalayas_sanitize_checkbox',
 	) );
+
 	$wp_customize->add_control( 'himalayas_slide_on_off', array(
 		'label'    => __( 'Enable the slider', 'himalayas' ),
 		'section'  => 'himalayas_slider',
 		'type'     => 'checkbox',
 		'priority' => 6,
 	) );
+
+	// Selective refresh for slider activation
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'himalayas_slide_on_off', array(
+			'selector'        => '.bx-wrapper',
+			'render_callback' => '',
+		) );
+	}
 
 	// Slider Page Select
 	for ( $i = 1; $i <= 4; $i ++ ) {
@@ -325,6 +339,7 @@ function himalayas_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'himalayas_primary_color', array(
 		'default'              => '#32c4d1',
 		'capability'           => 'edit_theme_options',
+		'transport'            => 'postMessage',
 		'sanitize_callback'    => 'himalayas_color_option_hex_sanitize',
 		'sanitize_js_callback' => 'himalayas_color_escaping_option_sanitize',
 	) );
@@ -570,6 +585,17 @@ function himalayas_customize_register( $wp_customize ) {
 }
 
 add_action( 'customize_register', 'himalayas_customize_register' );
+
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ *
+ * @since himalayas 1.1.2
+ */
+function himalayas_customize_preview_js() {
+	wp_enqueue_script( 'himalayas-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), false, true );
+}
+
+add_action( 'customize_preview_init', 'himalayas_customize_preview_js' );
 
 /**
  * Render the site title for the selective refresh partial.
