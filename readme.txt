@@ -54,6 +54,7 @@ If you want to translate this theme to your language, refer to: https://translat
 = Version TBD =
 * Tweak - Add theme support for Jetpack Responsive Videos.
 * Tweaks - Introduce selective refresh for site title and description
+* Fix - Slider anchors unclickable in Firefox browsers versioned 59+.
 
 = Version 1.1.1 - 2017-05-24 =
 * Fix - Custom header markup function
