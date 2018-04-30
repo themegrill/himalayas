@@ -51,6 +51,9 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Tweak - Allow HTML tags in widget textarea.
+
 = Version 1.1.2 - 2018-03-27 =
 * Tweak - Add theme support for Jetpack Responsive Videos.
 * Fix - Slider anchors unclickable in Firefox browsers versioned 59+.
