@@ -51,7 +51,7 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.1.3 - 2018-04-30 =
 * Tweak - Allow HTML tags in widget textarea.
 
 = Version 1.1.2 - 2018-03-27 =
