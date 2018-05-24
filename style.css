@@ -3390,6 +3390,25 @@ article {
 	text-transform: none;
 }
 
+/* author-box */
+
+.author-box {
+	padding: 15px;
+	border: 1px solid #32c4d1;
+}
+
+.author-box .author-img {
+	float: left;
+}
+
+.author-description-wrapper {
+    margin-left: 120px;
+}
+
+.author-description-wrapper .author-name {
+    clear: none;
+}
+
 /*--------------------------------------------------------------
     Sidebar css
 --------------------------------------------------------------*/
@@ -4296,6 +4315,23 @@ iframe#wp-custom-header-video {
 
 	.show-both #header-text {
 		margin-left: 0;
+	}
+
+	.author-box .author-img {
+		float: none;
+	}
+
+	.author-box .author-img img {
+		float: none;
+		margin-bottom: 15px;
+	}
+
+	.author-description-wrapper {
+		margin-left: 0;
+	}
+
+	.author-description-wrapper .author-name {
+		clear: both;
 	}
 }
 
