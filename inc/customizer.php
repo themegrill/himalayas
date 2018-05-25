@@ -439,6 +439,26 @@ function himalayas_customize_register( $wp_customize ) {
 		'section' => 'himalayas_blog_on_front',
 	) );
 
+	//Author bio display
+	$wp_customize->add_section( 'himalayas_author_bio_section', array(
+		'priority' => 9,
+		'title'    => esc_html__('Author Bio Option', 'himalayas'),
+		'panel'    => 'himalayas_additional_options',
+	) );
+
+	$wp_customize->add_setting('himalayas_author_bio_setting', array(
+		'default'           => 0,
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'himalayas_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control('himalayas_author_bio_setting', array(
+		'type'     => 'checkbox',
+		'label'    => esc_html__('Check to activate author bio display.', 'himalayas'),
+		'section'  => 'himalayas_author_bio_section',
+		'settings' => 'himalayas_author_bio_setting',
+	) );
+
 	// Excerpts or Full Posts setting
 	$wp_customize->add_section( 'himalayas_content_setting', array(
 		'priority' => 610,
