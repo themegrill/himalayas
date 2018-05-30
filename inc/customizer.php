@@ -459,6 +459,43 @@ function himalayas_customize_register( $wp_customize ) {
 		'settings' => 'himalayas_author_bio_setting',
 	) );
 
+	//Related post
+	$wp_customize->add_section( 'himalayas_related_posts_section', array(
+		'priority' => 5,
+		'title'    => esc_html__( 'Related Posts', 'himalayas' ),
+		'panel'    => 'himalayas_additional_options',
+	) );
+
+	$wp_customize->add_setting( 'himalayas_related_posts_activate', array(
+		'default'           => 0,
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'himalayas_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'himalayas_related_posts_activate', array(
+		'type'     => 'checkbox',
+		'label'    => esc_html__( 'Check to activate the related posts', 'himalayas' ),
+		'section'  => 'himalayas_related_posts_section',
+		'settings' => 'himalayas_related_posts_activate',
+	) );
+
+	$wp_customize->add_setting( 'himalayas_related_posts', array(
+		'default'           => 'categories',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'himalayas_radio_sanitize',
+	) );
+
+	$wp_customize->add_control( 'himalayas_related_posts', array(
+		'type'     => 'radio',
+		'label'    => esc_html__( 'Related Posts Must Be Shown As:', 'himalayas' ),
+		'section'  => 'himalayas_related_posts_section',
+		'settings' => 'himalayas_related_posts',
+		'choices'  => array(
+			'categories' => esc_html__( 'Related Posts By Categories', 'himalayas' ),
+			'tags'       => esc_html__( 'Related Posts By Tags', 'himalayas' ),
+		),
+	) );
+
 	// Excerpts or Full Posts setting
 	$wp_customize->add_section( 'himalayas_content_setting', array(
 		'priority' => 610,
