@@ -764,7 +764,7 @@ article.hentry .entry-footer > span {
 
 .related-posts-wrapper {
 	border-bottom: 1px solid #e1e1e1;
-	padding-bottom: 20px;
+	padding: 20px 0;
 	margin-bottom: 20px;
 }
 
