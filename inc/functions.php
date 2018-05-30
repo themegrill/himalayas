@@ -109,7 +109,7 @@ if ( ! function_exists( 'himalayas_related_posts_function' ) ) {
 			'ignore_sticky_posts'    => 1,
 			'orderby'                => 'rand',
 			'post__not_in'           => array( $post->ID ),
-			'posts_per_page'         => get_theme_mod( 'himalayas_related_post_number_display', '3' ),
+			'posts_per_page'         => 3,
 		);
 
 		// Related by categories.
