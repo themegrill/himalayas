@@ -51,6 +51,10 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Feature - Added Author Bio display option
+* Feature - Added Related posts display option
+
 = Version 1.1.3 - 2018-04-30 =
 * Tweak - Allow HTML tags in widget textarea.
 
