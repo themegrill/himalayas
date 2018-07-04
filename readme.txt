@@ -54,6 +54,7 @@ If you want to translate this theme to your language, refer to: https://translat
 = TBD =
 * Fix - Image upload button in customize option
 * Fix - Header image size
+* Fix - Section title hidden when one page menu is set
 
 = Version 1.1.4 - 2018-05-31 =
 * Feature - Added Author Bio display option
