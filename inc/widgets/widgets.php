@@ -2,9 +2,9 @@
 /**
  * Contains all the functions related to sidebar and widget.
  *
- * @package ThemeGrill
+ * @package    ThemeGrill
  * @subpackage Himalayas
- * @since Himalayas 1.0
+ * @since      Himalayas 1.0
  */
 
 add_action( 'widgets_init', 'himalayas_widgets_init' );
@@ -105,7 +105,7 @@ class himalayas_about_us_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops  = array(
 			'classname'   => 'widget_about_block',
-			'description' => __( 'Show your about page.', 'himalayas' )
+			'description' => __( 'Show your about page.', 'himalayas' ),
 		);
 		$control_ops = array( 'width' => 200, 'height' => 250 );
 		parent::__construct( false, $name = __( 'TG: About Widget', 'himalayas' ), $widget_ops, $control_ops );
@@ -135,20 +135,20 @@ class himalayas_about_us_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'about_menu_id' ) ); ?>"><?php esc_html_e( 'About Section ID:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'about_menu_id' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'about_menu_id' ) ); ?>"
-					type="text" value="<?php echo esc_attr( $about_menu_id ); ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'about_menu_id' ) ); ?>"
+			       type="text" value="<?php echo esc_attr( $about_menu_id ); ?>" />
 		</p>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text"
-					value="<?php echo esc_attr( $title ); ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text"
+			       value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 
 		<?php esc_html_e( 'Description:', 'himalayas' ); ?>
 		<textarea class="widefat" rows="5" cols="20" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"
-				name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo esc_html( $text ); ?></textarea>
+		          name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo esc_html( $text ); ?></textarea>
 
 		<p>
 			<?php esc_html_e( 'Select a page to display Title, Excerpt and Featured image.', 'himalayas' ); ?>
@@ -165,23 +165,23 @@ class himalayas_about_us_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>"><?php esc_html_e( 'Button Text:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'button_text' ) ); ?>" type="text"
-					value="<?php echo esc_attr( $button_text ); ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'button_text' ) ); ?>" type="text"
+			       value="<?php echo esc_attr( $button_text ); ?>" />
 		</p>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'button_url' ) ); ?>"><?php esc_html_e( 'Button Redirect Link:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'button_url' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'button_url' ) ); ?>" type="text"
-					value="<?php echo esc_url( $button_url ); ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'button_url' ) ); ?>" type="text"
+			       value="<?php echo esc_url( $button_url ); ?>" />
 		</p>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'button_icon' ) ); ?>"><?php esc_html_e( 'Button Icon Class:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'button_icon' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'button_icon' ) ); ?>" placeholder="fa-cog"
-					type="text"
-					value="<?php echo esc_attr( $button_icon ); ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'button_icon' ) ); ?>" placeholder="fa-cog"
+			       type="text"
+			       value="<?php echo esc_attr( $button_icon ); ?>" />
 		</p>
 		<p>
 			<?php
@@ -301,7 +301,7 @@ class himalayas_service_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops  = array(
 			'classname'   => 'widget_service_block',
-			'description' => __( 'Display some pages as services.', 'himalayas' )
+			'description' => __( 'Display some pages as services.', 'himalayas' ),
 		);
 		$control_ops = array( 'width' => 200, 'height' => 250 );
 		parent::__construct( false, $name = __( 'TG: Service Widget', 'himalayas' ), $widget_ops, $control_ops );
@@ -325,27 +325,27 @@ class himalayas_service_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'service_menu_id' ) ); ?>"><?php esc_html_e( 'Service Section ID:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'service_menu_id' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'service_menu_id' ) ); ?>" type="text"
-					value="<?php echo esc_attr( $service_menu_id ); ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'service_menu_id' ) ); ?>" type="text"
+			       value="<?php echo esc_attr( $service_menu_id ); ?>" />
 		</p>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text"
-					value="<?php echo esc_attr( $title ); ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text"
+			       value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 
 		<?php esc_html_e( 'Description:', 'himalayas' ); ?>
 		<textarea class="widefat" rows="5" cols="20" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"
-				name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo esc_html( $text ); ?></textarea>
+		          name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo esc_html( $text ); ?></textarea>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of pages to display:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text"
-					value="<?php echo esc_attr( $number ); ?>"
-					size="3"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text"
+			       value="<?php echo esc_attr( $number ); ?>"
+			       size="3" />
 		</p>
 
 		<p><?php esc_html_e( 'Note: Create the pages and select Services Template to display Services pages.', 'himalayas' ); ?></p>
@@ -462,8 +462,8 @@ class himalayas_service_widget extends WP_Widget {
 
 										<div class="service-desc-wrap">
 											<h5 class="service-title"><a title="<?php the_title_attribute(); ?>"
-														href="<?php the_permalink(); ?>"
-														alt="<?php the_title_attribute(); ?>"> <?php echo esc_html( get_the_title() ); ?></a>
+											                             href="<?php the_permalink(); ?>"
+											                             alt="<?php the_title_attribute(); ?>"> <?php echo esc_html( get_the_title() ); ?></a>
 											</h5>
 
 											<div class="service-content">
@@ -471,12 +471,12 @@ class himalayas_service_widget extends WP_Widget {
 											</div>
 
 											<a class="service-read-more" href="<?php the_permalink(); ?>"
-													title="<?php the_title_attribute(); ?>"> <?php esc_html_e( 'Read more', 'himalayas' ); ?>
+											   title="<?php the_title_attribute(); ?>"> <?php esc_html_e( 'Read more', 'himalayas' ); ?>
 												<i class="fa fa-angle-double-right"> </i></a>
 										</div>
 									</div>
 									<?php
-									$count++;
+									$count ++;
 								endwhile;
 								?>
 							</div>
@@ -503,7 +503,7 @@ class himalayas_call_to_action_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops  = array(
 			'classname'   => 'widget_call_to_action_block',
-			'description' => __( 'Use this widget to show the call to action section.', 'himalayas' )
+			'description' => __( 'Use this widget to show the call to action section.', 'himalayas' ),
 		);
 		$control_ops = array( 'width' => 200, 'height' => 250 );
 		parent::__construct( false, $name = __( 'TG: Call To Action Widget', 'himalayas' ), $widget_ops, $control_ops );
@@ -531,66 +531,66 @@ class himalayas_call_to_action_widget extends WP_Widget {
 		$select           = $instance['select'];
 		?>
 		<p>
-			<strong><?php esc_html_e( 'DESIGN SETTINGS :', 'himalayas' ); ?></strong><br/>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"><?php esc_html_e( 'Background Color:', 'himalayas' ); ?></label><br/>
+			<strong><?php esc_html_e( 'DESIGN SETTINGS :', 'himalayas' ); ?></strong><br />
+			<label for="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"><?php esc_html_e( 'Background Color:', 'himalayas' ); ?></label><br />
 			<input class="my-color-picker" type="text" data-default-color="#32c4d1"
-					id="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'background_color' ) ); ?>"
-					value="<?php echo esc_attr( $background_color ); ?>"/>
+			       id="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"
+			       name="<?php echo esc_attr( $this->get_field_name( 'background_color' ) ); ?>"
+			       value="<?php echo esc_attr( $background_color ); ?>" />
 		</p>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"> <?php esc_html_e( 'Image:', 'himalayas' ); ?> </label>
-			<br/>
+			<br />
 		<div class="media-uploader" id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>">
 			<div class="custom_media_preview">
 				<?php if ( $background_image != '' ) : ?>
 					<img class="custom_media_preview_default"
-							src="<?php echo esc_url( $background_image ); ?>" style="max-width:100%;"/>
+					     src="<?php echo esc_url( $background_image ); ?>" style="max-width:100%;" />
 				<?php endif; ?>
 			</div>
 			<input type="text" class="widefat custom_media_input"
-					id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'background_image' ) ); ?>"
-					value="<?php echo esc_url( $instance['background_image'] ); ?>" style="margin-top:5px;"/>
+			       id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
+			       name="<?php echo esc_attr( $this->get_field_name( 'background_image' ) ); ?>"
+			       value="<?php echo esc_url( $instance['background_image'] ); ?>" style="margin-top:5px;" />
 			<button class="custom_media_upload button button-secondary button-large"
-					id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
-					data-choose="<?php esc_attr_e( 'Choose an image', 'himalayas' ); ?>"
-					data-update="<?php esc_attr_e( 'Use image', 'himalayas' ); ?>"
-					style="width:100%;margin-top:6px;margin-right:30px;"><?php esc_html_e( 'Select an Image', 'himalayas' ); ?></button>
+			        id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
+			        data-choose="<?php esc_attr_e( 'Choose an image', 'himalayas' ); ?>"
+			        data-update="<?php esc_attr_e( 'Use image', 'himalayas' ); ?>"
+			        style="width:100%;margin-top:6px;margin-right:30px;"><?php esc_html_e( 'Select an Image', 'himalayas' ); ?></button>
 		</div>
 		</p>
 
-		<strong><?php esc_html_e( 'OTHER SETTINGS :', 'himalayas' ); ?></strong><br/>
+		<strong><?php esc_html_e( 'OTHER SETTINGS :', 'himalayas' ); ?></strong><br />
 
 		<?php esc_html_e( 'Call to Action Main Text', 'himalayas' ); ?>
 		<textarea class="widefat" rows="3" cols="20" id="<?php echo esc_attr( $this->get_field_id( 'text_main' ) ); ?>"
-				name="<?php echo esc_attr( $this->get_field_name( 'text_main' ) ); ?>"><?php echo esc_textarea( $text_main ); ?></textarea>
+		          name="<?php echo esc_attr( $this->get_field_name( 'text_main' ) ); ?>"><?php echo esc_textarea( $text_main ); ?></textarea>
 		<?php esc_html_e( 'Call to Action Additional Text', 'himalayas' ); ?>
 		<textarea class="widefat" rows="4" cols="20"
-				id="<?php echo esc_attr( $this->get_field_id( 'text_additional' ) ); ?>"
-				name="<?php echo esc_attr( $this->get_field_name( 'text_additional' ) ); ?>"><?php echo esc_textarea( $text_additional ); ?></textarea>
+		          id="<?php echo esc_attr( $this->get_field_id( 'text_additional' ) ); ?>"
+		          name="<?php echo esc_attr( $this->get_field_name( 'text_additional' ) ); ?>"><?php echo esc_textarea( $text_additional ); ?></textarea>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>"><?php esc_html_e( 'Button Text:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'button_text' ) ); ?>" type="text"
-					value="<?php echo esc_attr( $button_text ); ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'button_text' ) ); ?>" type="text"
+			       value="<?php echo esc_attr( $button_text ); ?>" />
 		</p>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'button_url' ) ); ?>"><?php esc_html_e( 'Button Redirect Link:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'button_url' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'button_url' ) ); ?>" type="text"
-					value="<?php echo esc_url( $button_url ); ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'button_url' ) ); ?>" type="text"
+			       value="<?php echo esc_url( $button_url ); ?>" />
 		</p>
 		<p>
 			<input class="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'new_tab' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'new_tab' ) ); ?>"
-					type="checkbox" <?php echo esc_attr( $new_tab ); ?> />
+			       name="<?php echo esc_attr( $this->get_field_name( 'new_tab' ) ); ?>"
+			       type="checkbox" <?php echo esc_attr( $new_tab ); ?> />
 			<label for="<?php echo esc_attr( $this->get_field_id( 'new_tab' ) ); ?>"><?php esc_html_e( 'Check to display link in new tab.', 'himalayas' ); ?></label>
 		</p>
 		<?php esc_html_e( 'Choose the layout', 'himalayas' ); ?>
 		<p>
 			<select id="<?php echo esc_attr( $this->get_field_id( 'select' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'select' ) ); ?>">
+			        name="<?php echo esc_attr( $this->get_field_name( 'select' ) ); ?>">
 				<option value="cta-text-style-1" <?php echo ( 'cta-text-style-1' === $select ) ? 'selected="selected"' : ''; ?>
 				><?php esc_html_e( 'Layout One', 'himalayas' ); ?></option>
 				<option value="cta-text-style-2" <?php echo ( 'cta-text-style-2' === $select ) ? 'selected="selected"' : ''; ?> ><?php esc_html_e( 'Layout Two', 'himalayas' ); ?></option>
@@ -672,7 +672,7 @@ class himalayas_call_to_action_widget extends WP_Widget {
 					</div>
 					<?php if ( ! empty( $button_text ) ) { ?>
 						<a class="cta-text-btn" href="<?php echo $button_url; ?>" <?php echo $target_blank; ?>
-								title="<?php echo esc_attr( $button_text ); ?>"><?php echo esc_html( $button_text ); ?></a>
+						   title="<?php echo esc_attr( $button_text ); ?>"><?php echo esc_html( $button_text ); ?></a>
 					<?php } ?>
 				</div>
 			</div>
@@ -691,7 +691,7 @@ class himalayas_portfolio_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops  = array(
 			'classname'   => 'widget_portfolio_block',
-			'description' => __( 'Display some pages as Portfolio', 'himalayas' )
+			'description' => __( 'Display some pages as Portfolio', 'himalayas' ),
 		);
 		$control_ops = array( 'width' => 200, 'height' => 250 );
 		parent::__construct( false, $name = __( 'TG: Portfolio', 'himalayas' ), $widget_ops );
@@ -715,26 +715,26 @@ class himalayas_portfolio_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'portfolio_menu_id' ) ); ?>"><?php esc_html_e( 'Portfolio Section ID:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'portfolio_menu_id' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'portfolio_menu_id' ) ); ?>" type="text"
-					value="<?php echo $portfolio_menu_id; ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'portfolio_menu_id' ) ); ?>" type="text"
+			       value="<?php echo $portfolio_menu_id; ?>" />
 		</p>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'himalayas' );
-			?></label>
+				?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo $title; ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 
 		<?php esc_html_e( 'Description:', 'himalayas' ); ?>
 		<textarea class="widefat" rows="5" cols="20" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"
-				name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo esc_textarea( $text ); ?></textarea>
+		          name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo esc_textarea( $text ); ?></textarea>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of pages to display:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text" value="<?php echo $number; ?>"
-					size="3"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text" value="<?php echo $number; ?>"
+			       size="3" />
 		</p>
 
 		<p>
@@ -783,7 +783,7 @@ class himalayas_portfolio_widget extends WP_Widget {
 			'posts_per_page' => $number,
 			'post_type'      => array( 'page' ),
 			'post__in'       => $page_array,
-			'orderby'        => array( 'menu_order' => 'ASC', 'date' => 'DESC' )
+			'orderby'        => array( 'menu_order' => 'ASC', 'date' => 'DESC' ),
 		) );
 
 		echo $before_widget;
@@ -837,7 +837,7 @@ class himalayas_portfolio_widget extends WP_Widget {
 
 									<div class="port-title-wrapper">
 										<h4 class="port-title"><a href="<?php the_permalink(); ?>"
-													title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+										                          title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 										</h4>
 										<div class="port-desc"> <?php echo himalayas_excerpt( 16 ); ?> </div>
 									</div>
@@ -866,7 +866,7 @@ class himalayas_featured_posts_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops  = array(
 			'classname'   => 'widget_featured_posts_block',
-			'description' => __( 'Display latest posts or posts of specific category', 'himalayas' )
+			'description' => __( 'Display latest posts or posts of specific category', 'himalayas' ),
 		);
 		$control_ops = array( 'width' => 200, 'height' => 250 );
 		parent::__construct( false, $name = __( 'TG: Featured Posts', 'himalayas' ), $widget_ops );
@@ -901,94 +901,92 @@ class himalayas_featured_posts_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'featured_menu_id' ) ); ?>"><?php esc_html_e( 'Featured Post Section ID:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'featured_menu_id' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'featured_menu_id' ) ); ?>" type="text"
-					value="<?php echo esc_attr( $featured_menu_id ); ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'featured_menu_id' ) ); ?>" type="text"
+			       value="<?php echo esc_attr( $featured_menu_id ); ?>" />
 		</p>
 
 		<p>
-			<strong><?php esc_html_e( 'DESIGN SETTINGS :', 'himalayas' ); ?></strong><br/>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"><?php esc_html_e( 'Background Color:', 'himalayas' ); ?></label><br/>
+			<strong><?php esc_html_e( 'DESIGN SETTINGS :', 'himalayas' ); ?></strong><br />
+			<label for="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"><?php esc_html_e( 'Background Color:', 'himalayas' ); ?></label><br />
 			<input class="my-color-picker" type="text" data-default-color="#f1f1f1"
-					id="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'background_color' ) ); ?>"
-					value="<?php echo esc_attr( $background_color ); ?>"/>
+			       id="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"
+			       name="<?php echo esc_attr( $this->get_field_name( 'background_color' ) ); ?>"
+			       value="<?php echo esc_attr( $background_color ); ?>" />
 		</p>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"> <?php esc_html_e( 'Image:', 'himalayas' ); ?> </label>
-			<br/>
-			<div class="media-uploader" id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>">
-				<div class="custom_media_preview">
-					<?php if ( $background_image != '' ) : ?>
-						<img class="custom_media_preview_default"
-								src="<?php echo esc_url( $background_image ); ?>" style="max-width:100%;"/>
-					<?php endif; ?>
-				</div>
-				<input type="text" class="widefat custom_media_input"
-						id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
-						name="<?php echo esc_attr( $this->get_field_name( 'background_image' ) ); ?>"
-						value="<?php echo esc_url( $instance['background_image'] ); ?>" style="margin-top:5px;"/>
-				<button class="custom_media_upload button button-secondary button-large"
-						id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
-						data-choose="<?php esc_attr_e( 'Choose an image', 'himalayas' ); ?>"
-						data-update="<?php esc_attr_e( 'Use image', 'himalayas' ); ?>"
-						style="width:100%;margin-top:6px;margin-right:30px;"><?php esc_html_e( 'Select an Image', 'himalayas' ); ?></button>
+			<br />
+		<div class="media-uploader" id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>">
+			<div class="custom_media_preview">
+				<?php if ( $background_image != '' ) : ?>
+					<img class="custom_media_preview_default"
+					     src="<?php echo esc_url( $background_image ); ?>" style="max-width:100%;" />
+				<?php endif; ?>
 			</div>
+			<input type="text" class="widefat custom_media_input"
+			       id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
+			       name="<?php echo esc_attr( $this->get_field_name( 'background_image' ) ); ?>"
+			       value="<?php echo esc_url( $instance['background_image'] ); ?>" style="margin-top:5px;" />
+			<button class="custom_media_upload button button-secondary button-large"
+			        id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
+			        data-choose="<?php esc_attr_e( 'Choose an image', 'himalayas' ); ?>"
+			        data-update="<?php esc_attr_e( 'Use image', 'himalayas' ); ?>"
+			        style="width:100%;margin-top:6px;margin-right:30px;"><?php esc_html_e( 'Select an Image', 'himalayas' ); ?></button>
+		</div>
 		</p>
 
-		<strong><?php esc_html_e( 'OTHER SETTINGS :', 'himalayas' ); ?></strong><br/>
+		<strong><?php esc_html_e( 'OTHER SETTINGS :', 'himalayas' ); ?></strong><br />
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'himalayas' );
-			?></label>
+				?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 		<?php esc_html_e( 'Description:', 'himalayas' ); ?>
 		<textarea class="widefat" rows="6" cols="20" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"
-				name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo esc_textarea( $text ); ?></textarea>
+		          name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo esc_textarea( $text ); ?></textarea>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of posts to display:', 'himalayas' );
-			?></label>
+				?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text" value="<?php echo $number; ?>"
-					size="3"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text" value="<?php echo $number; ?>"
+			       size="3" />
 		</p>
 
 		<p>
 			<input type="radio" <?php checked( $type, 'latest' ) ?> id="<?php echo esc_attr( $this->get_field_id( 'type' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'type' ) ); ?>"
-					value="latest"/><?php esc_html_e( 'Show latest Posts', 'himalayas' ); ?><br/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'type' ) ); ?>"
+			       value="latest" /><?php esc_html_e( 'Show latest Posts', 'himalayas' ); ?><br />
 			<input type="radio" <?php checked( $type, 'category' ) ?> id="<?php echo esc_attr( $this->get_field_id( 'type' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'type' ) ); ?>"
-					value="category"/><?php esc_html_e( 'Show posts from a category', 'himalayas' ); ?><br/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'type' ) ); ?>"
+			       value="category" /><?php esc_html_e( 'Show posts from a category', 'himalayas' ); ?><br />
 		</p>
 
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'category' ) ); ?>"><?php esc_html_e( 'Select category', 'himalayas' )
-				; ?>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'category' ) ); ?>"><?php esc_html_e( 'Select category', 'himalayas' ); ?>
 				:</label>
 			<?php wp_dropdown_categories( array(
 				'show_option_none' => ' ',
 				'name'             => esc_attr( $this->get_field_name( 'category' ) ),
-				'selected'         => $category
+				'selected'         => $category,
 			) ); ?>
 		</p>
 
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>"><?php esc_html_e( 'Button Text:', 'himalayas' )
-				; ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>"><?php esc_html_e( 'Button Text:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'button_text' ) ); ?>" type="text"
-					value="<?php echo $button_text; ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'button_text' ) ); ?>" type="text"
+			       value="<?php echo $button_text; ?>" />
 		</p>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'button_url' ) ); ?>"><?php esc_html_e( 'Button Redirect Link:', 'himalayas' );
-			?></label>
+				?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'button_url' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'button_url' ) ); ?>" type="text"
-					value="<?php echo $button_url; ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'button_url' ) ); ?>" type="text"
+			       value="<?php echo $button_url; ?>" />
 		</p>
 		<?php
 	}
@@ -1034,13 +1032,13 @@ class himalayas_featured_posts_widget extends WP_Widget {
 			$get_featured_posts = new WP_Query( array(
 				'posts_per_page'      => $number,
 				'post_type'           => 'post',
-				'ignore_sticky_posts' => true
+				'ignore_sticky_posts' => true,
 			) );
 		} else {
 			$get_featured_posts = new WP_Query( array(
 				'posts_per_page' => $number,
 				'post_type'      => 'post',
-				'category__in'   => $category
+				'category__in'   => $category,
 			) );
 		}
 
@@ -1097,7 +1095,7 @@ class himalayas_featured_posts_widget extends WP_Widget {
 										<div class="blog-content-wrapper">
 
 											<h5 class="blog-title"><a href="<?php the_permalink(); ?>"
-														title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+											                          title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 											</h5>
 
 											<div class="posted-date">
@@ -1111,7 +1109,7 @@ class himalayas_featured_posts_widget extends WP_Widget {
 												<span>
                                  <?php esc_html_e( 'by ', 'himalayas' ); ?>
 													<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"
-															title="<?php echo get_the_author(); ?>"><?php echo esc_html( get_the_author() ); ?></a>
+													   title="<?php echo get_the_author(); ?>"><?php echo esc_html( get_the_author() ); ?></a>
                               </span>
 
 												<span>
@@ -1136,21 +1134,21 @@ class himalayas_featured_posts_widget extends WP_Widget {
 											</div>
 
 											<a class="blog-readmore" href="<?php the_permalink(); ?>"
-													title="<?php the_title_attribute(); ?>"> <?php echo __( 'Read more', 'himalayas' ) ?>
+											   title="<?php the_title_attribute(); ?>"> <?php echo __( 'Read more', 'himalayas' ) ?>
 												<i class="fa fa-angle-double-right"> </i> </a>
 										</div>
 
 									</div><!-- .blog-block -->
 								</div><!-- .tg-column-3 -->
 
-								<?php $count++;
+								<?php $count ++;
 							endwhile;
 
 							if ( ! empty( $button_text ) ) { ?>
 								<div class="clearfix"></div>
 
 								<a class="blog-view" href="<?php echo $button_url; ?>"
-										title="<?php echo esc_attr( $button_text ); ?>"><?php echo esc_html( $button_text ); ?></a>
+								   title="<?php echo esc_attr( $button_text ); ?>"><?php echo esc_html( $button_text ); ?></a>
 							<?php } ?>
 
 						</div><!-- .tg-column-wrapper -->
@@ -1176,7 +1174,7 @@ class himalayas_our_team_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops  = array(
 			'classname'   => 'widget_our_team_block',
-			'description' => __( 'Show your Team Members.', 'himalayas' )
+			'description' => __( 'Show your Team Members.', 'himalayas' ),
 		);
 		$control_ops = array( 'width' => 200, 'height' => 250 );
 		parent::__construct( false, $name = __( 'TG: Our Team Widget', 'himalayas' ), $widget_ops, $control_ops );
@@ -1205,61 +1203,59 @@ class himalayas_our_team_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'team_menu_id' ) ); ?>"><?php esc_html_e( 'Our Team Section ID:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'team_menu_id' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'team_menu_id' ) ); ?>" type="text"
-					value="<?php echo $team_menu_id; ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'team_menu_id' ) ); ?>" type="text"
+			       value="<?php echo $team_menu_id; ?>" />
 		</p>
 		<p>
-			<strong><?php esc_html_e( 'DESIGN SETTINGS :', 'himalayas' ); ?></strong><br/>
+			<strong><?php esc_html_e( 'DESIGN SETTINGS :', 'himalayas' ); ?></strong><br />
 
-			<label for="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"><?php esc_html_e( 'Background Color:', 'himalayas' ); ?></label><br/>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"><?php esc_html_e( 'Background Color:', 'himalayas' ); ?></label><br />
 			<input class="my-color-picker" type="text" data-default-color="#575757"
-					id="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'background_color' ) ); ?>"
-					value="<?php echo $background_color; ?>"/>
+			       id="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"
+			       name="<?php echo esc_attr( $this->get_field_name( 'background_color' ) ); ?>"
+			       value="<?php echo $background_color; ?>" />
 		</p>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"> <?php esc_html_e( 'Background Image:', 'himalayas' ); ?> </label>
-			<br/>
+			<br />
 		<div class="media-uploader" id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>">
 			<div class="custom_media_preview">
 				<?php if ( $background_image != '' ) : ?>
 					<img class="custom_media_preview_default"
-							src="<?php echo esc_url( $instance['background_image'] ); ?>" style="max-width:100%;"/>
+					     src="<?php echo esc_url( $instance['background_image'] ); ?>" style="max-width:100%;" />
 				<?php endif; ?>
 			</div>
 			<input type="text" class="widefat custom_media_input"
-					id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'background_image' ) ); ?>"
-					value="<?php echo esc_url( $instance['background_image'] ); ?>" style="margin-top:5px;"/>
+			       id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
+			       name="<?php echo esc_attr( $this->get_field_name( 'background_image' ) ); ?>"
+			       value="<?php echo esc_url( $instance['background_image'] ); ?>" style="margin-top:5px;" />
 			<button class="custom_media_upload button button-secondary button-large"
-					id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
-					data-choose="<?php esc_attr_e( 'Choose an image', 'himalayas' ); ?>"
-					data-update="<?php esc_attr_e( 'Use image', 'himalayas' ); ?>"
-					style="width:100%;margin-top:6px;margin-right:30px;"><?php esc_html_e( 'Select an Image', 'himalayas' ); ?></button>
+			        id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
+			        data-choose="<?php esc_attr_e( 'Choose an image', 'himalayas' ); ?>"
+			        data-update="<?php esc_attr_e( 'Use image', 'himalayas' ); ?>"
+			        style="width:100%;margin-top:6px;margin-right:30px;"><?php esc_html_e( 'Select an Image', 'himalayas' ); ?></button>
 		</div>
 		</p>
 
-		<strong><?php esc_html_e( 'OTHER SETTINGS :', 'himalayas' ); ?></strong><br/>
+		<strong><?php esc_html_e( 'OTHER SETTINGS :', 'himalayas' ); ?></strong><br />
 
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'himalayas' )
-				; ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo $title; ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 		<?php esc_html_e( 'Description:', 'himalayas' ); ?>
 		<textarea class="widefat" rows="5" cols="20" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"
-				name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo wp_kses_post( $text ); ?></textarea>
+		          name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo wp_kses_post( $text ); ?></textarea>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of pages to display:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text" value="<?php echo $number; ?>"
-					size="3"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text" value="<?php echo $number; ?>"
+			       size="3" />
 		</p>
-		<p><?php esc_html_e( 'Note: Create the pages and select Our Team Template to display Our Team pages.', 'himalayas' )
-			; ?></p>
+		<p><?php esc_html_e( 'Note: Create the pages and select Our Team Template to display Our Team pages.', 'himalayas' ); ?></p>
 	<?php }
 
 	function update( $new_instance, $old_instance ) {
@@ -1307,7 +1303,7 @@ class himalayas_our_team_widget extends WP_Widget {
 			'posts_per_page' => $number,
 			'post_type'      => array( 'page' ),
 			'post__in'       => $page_array,
-			'orderby'        => array( 'menu_order' => 'ASC', 'date' => 'DESC' )
+			'orderby'        => array( 'menu_order' => 'ASC', 'date' => 'DESC' ),
 		) );
 
 		if ( ! empty( $background_image ) ) {
@@ -1325,7 +1321,7 @@ class himalayas_our_team_widget extends WP_Widget {
 
 		echo $before_widget; ?>
 		<div id="<?php echo esc_attr( $section_id ); ?>" class="<?php echo $bg_image_class ?> clearfix"
-				style="<?php echo esc_attr( $bg_image_style ); ?>">
+		     style="<?php echo esc_attr( $bg_image_style ); ?>">
 
 			<div class="parallax-overlay"></div>
 			<div class="section-wrapper">
@@ -1350,44 +1346,44 @@ class himalayas_our_team_widget extends WP_Widget {
 									if ( $count % 3 == 0 && $count > 1 ) { ?>
 										<div class="clearfix"></div> <?php }
 
-										$title_attribute = the_title_attribute( 'echo=0' ); ?>
+									$title_attribute = the_title_attribute( 'echo=0' ); ?>
 
-										<div class="tg-column-3 tg-column-bottom-margin">
-											<div class="team-block">
+									<div class="tg-column-3 tg-column-bottom-margin">
+										<div class="team-block">
 
-												<div class="team-img-wrapper">
+											<div class="team-img-wrapper">
 
-													<div class="team-img">
-														<?php if ( has_post_thumbnail() ) {
-															the_post_thumbnail( 'himalayas-portfolio-image' );
-														} else {
-															echo '<img src="' . get_template_directory_uri() . '/images/placeholder-team.jpg' . '">';
-														} ?>
-													</div>
-
-													<div class="team-name">
-														<?php the_title(); ?>
-													</div>
+												<div class="team-img">
+													<?php if ( has_post_thumbnail() ) {
+														the_post_thumbnail( 'himalayas-portfolio-image' );
+													} else {
+														echo '<img src="' . get_template_directory_uri() . '/images/placeholder-team.jpg' . '">';
+													} ?>
 												</div>
 
-												<div class="team-desc-wrapper">
-													<?php
-													$output                = '';
-													$himalayas_designation = get_post_meta( $post->ID, 'himalayas_designation', true );
-													if ( ! empty( $himalayas_designation ) ) {
-														$himalayas_designation = isset( $himalayas_designation ) ? esc_attr( $himalayas_designation ) : '';
-														$output                .= '<h5 class="team-deg">' . esc_html( $himalayas_designation ) . '</h5>';
-													}
-
-													$output .= '<div class="team-content">' . '<p>' . get_the_excerpt() . '</p></div>';
-
-													$output .= '<a class="team-name" href="' . get_permalink() . '" title="' . $title_attribute . '" alt ="' . $title_attribute . '">' . get_the_title() . '</a>';
-
-													echo $output;
-													$count++; ?>
+												<div class="team-name">
+													<?php the_title(); ?>
 												</div>
-											</div><!-- .team-block -->
-										</div><!-- .tg-column-3 -->
+											</div>
+
+											<div class="team-desc-wrapper">
+												<?php
+												$output                = '';
+												$himalayas_designation = get_post_meta( $post->ID, 'himalayas_designation', true );
+												if ( ! empty( $himalayas_designation ) ) {
+													$himalayas_designation = isset( $himalayas_designation ) ? esc_attr( $himalayas_designation ) : '';
+													$output                .= '<h5 class="team-deg">' . esc_html( $himalayas_designation ) . '</h5>';
+												}
+
+												$output .= '<div class="team-content">' . '<p>' . get_the_excerpt() . '</p></div>';
+
+												$output .= '<a class="team-name" href="' . get_permalink() . '" title="' . $title_attribute . '" alt ="' . $title_attribute . '">' . get_the_title() . '</a>';
+
+												echo $output;
+												$count ++; ?>
+											</div>
+										</div><!-- .team-block -->
+									</div><!-- .tg-column-3 -->
 								<?php endwhile;
 
 								// Reset Post Data
@@ -1414,7 +1410,7 @@ class himalayas_contact_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops  = array(
 			'classname'   => 'widget_contact_block',
-			'description' => __( 'Show your Contact page.', 'himalayas' )
+			'description' => __( 'Show your Contact page.', 'himalayas' ),
 		);
 		$control_ops = array( 'width' => 200, 'height' => 250 );
 		parent::__construct( false, $name = __( 'TG: Contact Us Widget', 'himalayas' ), $widget_ops, $control_ops );
@@ -1440,24 +1436,23 @@ class himalayas_contact_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'contact_menu_id' ) ); ?>"><?php esc_html_e( 'Contact Section ID:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'contact_menu_id' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'contact_menu_id' ) ); ?>" type="text"
-					value="<?php echo esc_attr( $contact_menu_id ); ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'contact_menu_id' ) ); ?>" type="text"
+			       value="<?php echo esc_attr( $contact_menu_id ); ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'himalayas' )
-				; ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 
 		<?php esc_html_e( 'Description:', 'himalayas' ); ?>
 		<textarea class="widefat" rows="5" cols="20" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"
-				name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo esc_textarea( $text ); ?></textarea>
+		          name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo esc_textarea( $text ); ?></textarea>
 
 		<p><?php esc_html_e( 'Select a Contact page.', 'himalayas' ) ?></p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'page_id' ) ); ?>"><?php esc_html_e( 'Page', 'himalayas' );
-		?>:</label>
+			?>:</label>
 		<?php wp_dropdown_pages( array(
 			'show_option_none' => ' ',
 			'name'             => esc_attr( $this->get_field_name( 'page_id' ) ),
@@ -1468,8 +1463,8 @@ class himalayas_contact_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'shortcode' ) ); ?>"><?php esc_html_e( 'Shortcode', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'shortcode' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'shortcode' ) ); ?>" type="text"
-					value="<?php echo esc_attr( $shortcode ); ?>"/>
+			       name="<?php echo esc_attr( $this->get_field_name( 'shortcode' ) ); ?>" type="text"
+			       value="<?php echo esc_attr( $shortcode ); ?>" />
 		</p>
 	<?php }
 
@@ -1507,41 +1502,43 @@ class himalayas_contact_widget extends WP_Widget {
 		}
 
 		echo $before_widget; ?>
-		<div <?php echo $section_id; ?> class="section-wrapper">
-			<div class="tg-container">
+		<div <?php echo $section_id; ?>>
+			<div class="section-wrapper">
+				<div class="tg-container">
 
-				<div class="section-title-wrapper">
-					<?php if ( ! empty( $title ) ) {
-						echo $before_title . esc_html( $title ) . $after_title;
-					}
+					<div class="section-title-wrapper">
+						<?php if ( ! empty( $title ) ) {
+							echo $before_title . esc_html( $title ) . $after_title;
+						}
 
-					if ( ! empty( $text ) ) { ?>
-						<h4 class="sub-title"><?php echo wp_kses_post( $text ); ?></h4>
-					<?php } ?>
-				</div>
+						if ( ! empty( $text ) ) { ?>
+							<h4 class="sub-title"><?php echo wp_kses_post( $text ); ?></h4>
+						<?php } ?>
+					</div>
 
-				<div class="contact-form-wrapper tg-column-wrapper clearfix">
-					<?php if ( $page_id ) :
-						$the_query = new WP_Query( 'page_id=' . $page_id );
-						while ( $the_query->have_posts() ):$the_query->the_post(); ?>
+					<div class="contact-form-wrapper tg-column-wrapper clearfix">
+						<?php if ( $page_id ) :
+							$the_query = new WP_Query( 'page_id=' . $page_id );
+							while ( $the_query->have_posts() ):$the_query->the_post(); ?>
 
+								<div class="tg-column-2">
+
+									<h2 class="contact-title"> <?php the_title(); ?> </h2>
+
+									<div class="contact-content"> <?php the_content(); ?> </div>
+								</div>
+							<?php endwhile;
+						endif;
+						// Reset Post Data
+						wp_reset_query();
+						if ( ! empty( $shortcode ) ) { ?>
 							<div class="tg-column-2">
-
-								<h2 class="contact-title"> <?php the_title(); ?> </h2>
-
-								<div class="contact-content"> <?php the_content(); ?> </div>
+								<?php echo do_shortcode( $shortcode ); ?>
 							</div>
-						<?php endwhile;
-					endif;
-					// Reset Post Data
-					wp_reset_query();
-					if ( ! empty( $shortcode ) ) { ?>
-						<div class="tg-column-2">
-							<?php echo do_shortcode( $shortcode ); ?>
-						</div>
-					<?php } ?>
-				</div><!-- .contact-content-wrapper -->
-			</div><!-- .tg-container -->
+						<?php } ?>
+					</div><!-- .contact-content-wrapper -->
+				</div><!-- .tg-container -->
+			</div>
 		</div>
 		<?php echo $after_widget;
 	}
