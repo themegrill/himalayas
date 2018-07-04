@@ -51,7 +51,7 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.1.5 - 2018-07-04 =
 * Fix - Image upload button in customize option
 * Fix - Header image size
 * Fix - Section title hidden when one page menu is set

@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License, version 3 (GPLv3).
 msgid ""
 msgstr ""
-"Project-Id-Version: Himalayas 1.1.4\n"
+"Project-Id-Version: Himalayas 1.1.5\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2018-05-31 08:23:56+00:00\n"
+"POT-Creation-Date: 2018-07-04 06:48:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -59,7 +59,7 @@ msgstr ""
 
 #: content.php:45 content.php:50 inc/header-functions.php:62
 #: inc/widgets/widgets.php:271 inc/widgets/widgets.php:474
-#: inc/widgets/widgets.php:1139
+#: inc/widgets/widgets.php:1137
 msgid "Read more"
 msgstr ""
 
@@ -378,11 +378,11 @@ msgstr ""
 msgid "TG: Featured Posts"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:496 inc/widgets/widgets.php:1182
+#: inc/admin/class-himalayas-admin.php:496 inc/widgets/widgets.php:1180
 msgid "TG: Our Team Widget"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:501 inc/widgets/widgets.php:1420
+#: inc/admin/class-himalayas-admin.php:501 inc/widgets/widgets.php:1416
 msgid "TG: Contact Us Widget"
 msgstr ""
 
@@ -1244,13 +1244,13 @@ msgstr ""
 
 #: inc/widgets/widgets.php:143 inc/widgets/widgets.php:333
 #: inc/widgets/widgets.php:723 inc/widgets/widgets.php:942
-#: inc/widgets/widgets.php:1246 inc/widgets/widgets.php:1448
+#: inc/widgets/widgets.php:1244 inc/widgets/widgets.php:1444
 msgid "Title:"
 msgstr ""
 
 #: inc/widgets/widgets.php:149 inc/widgets/widgets.php:339
 #: inc/widgets/widgets.php:729 inc/widgets/widgets.php:947
-#: inc/widgets/widgets.php:1251 inc/widgets/widgets.php:1454
+#: inc/widgets/widgets.php:1248 inc/widgets/widgets.php:1449
 msgid "Description:"
 msgstr ""
 
@@ -1263,12 +1263,12 @@ msgid "Page :"
 msgstr ""
 
 #: inc/widgets/widgets.php:166 inc/widgets/widgets.php:573
-#: inc/widgets/widgets.php:980
+#: inc/widgets/widgets.php:979
 msgid "Button Text:"
 msgstr ""
 
 #: inc/widgets/widgets.php:173 inc/widgets/widgets.php:579
-#: inc/widgets/widgets.php:987
+#: inc/widgets/widgets.php:985
 msgid "Button Redirect Link:"
 msgstr ""
 
@@ -1296,7 +1296,7 @@ msgid "Service Section ID:"
 msgstr ""
 
 #: inc/widgets/widgets.php:344 inc/widgets/widgets.php:734
-#: inc/widgets/widgets.php:1256
+#: inc/widgets/widgets.php:1253
 msgid "Number of pages to display:"
 msgstr ""
 
@@ -1311,12 +1311,12 @@ msgid "Use this widget to show the call to action section."
 msgstr ""
 
 #: inc/widgets/widgets.php:534 inc/widgets/widgets.php:909
-#: inc/widgets/widgets.php:1212
+#: inc/widgets/widgets.php:1210
 msgid "DESIGN SETTINGS :"
 msgstr ""
 
 #: inc/widgets/widgets.php:535 inc/widgets/widgets.php:910
-#: inc/widgets/widgets.php:1214
+#: inc/widgets/widgets.php:1212
 msgid "Background Color:"
 msgstr ""
 
@@ -1325,22 +1325,22 @@ msgid "Image:"
 msgstr ""
 
 #: inc/widgets/widgets.php:557 inc/widgets/widgets.php:933
-#: inc/widgets/widgets.php:1237
+#: inc/widgets/widgets.php:1235
 msgid "Choose an image"
 msgstr ""
 
 #: inc/widgets/widgets.php:558 inc/widgets/widgets.php:934
-#: inc/widgets/widgets.php:1238
+#: inc/widgets/widgets.php:1236
 msgid "Use image"
 msgstr ""
 
 #: inc/widgets/widgets.php:559 inc/widgets/widgets.php:935
-#: inc/widgets/widgets.php:1239
+#: inc/widgets/widgets.php:1237
 msgid "Select an Image"
 msgstr ""
 
 #: inc/widgets/widgets.php:563 inc/widgets/widgets.php:939
-#: inc/widgets/widgets.php:1243
+#: inc/widgets/widgets.php:1241
 msgid "OTHER SETTINGS :"
 msgstr ""
 
@@ -1416,73 +1416,73 @@ msgstr ""
 msgid "Select category"
 msgstr ""
 
-#: inc/widgets/widgets.php:1107
+#: inc/widgets/widgets.php:1105
 msgid "Posted in "
 msgstr ""
 
-#: inc/widgets/widgets.php:1112
+#: inc/widgets/widgets.php:1110
 msgid "by "
 msgstr ""
 
-#: inc/widgets/widgets.php:1118
+#: inc/widgets/widgets.php:1116
 msgid "on "
 msgstr ""
 
-#: inc/widgets/widgets.php:1126
+#: inc/widgets/widgets.php:1124
 msgid "<span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"> %3$s</a></span>"
 msgstr ""
 
-#: inc/widgets/widgets.php:1179
+#: inc/widgets/widgets.php:1177
 msgid "Show your Team Members."
 msgstr ""
 
-#: inc/widgets/widgets.php:1203
+#: inc/widgets/widgets.php:1201
 msgid ""
 "Note: Enter the Our Team Section ID and use same for Menu item. Only used "
 "for One Page Menu."
 msgstr ""
 
-#: inc/widgets/widgets.php:1206
+#: inc/widgets/widgets.php:1204
 msgid "Our Team Section ID:"
 msgstr ""
 
-#: inc/widgets/widgets.php:1222
+#: inc/widgets/widgets.php:1220
 msgid "Background Image:"
 msgstr ""
 
-#: inc/widgets/widgets.php:1261
+#: inc/widgets/widgets.php:1258
 msgid ""
 "Note: Create the pages and select Our Team Template to display Our Team "
 "pages."
 msgstr ""
 
-#: inc/widgets/widgets.php:1417
+#: inc/widgets/widgets.php:1413
 msgid "Show your Contact page."
 msgstr ""
 
-#: inc/widgets/widgets.php:1438
+#: inc/widgets/widgets.php:1434
 msgid ""
 "Note: Enter the Contact Section ID and use same for Menu item. Only used "
 "for One Page Menu."
 msgstr ""
 
-#: inc/widgets/widgets.php:1441
+#: inc/widgets/widgets.php:1437
 msgid "Contact Section ID:"
 msgstr ""
 
-#: inc/widgets/widgets.php:1458
+#: inc/widgets/widgets.php:1453
 msgid "Select a Contact page."
 msgstr ""
 
-#: inc/widgets/widgets.php:1459
+#: inc/widgets/widgets.php:1454
 msgid "Page"
 msgstr ""
 
-#: inc/widgets/widgets.php:1467
+#: inc/widgets/widgets.php:1462
 msgid "Use Contact Form Plugin and enter the shortcode here:"
 msgstr ""
 
-#: inc/widgets/widgets.php:1469
+#: inc/widgets/widgets.php:1464
 msgid "Shortcode"
 msgstr ""
 
