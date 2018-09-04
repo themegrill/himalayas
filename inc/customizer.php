@@ -520,7 +520,55 @@ function himalayas_customize_register( $wp_customize ) {
 	) );
 	// End of the Additional Options
 
+	/**
+	 * Class to include upsell link campaign for theme.
+	 *
+	 * Class HIMALAYAS_Upsell_Section
+	 */
+	class HIMALAYAS_Upsell_Section extends WP_Customize_Section {
+		public $type = 'himalayas-upsell-section';
+		public $url  = '';
+		public $id   = '';
 
+		/**
+		 * Gather the parameters passed to client JavaScript via JSON.
+		 *
+		 * @return array The array to be exported to the client as JSON.
+		 */
+		public function json() {
+			$json        = parent::json();
+			$json['url'] = esc_url( $this->url );
+			$json['id']  = $this->id;
+
+			return $json;
+		}
+
+		/**
+		 * An Underscore (JS) template for rendering this section.
+		 */
+		protected function render_template() {
+			?>
+			<li id="accordion-section-{{ data.id }}" class="himalayas-upsell-accordion-section control-section-{{ data.type }} cannot-expand accordion-section">
+				<h3 class="accordion-section-title"><a href="{{{ data.url }}}" target="_blank">{{ data.title }}</a></h3>
+			</li>
+			<?php
+		}
+	}
+
+// Register `HIMALAYAS_Upsell_Section` type section.
+	$wp_customize->register_section_type( 'HIMALAYAS_Upsell_Section' );
+
+// Add `HIMALAYAS_Upsell_Section` to display pro link.
+	$wp_customize->add_section(
+		new HIMALAYAS_Upsell_Section( $wp_customize, 'himalayas_upsell_section',
+			array(
+				'title'      => esc_html__( 'View PRO version', 'himalayas' ),
+				'url'        => 'https://themegrill.com/themes/himalayas/?utm_source=himalayas-customizer&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro',
+				'capability' => 'edit_theme_options',
+				'priority'   => 1,
+			)
+		)
+	);
 	/**************************************************************************************/
 
 	function himalayas_sanitize_checkbox( $input ) {
@@ -659,5 +707,22 @@ function himalayas_customizer_custom_scripts() { ?>
 			background: #2380BA;
 		}
 	</style>
+
+	<script>
+		( function ( $, api ) {
+			api.sectionConstructor['himalayas-upsell-section'] = api.Section.extend( {
+
+				// No events for this type of section.
+				attachEvents : function () {
+				},
+
+				// Always make the section active.
+				isContextuallyActive : function () {
+					return true;
+				}
+			} );
+		} )( jQuery, wp.customize );
+
+	</script>
 	<?php
 }
