@@ -63,7 +63,7 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 				update_option( 'himalayas_admin_notice_welcome', 1 );
 
 				// No option? Let run the notice wizard again..
-			} else if ( ! get_option( 'himalayas_admin_notice_welcome' ) ) {
+			} elseif ( ! get_option( 'himalayas_admin_notice_welcome' ) ) {
 				add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
 			}
 		}
@@ -131,7 +131,7 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 			</div>
 
 			<p class="himalayas-actions">
-				<a href="<?php echo esc_url( 'https://themegrill.com/themes/himalayas/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'himalayas' ); ?></a>
+				<a href="<?php echo esc_url( 'https://themegrill.com/themes/himalayas/?utm_source=himalayas-about&utm_medium=theme-info-link&utm_campaign=theme-info' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'himalayas' ); ?></a>
 
 				<a href="<?php echo esc_url( 'https://demo.themegrill.com/himalayas/' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'himalayas' ); ?></a>
 
@@ -213,7 +213,7 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 							<h3><?php esc_html_e( 'Documentation', 'himalayas' ); ?></h3>
 							<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'himalayas' ) ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'https://themegrill.com/theme-instruction/himalayas/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'himalayas' ); ?></a>
+								<a href="<?php echo esc_url( 'https://docs.themegrill.com/himalayas/?utm_source=himalayas-about&utm_medium=documentation-link&utm_campaign=documentation' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Documentation', 'himalayas' ); ?></a>
 							</p>
 						</div>
 
@@ -221,7 +221,7 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 							<h3><?php esc_html_e( 'Got theme support question?', 'himalayas' ); ?></h3>
 							<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'himalayas' ) ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support', 'himalayas' ); ?></a>
+								<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/?utm_source=himalayas-about&utm_medium=support-forum-link&utm_campaign=support-forum' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Support', 'himalayas' ); ?></a>
 							</p>
 						</div>
 
@@ -237,7 +237,7 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 							<h3><?php esc_html_e( 'Got sales related question?', 'himalayas' ); ?></h3>
 							<p><?php esc_html_e( 'Please send it via our sales contact page.', 'himalayas' ) ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'https://themegrill.com/contact/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Contact Page', 'himalayas' ); ?></a>
+								<a href="<?php echo esc_url( 'https://themegrill.com/contact/?utm_source=himalayas-about&utm_medium=contact-page-link&utm_campaign=contact-page' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Contact Page', 'himalayas' ); ?></a>
 							</p>
 						</div>
 
