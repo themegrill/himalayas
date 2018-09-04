@@ -442,19 +442,19 @@ function himalayas_customize_register( $wp_customize ) {
 	//Author bio display
 	$wp_customize->add_section( 'himalayas_author_bio_section', array(
 		'priority' => 9,
-		'title'    => esc_html__('Author Bio Option', 'himalayas'),
+		'title'    => esc_html__( 'Author Bio Option', 'himalayas' ),
 		'panel'    => 'himalayas_additional_options',
 	) );
 
-	$wp_customize->add_setting('himalayas_author_bio_setting', array(
+	$wp_customize->add_setting( 'himalayas_author_bio_setting', array(
 		'default'           => 0,
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'himalayas_sanitize_checkbox',
 	) );
 
-	$wp_customize->add_control('himalayas_author_bio_setting', array(
+	$wp_customize->add_control( 'himalayas_author_bio_setting', array(
 		'type'     => 'checkbox',
-		'label'    => esc_html__('Check to activate author bio display.', 'himalayas'),
+		'label'    => esc_html__( 'Check to activate author bio display.', 'himalayas' ),
 		'section'  => 'himalayas_author_bio_section',
 		'settings' => 'himalayas_author_bio_setting',
 	) );
@@ -520,65 +520,6 @@ function himalayas_customize_register( $wp_customize ) {
 	) );
 	// End of the Additional Options
 
-	// Theme important links started
-	class HIMALAYAS_Important_Links extends WP_Customize_Control {
-
-		public $type = "himalayas-important-links";
-
-		public function render_content() {
-			//Add Theme instruction, Support Forum, Demo Link, Rating Link
-			$important_links = array(
-				'view-pro'      => array(
-					'link' => esc_url( 'https://themegrill.com/themes/himalayas-pro/' ),
-					'text' => __( 'View Pro', 'himalayas' ),
-				),
-				'theme-info'    => array(
-					'link' => esc_url( 'https://themegrill.com/themes/himalayas/' ),
-					'text' => esc_html__( 'Theme Info', 'himalayas' ),
-				),
-				'support'       => array(
-					'link' => esc_url( 'https://themegrill.com/support-forum/' ),
-					'text' => __( 'Support Forum', 'himalayas' ),
-				),
-				'documentation' => array(
-					'link' => esc_url( 'https://docs.themegrill.com/himalayas/' ),
-					'text' => __( 'Documentation', 'himalayas' ),
-				),
-				'demo'          => array(
-					'link' => esc_url( 'https://demo.themegrill.com/himalayas/' ),
-					'text' => __( 'View Demo', 'himalayas' ),
-				),
-				'rating'        => array(
-					'link' => esc_url( 'http://wordpress.org/support/view/theme-reviews/himalayas?filter=5' ),
-					'text' => __( 'Rate this theme', 'himalayas' ),
-				),
-			);
-			foreach ( $important_links as $important_link ) {
-				echo '<p><a target="_blank" href="' . $important_link['link'] . '" >' . esc_attr( $important_link['text'] ) . ' </a></p>';
-			}
-		}
-
-	}
-
-	$wp_customize->add_section( 'himalayas_important_links', array(
-		'priority' => 1,
-		'title'    => __( 'Himalayas Important Links', 'himalayas' ),
-	) );
-
-	/**
-	 * This setting has the dummy Sanitizaition function as it contains no value to be sanitized
-	 */
-	$wp_customize->add_setting( 'himalayas_important_links', array(
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'himalayas_links_sanitize',
-	) );
-
-	$wp_customize->add_control( new HIMALAYAS_Important_Links( $wp_customize, 'important_links', array(
-		'label'    => __( 'Important Links', 'himalayas' ),
-		'section'  => 'himalayas_important_links',
-		'settings' => 'himalayas_important_links',
-	) ) );
-	// Theme Important Links Ended
 
 	/**************************************************************************************/
 
