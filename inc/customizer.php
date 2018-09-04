@@ -442,19 +442,19 @@ function himalayas_customize_register( $wp_customize ) {
 	//Author bio display
 	$wp_customize->add_section( 'himalayas_author_bio_section', array(
 		'priority' => 9,
-		'title'    => esc_html__('Author Bio Option', 'himalayas'),
+		'title'    => esc_html__( 'Author Bio Option', 'himalayas' ),
 		'panel'    => 'himalayas_additional_options',
 	) );
 
-	$wp_customize->add_setting('himalayas_author_bio_setting', array(
+	$wp_customize->add_setting( 'himalayas_author_bio_setting', array(
 		'default'           => 0,
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'himalayas_sanitize_checkbox',
 	) );
 
-	$wp_customize->add_control('himalayas_author_bio_setting', array(
+	$wp_customize->add_control( 'himalayas_author_bio_setting', array(
 		'type'     => 'checkbox',
-		'label'    => esc_html__('Check to activate author bio display.', 'himalayas'),
+		'label'    => esc_html__( 'Check to activate author bio display.', 'himalayas' ),
 		'section'  => 'himalayas_author_bio_section',
 		'settings' => 'himalayas_author_bio_setting',
 	) );
@@ -520,66 +520,55 @@ function himalayas_customize_register( $wp_customize ) {
 	) );
 	// End of the Additional Options
 
-	// Theme important links started
-	class HIMALAYAS_Important_Links extends WP_Customize_Control {
+	/**
+	 * Class to include upsell link campaign for theme.
+	 *
+	 * Class HIMALAYAS_Upsell_Section
+	 */
+	class HIMALAYAS_Upsell_Section extends WP_Customize_Section {
+		public $type = 'himalayas-upsell-section';
+		public $url  = '';
+		public $id   = '';
 
-		public $type = "himalayas-important-links";
+		/**
+		 * Gather the parameters passed to client JavaScript via JSON.
+		 *
+		 * @return array The array to be exported to the client as JSON.
+		 */
+		public function json() {
+			$json        = parent::json();
+			$json['url'] = esc_url( $this->url );
+			$json['id']  = $this->id;
 
-		public function render_content() {
-			//Add Theme instruction, Support Forum, Demo Link, Rating Link
-			$important_links = array(
-				'view-pro'      => array(
-					'link' => esc_url( 'https://themegrill.com/themes/himalayas-pro/' ),
-					'text' => __( 'View Pro', 'himalayas' ),
-				),
-				'theme-info'    => array(
-					'link' => esc_url( 'https://themegrill.com/themes/himalayas/' ),
-					'text' => esc_html__( 'Theme Info', 'himalayas' ),
-				),
-				'support'       => array(
-					'link' => esc_url( 'https://themegrill.com/support-forum/' ),
-					'text' => __( 'Support Forum', 'himalayas' ),
-				),
-				'documentation' => array(
-					'link' => esc_url( 'https://docs.themegrill.com/himalayas/' ),
-					'text' => __( 'Documentation', 'himalayas' ),
-				),
-				'demo'          => array(
-					'link' => esc_url( 'https://demo.themegrill.com/himalayas/' ),
-					'text' => __( 'View Demo', 'himalayas' ),
-				),
-				'rating'        => array(
-					'link' => esc_url( 'http://wordpress.org/support/view/theme-reviews/himalayas?filter=5' ),
-					'text' => __( 'Rate this theme', 'himalayas' ),
-				),
-			);
-			foreach ( $important_links as $important_link ) {
-				echo '<p><a target="_blank" href="' . $important_link['link'] . '" >' . esc_attr( $important_link['text'] ) . ' </a></p>';
-			}
+			return $json;
 		}
 
+		/**
+		 * An Underscore (JS) template for rendering this section.
+		 */
+		protected function render_template() {
+			?>
+			<li id="accordion-section-{{ data.id }}" class="himalayas-upsell-accordion-section control-section-{{ data.type }} cannot-expand accordion-section">
+				<h3 class="accordion-section-title"><a href="{{{ data.url }}}" target="_blank">{{ data.title }}</a></h3>
+			</li>
+			<?php
+		}
 	}
 
-	$wp_customize->add_section( 'himalayas_important_links', array(
-		'priority' => 1,
-		'title'    => __( 'Himalayas Important Links', 'himalayas' ),
-	) );
+// Register `HIMALAYAS_Upsell_Section` type section.
+	$wp_customize->register_section_type( 'HIMALAYAS_Upsell_Section' );
 
-	/**
-	 * This setting has the dummy Sanitizaition function as it contains no value to be sanitized
-	 */
-	$wp_customize->add_setting( 'himalayas_important_links', array(
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'himalayas_links_sanitize',
-	) );
-
-	$wp_customize->add_control( new HIMALAYAS_Important_Links( $wp_customize, 'important_links', array(
-		'label'    => __( 'Important Links', 'himalayas' ),
-		'section'  => 'himalayas_important_links',
-		'settings' => 'himalayas_important_links',
-	) ) );
-	// Theme Important Links Ended
-
+// Add `HIMALAYAS_Upsell_Section` to display pro link.
+	$wp_customize->add_section(
+		new HIMALAYAS_Upsell_Section( $wp_customize, 'himalayas_upsell_section',
+			array(
+				'title'      => esc_html__( 'View PRO version', 'himalayas' ),
+				'url'        => 'https://themegrill.com/themes/himalayas/?utm_source=himalayas-customizer&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro',
+				'capability' => 'edit_theme_options',
+				'priority'   => 1,
+			)
+		)
+	);
 	/**************************************************************************************/
 
 	function himalayas_sanitize_checkbox( $input ) {
@@ -682,18 +671,38 @@ add_action( 'customize_controls_print_footer_scripts', 'himalayas_customizer_cus
 function himalayas_customizer_custom_scripts() { ?>
 	<style>
 		/* Theme Instructions Panel CSS */
-		li#accordion-section-himalayas_important_links h3.accordion-section-title, li#accordion-section-himalayas_important_links h3.accordion-section-title:focus {
+		li#accordion-section-himalayas_upsell_section h3.accordion-section-title {
 			background-color: #32C4D1 !important;
-			color: #fff !important;
+			border-left-color: #1b909a !important;
 		}
 
-		li#accordion-section-himalayas_important_links h3.accordion-section-title:hover {
-			background-color: #32C4D1 !important;
-			color: #fff !important;
+		#accordion-section-himalayas_upsell_section h3 a:after {
+			content: '\f345';
+			color: #fff;
+			position: absolute;
+			top: 12px;
+			right: 10px;
+			z-index: 1;
+			font: 400 20px/1 dashicons;
+			speak: none;
+			display: block;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			text-decoration: none!important;
 		}
 
-		li#accordion-section-himalayas_important_links h3.accordion-section-title:after {
+		li#accordion-section-himalayas_upsell_section h3.accordion-section-title a {
+			display: block;
 			color: #fff !important;
+			text-decoration: none;
+		}
+
+		li#accordion-section-himalayas_upsell_section h3.accordion-section-title a:focus {
+			box-shadow: none;
+		}
+
+		li#accordion-section-himalayas_upsell_section h3.accordion-section-title:hover {
+			background-color: #28b7c3 !important;
 		}
 
 		/* Upsell button CSS */
@@ -718,5 +727,22 @@ function himalayas_customizer_custom_scripts() { ?>
 			background: #2380BA;
 		}
 	</style>
+
+	<script>
+		( function ( $, api ) {
+			api.sectionConstructor['himalayas-upsell-section'] = api.Section.extend( {
+
+				// No events for this type of section.
+				attachEvents : function () {
+				},
+
+				// Always make the section active.
+				isContextuallyActive : function () {
+					return true;
+				}
+			} );
+		} )( jQuery, wp.customize );
+
+	</script>
 	<?php
 }
