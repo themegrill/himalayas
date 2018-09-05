@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License, version 3 (GPLv3).
 msgid ""
 msgstr ""
-"Project-Id-Version: Himalayas 1.1.5\n"
+"Project-Id-Version: Himalayas 1.1.6\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2018-07-04 06:48:56+00:00\n"
+"POT-Creation-Date: 2018-09-05 10:16:45+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -58,8 +58,9 @@ msgid "Pages:"
 msgstr ""
 
 #: content.php:45 content.php:50 inc/header-functions.php:62
-#: inc/widgets/widgets.php:271 inc/widgets/widgets.php:474
-#: inc/widgets/widgets.php:1137
+#: inc/widgets/class-himalayas-about-us-widget.php:173
+#: inc/widgets/class-himalayas-featured-posts-widget.php:279
+#: inc/widgets/class-himalayas-service-widget.php:180
 msgid "Read more"
 msgstr ""
 
@@ -98,20 +99,20 @@ msgstr ""
 msgid "Get started with Himalayas"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:134 inc/customizer.php:537
+#: inc/admin/class-himalayas-admin.php:134
 msgid "Theme Info"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:136 inc/customizer.php:549
+#: inc/admin/class-himalayas-admin.php:136
 msgid "View Demo"
 msgstr ""
 
 #: inc/admin/class-himalayas-admin.php:138
-#: inc/admin/class-himalayas-admin.php:232
+#: inc/admin/class-himalayas-admin.php:232 inc/customizer.php:565
 msgid "View PRO version"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:140 inc/customizer.php:553
+#: inc/admin/class-himalayas-admin.php:140
 msgid "Rate this theme"
 msgstr ""
 
@@ -140,7 +141,7 @@ msgid "Customize"
 msgstr ""
 
 #: inc/admin/class-himalayas-admin.php:213
-#: inc/admin/class-himalayas-admin.php:216 inc/customizer.php:545
+#: inc/admin/class-himalayas-admin.php:216
 msgid "Documentation"
 msgstr ""
 
@@ -266,7 +267,7 @@ msgstr ""
 msgid "Himalayas"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:391 inc/demo-config.php:29
+#: inc/admin/class-himalayas-admin.php:391 inc/demo-config.php:26
 msgid "Himalayas Pro"
 msgstr ""
 
@@ -358,31 +359,38 @@ msgstr ""
 msgid "Emails/Priority Support Ticket"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:471 inc/widgets/widgets.php:111
+#: inc/admin/class-himalayas-admin.php:471
+#: inc/widgets/class-himalayas-about-us-widget.php:13
 msgid "TG: About Widget"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:476 inc/widgets/widgets.php:307
+#: inc/admin/class-himalayas-admin.php:476
+#: inc/widgets/class-himalayas-service-widget.php:13
 msgid "TG: Service Widget"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:481 inc/widgets/widgets.php:509
+#: inc/admin/class-himalayas-admin.php:481
+#: inc/widgets/class-himalayas-call-to-action-widget.php:13
 msgid "TG: Call To Action Widget"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:486 inc/widgets/widgets.php:697
+#: inc/admin/class-himalayas-admin.php:486
+#: inc/widgets/class-himalayas-portfolio-widget.php:14
 msgid "TG: Portfolio"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:491 inc/widgets/widgets.php:872
+#: inc/admin/class-himalayas-admin.php:491
+#: inc/widgets/class-himalayas-featured-posts-widget.php:14
 msgid "TG: Featured Posts"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:496 inc/widgets/widgets.php:1180
+#: inc/admin/class-himalayas-admin.php:496
+#: inc/widgets/class-himalayas-our-team-widget.php:13
 msgid "TG: Our Team Widget"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:501 inc/widgets/widgets.php:1416
+#: inc/admin/class-himalayas-admin.php:501
+#: inc/widgets/class-himalayas-contact-widget.php:13
 msgid "TG: Contact Us Widget"
 msgstr ""
 
@@ -402,7 +410,7 @@ msgstr ""
 msgid "TG: Fun Facts"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:529 inc/customizer.php:533
+#: inc/admin/class-himalayas-admin.php:529
 msgid "View Pro"
 msgstr ""
 
@@ -692,18 +700,6 @@ msgstr ""
 
 #: inc/customizer.php:518
 msgid "Show excerpt"
-msgstr ""
-
-#: inc/customizer.php:541
-msgid "Support Forum"
-msgstr ""
-
-#: inc/customizer.php:565
-msgid "Himalayas Important Links"
-msgstr ""
-
-#: inc/customizer.php:577
-msgid "Important Links"
 msgstr ""
 
 #: inc/functions.php:248 inc/related-posts.php:43
@@ -1180,6 +1176,280 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
+#: inc/widgets/class-himalayas-about-us-widget.php:10
+msgid "Show your about page."
+msgstr ""
+
+#: inc/widgets/class-himalayas-about-us-widget.php:35
+msgid ""
+"Note: Enter the About Section ID and use same for Menu item. Only used for "
+"One Page Menu."
+msgstr ""
+
+#: inc/widgets/class-himalayas-about-us-widget.php:38
+msgid "About Section ID:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-about-us-widget.php:45
+#: inc/widgets/class-himalayas-contact-widget.php:41
+#: inc/widgets/class-himalayas-featured-posts-widget.php:84
+#: inc/widgets/class-himalayas-our-team-widget.php:77
+#: inc/widgets/class-himalayas-portfolio-widget.php:40
+#: inc/widgets/class-himalayas-service-widget.php:39
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-about-us-widget.php:51
+#: inc/widgets/class-himalayas-contact-widget.php:46
+#: inc/widgets/class-himalayas-featured-posts-widget.php:89
+#: inc/widgets/class-himalayas-our-team-widget.php:81
+#: inc/widgets/class-himalayas-portfolio-widget.php:46
+#: inc/widgets/class-himalayas-service-widget.php:45
+msgid "Description:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-about-us-widget.php:56
+msgid "Select a page to display Title, Excerpt and Featured image."
+msgstr ""
+
+#: inc/widgets/class-himalayas-about-us-widget.php:58
+msgid "Page :"
+msgstr ""
+
+#: inc/widgets/class-himalayas-about-us-widget.php:68
+#: inc/widgets/class-himalayas-call-to-action-widget.php:77
+#: inc/widgets/class-himalayas-featured-posts-widget.php:121
+msgid "Button Text:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-about-us-widget.php:75
+#: inc/widgets/class-himalayas-call-to-action-widget.php:83
+#: inc/widgets/class-himalayas-featured-posts-widget.php:127
+msgid "Button Redirect Link:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-about-us-widget.php:82
+msgid "Button Icon Class:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-about-us-widget.php:93
+#. translators: %s
+msgid "<a href=\"%s\" target=\"_blank\">Refer here</a> For Icon Class"
+msgstr ""
+
+#: inc/widgets/class-himalayas-call-to-action-widget.php:10
+msgid "Use this widget to show the call to action section."
+msgstr ""
+
+#: inc/widgets/class-himalayas-call-to-action-widget.php:38
+#: inc/widgets/class-himalayas-featured-posts-widget.php:51
+#: inc/widgets/class-himalayas-our-team-widget.php:43
+msgid "DESIGN SETTINGS :"
+msgstr ""
+
+#: inc/widgets/class-himalayas-call-to-action-widget.php:39
+#: inc/widgets/class-himalayas-featured-posts-widget.php:52
+#: inc/widgets/class-himalayas-our-team-widget.php:45
+msgid "Background Color:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-call-to-action-widget.php:46
+#: inc/widgets/class-himalayas-featured-posts-widget.php:60
+msgid "Image:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-call-to-action-widget.php:61
+#: inc/widgets/class-himalayas-featured-posts-widget.php:75
+#: inc/widgets/class-himalayas-our-team-widget.php:68
+msgid "Choose an image"
+msgstr ""
+
+#: inc/widgets/class-himalayas-call-to-action-widget.php:62
+#: inc/widgets/class-himalayas-featured-posts-widget.php:76
+#: inc/widgets/class-himalayas-our-team-widget.php:69
+msgid "Use image"
+msgstr ""
+
+#: inc/widgets/class-himalayas-call-to-action-widget.php:63
+#: inc/widgets/class-himalayas-featured-posts-widget.php:77
+#: inc/widgets/class-himalayas-our-team-widget.php:70
+msgid "Select an Image"
+msgstr ""
+
+#: inc/widgets/class-himalayas-call-to-action-widget.php:67
+#: inc/widgets/class-himalayas-featured-posts-widget.php:81
+#: inc/widgets/class-himalayas-our-team-widget.php:74
+msgid "OTHER SETTINGS :"
+msgstr ""
+
+#: inc/widgets/class-himalayas-call-to-action-widget.php:69
+msgid "Call to Action Main Text"
+msgstr ""
+
+#: inc/widgets/class-himalayas-call-to-action-widget.php:72
+msgid "Call to Action Additional Text"
+msgstr ""
+
+#: inc/widgets/class-himalayas-call-to-action-widget.php:92
+msgid "Check to display link in new tab."
+msgstr ""
+
+#: inc/widgets/class-himalayas-call-to-action-widget.php:94
+msgid "Choose the layout"
+msgstr ""
+
+#: inc/widgets/class-himalayas-call-to-action-widget.php:99
+msgid "Layout One"
+msgstr ""
+
+#: inc/widgets/class-himalayas-call-to-action-widget.php:100
+msgid "Layout Two"
+msgstr ""
+
+#: inc/widgets/class-himalayas-contact-widget.php:10
+msgid "Show your Contact page."
+msgstr ""
+
+#: inc/widgets/class-himalayas-contact-widget.php:31
+msgid ""
+"Note: Enter the Contact Section ID and use same for Menu item. Only used "
+"for One Page Menu."
+msgstr ""
+
+#: inc/widgets/class-himalayas-contact-widget.php:34
+msgid "Contact Section ID:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-contact-widget.php:50
+msgid "Select a Contact page."
+msgstr ""
+
+#: inc/widgets/class-himalayas-contact-widget.php:51
+msgid "Page"
+msgstr ""
+
+#: inc/widgets/class-himalayas-contact-widget.php:59
+msgid "Use Contact Form Plugin and enter the shortcode here:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-contact-widget.php:61
+msgid "Shortcode"
+msgstr ""
+
+#: inc/widgets/class-himalayas-featured-posts-widget.php:11
+msgid "Display latest posts or posts of specific category"
+msgstr ""
+
+#: inc/widgets/class-himalayas-featured-posts-widget.php:42
+msgid ""
+"Note: Enter the Featured Post Section ID and use same for Menu item. Only "
+"used for One Page Menu."
+msgstr ""
+
+#: inc/widgets/class-himalayas-featured-posts-widget.php:44
+msgid "Featured Post Section ID:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-featured-posts-widget.php:94
+msgid "Number of posts to display:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-featured-posts-widget.php:104
+msgid "Show latest Posts"
+msgstr ""
+
+#: inc/widgets/class-himalayas-featured-posts-widget.php:107
+msgid "Show posts from a category"
+msgstr ""
+
+#: inc/widgets/class-himalayas-featured-posts-widget.php:111
+msgid "Select category"
+msgstr ""
+
+#: inc/widgets/class-himalayas-featured-posts-widget.php:247
+msgid "Posted in "
+msgstr ""
+
+#: inc/widgets/class-himalayas-featured-posts-widget.php:252
+msgid "by "
+msgstr ""
+
+#: inc/widgets/class-himalayas-featured-posts-widget.php:258
+msgid "on "
+msgstr ""
+
+#: inc/widgets/class-himalayas-featured-posts-widget.php:266
+msgid "<span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"> %3$s</a></span>"
+msgstr ""
+
+#: inc/widgets/class-himalayas-our-team-widget.php:10
+msgid "Show your Team Members."
+msgstr ""
+
+#: inc/widgets/class-himalayas-our-team-widget.php:34
+msgid ""
+"Note: Enter the Our Team Section ID and use same for Menu item. Only used "
+"for One Page Menu."
+msgstr ""
+
+#: inc/widgets/class-himalayas-our-team-widget.php:37
+msgid "Our Team Section ID:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-our-team-widget.php:53
+msgid "Background Image:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-our-team-widget.php:86
+#: inc/widgets/class-himalayas-portfolio-widget.php:51
+#: inc/widgets/class-himalayas-service-widget.php:50
+msgid "Number of pages to display:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-our-team-widget.php:91
+msgid ""
+"Note: Create the pages and select Our Team Template to display Our Team "
+"pages."
+msgstr ""
+
+#: inc/widgets/class-himalayas-portfolio-widget.php:11
+msgid "Display some pages as Portfolio"
+msgstr ""
+
+#: inc/widgets/class-himalayas-portfolio-widget.php:30
+msgid "Note: Enter the Portfolio Section ID and use same for Menu item."
+msgstr ""
+
+#: inc/widgets/class-himalayas-portfolio-widget.php:33
+msgid "Portfolio Section ID:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-portfolio-widget.php:58
+msgid ""
+"Note: Create the pages and select Portfolio Template to display Portfolio "
+"es."
+msgstr ""
+
+#: inc/widgets/class-himalayas-service-widget.php:10
+msgid "Display some pages as services."
+msgstr ""
+
+#: inc/widgets/class-himalayas-service-widget.php:29
+msgid ""
+"Note: Enter the Service Section ID and use same for Menu item. Only used "
+"for One Page Menu."
+msgstr ""
+
+#: inc/widgets/class-himalayas-service-widget.php:32
+msgid "Service Section ID:"
+msgstr ""
+
+#: inc/widgets/class-himalayas-service-widget.php:57
+msgid ""
+"Note: Create the pages and select Services Template to display Services "
+"pages."
+msgstr ""
+
 #: inc/widgets/widgets.php:23
 msgid "Shows widgets at Right side."
 msgstr ""
@@ -1226,264 +1496,6 @@ msgstr ""
 
 #: inc/widgets/widgets.php:83
 msgid "Shows widgets on footer sidebar three."
-msgstr ""
-
-#: inc/widgets/widgets.php:108
-msgid "Show your about page."
-msgstr ""
-
-#: inc/widgets/widgets.php:133
-msgid ""
-"Note: Enter the About Section ID and use same for Menu item. Only used for "
-"One Page Menu."
-msgstr ""
-
-#: inc/widgets/widgets.php:136
-msgid "About Section ID:"
-msgstr ""
-
-#: inc/widgets/widgets.php:143 inc/widgets/widgets.php:333
-#: inc/widgets/widgets.php:723 inc/widgets/widgets.php:942
-#: inc/widgets/widgets.php:1244 inc/widgets/widgets.php:1444
-msgid "Title:"
-msgstr ""
-
-#: inc/widgets/widgets.php:149 inc/widgets/widgets.php:339
-#: inc/widgets/widgets.php:729 inc/widgets/widgets.php:947
-#: inc/widgets/widgets.php:1248 inc/widgets/widgets.php:1449
-msgid "Description:"
-msgstr ""
-
-#: inc/widgets/widgets.php:154
-msgid "Select a page to display Title, Excerpt and Featured image."
-msgstr ""
-
-#: inc/widgets/widgets.php:156
-msgid "Page :"
-msgstr ""
-
-#: inc/widgets/widgets.php:166 inc/widgets/widgets.php:573
-#: inc/widgets/widgets.php:979
-msgid "Button Text:"
-msgstr ""
-
-#: inc/widgets/widgets.php:173 inc/widgets/widgets.php:579
-#: inc/widgets/widgets.php:985
-msgid "Button Redirect Link:"
-msgstr ""
-
-#: inc/widgets/widgets.php:180
-msgid "Button Icon Class:"
-msgstr ""
-
-#: inc/widgets/widgets.php:191
-#. translators: %s
-msgid "<a href=\"%s\" target=\"_blank\">Refer here</a> For Icon Class"
-msgstr ""
-
-#: inc/widgets/widgets.php:304
-msgid "Display some pages as services."
-msgstr ""
-
-#: inc/widgets/widgets.php:323
-msgid ""
-"Note: Enter the Service Section ID and use same for Menu item. Only used "
-"for One Page Menu."
-msgstr ""
-
-#: inc/widgets/widgets.php:326
-msgid "Service Section ID:"
-msgstr ""
-
-#: inc/widgets/widgets.php:344 inc/widgets/widgets.php:734
-#: inc/widgets/widgets.php:1253
-msgid "Number of pages to display:"
-msgstr ""
-
-#: inc/widgets/widgets.php:351
-msgid ""
-"Note: Create the pages and select Services Template to display Services "
-"pages."
-msgstr ""
-
-#: inc/widgets/widgets.php:506
-msgid "Use this widget to show the call to action section."
-msgstr ""
-
-#: inc/widgets/widgets.php:534 inc/widgets/widgets.php:909
-#: inc/widgets/widgets.php:1210
-msgid "DESIGN SETTINGS :"
-msgstr ""
-
-#: inc/widgets/widgets.php:535 inc/widgets/widgets.php:910
-#: inc/widgets/widgets.php:1212
-msgid "Background Color:"
-msgstr ""
-
-#: inc/widgets/widgets.php:542 inc/widgets/widgets.php:918
-msgid "Image:"
-msgstr ""
-
-#: inc/widgets/widgets.php:557 inc/widgets/widgets.php:933
-#: inc/widgets/widgets.php:1235
-msgid "Choose an image"
-msgstr ""
-
-#: inc/widgets/widgets.php:558 inc/widgets/widgets.php:934
-#: inc/widgets/widgets.php:1236
-msgid "Use image"
-msgstr ""
-
-#: inc/widgets/widgets.php:559 inc/widgets/widgets.php:935
-#: inc/widgets/widgets.php:1237
-msgid "Select an Image"
-msgstr ""
-
-#: inc/widgets/widgets.php:563 inc/widgets/widgets.php:939
-#: inc/widgets/widgets.php:1241
-msgid "OTHER SETTINGS :"
-msgstr ""
-
-#: inc/widgets/widgets.php:565
-msgid "Call to Action Main Text"
-msgstr ""
-
-#: inc/widgets/widgets.php:568
-msgid "Call to Action Additional Text"
-msgstr ""
-
-#: inc/widgets/widgets.php:588
-msgid "Check to display link in new tab."
-msgstr ""
-
-#: inc/widgets/widgets.php:590
-msgid "Choose the layout"
-msgstr ""
-
-#: inc/widgets/widgets.php:595
-msgid "Layout One"
-msgstr ""
-
-#: inc/widgets/widgets.php:596
-msgid "Layout Two"
-msgstr ""
-
-#: inc/widgets/widgets.php:694
-msgid "Display some pages as Portfolio"
-msgstr ""
-
-#: inc/widgets/widgets.php:713
-msgid "Note: Enter the Portfolio Section ID and use same for Menu item."
-msgstr ""
-
-#: inc/widgets/widgets.php:716
-msgid "Portfolio Section ID:"
-msgstr ""
-
-#: inc/widgets/widgets.php:741
-msgid ""
-"Note: Create the pages and select Portfolio Template to display Portfolio "
-"es."
-msgstr ""
-
-#: inc/widgets/widgets.php:869
-msgid "Display latest posts or posts of specific category"
-msgstr ""
-
-#: inc/widgets/widgets.php:900
-msgid ""
-"Note: Enter the Featured Post Section ID and use same for Menu item. Only "
-"used for One Page Menu."
-msgstr ""
-
-#: inc/widgets/widgets.php:902
-msgid "Featured Post Section ID:"
-msgstr ""
-
-#: inc/widgets/widgets.php:952
-msgid "Number of posts to display:"
-msgstr ""
-
-#: inc/widgets/widgets.php:962
-msgid "Show latest Posts"
-msgstr ""
-
-#: inc/widgets/widgets.php:965
-msgid "Show posts from a category"
-msgstr ""
-
-#: inc/widgets/widgets.php:969
-msgid "Select category"
-msgstr ""
-
-#: inc/widgets/widgets.php:1105
-msgid "Posted in "
-msgstr ""
-
-#: inc/widgets/widgets.php:1110
-msgid "by "
-msgstr ""
-
-#: inc/widgets/widgets.php:1116
-msgid "on "
-msgstr ""
-
-#: inc/widgets/widgets.php:1124
-msgid "<span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"> %3$s</a></span>"
-msgstr ""
-
-#: inc/widgets/widgets.php:1177
-msgid "Show your Team Members."
-msgstr ""
-
-#: inc/widgets/widgets.php:1201
-msgid ""
-"Note: Enter the Our Team Section ID and use same for Menu item. Only used "
-"for One Page Menu."
-msgstr ""
-
-#: inc/widgets/widgets.php:1204
-msgid "Our Team Section ID:"
-msgstr ""
-
-#: inc/widgets/widgets.php:1220
-msgid "Background Image:"
-msgstr ""
-
-#: inc/widgets/widgets.php:1258
-msgid ""
-"Note: Create the pages and select Our Team Template to display Our Team "
-"pages."
-msgstr ""
-
-#: inc/widgets/widgets.php:1413
-msgid "Show your Contact page."
-msgstr ""
-
-#: inc/widgets/widgets.php:1434
-msgid ""
-"Note: Enter the Contact Section ID and use same for Menu item. Only used "
-"for One Page Menu."
-msgstr ""
-
-#: inc/widgets/widgets.php:1437
-msgid "Contact Section ID:"
-msgstr ""
-
-#: inc/widgets/widgets.php:1453
-msgid "Select a Contact page."
-msgstr ""
-
-#: inc/widgets/widgets.php:1454
-msgid "Page"
-msgstr ""
-
-#: inc/widgets/widgets.php:1462
-msgid "Use Contact Form Plugin and enter the shortcode here:"
-msgstr ""
-
-#: inc/widgets/widgets.php:1464
-msgid "Shortcode"
 msgstr ""
 
 #: navigation.php:24 navigation.php:36

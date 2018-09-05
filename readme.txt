@@ -51,7 +51,7 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.1.6 - 2018-09-05 =
 * Update - Upsell link
 
 = Version 1.1.5 - 2018-07-04 =
