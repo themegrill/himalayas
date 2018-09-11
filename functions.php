@@ -58,6 +58,9 @@ function himalayas_setup() {
     */
    add_theme_support('title-tag');
 
+	// Gutenberg layout support.
+	add_theme_support( 'align-wide' );
+
 	// Adding excerpt option box for pages as well
 	add_post_type_support( 'page', 'excerpt' );
 

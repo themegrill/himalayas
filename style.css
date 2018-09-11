@@ -771,11 +771,11 @@ article.hentry .entry-footer > span {
 	margin-bottom: 20px;
 }
 
-.related-posts-wrapper .related-posts  {
+.related-posts-wrapper .related-posts {
 	margin-left: -5%;
 }
 
-.related-posts-wrapper .post-thumbnails  {
+.related-posts-wrapper .post-thumbnails {
 	margin-bottom: 15px;
 }
 
@@ -3245,6 +3245,31 @@ Video background css
 	width: 100%;
 }
 
+.no-sidebar-full-width,
+.no-sidebar,
+.no-sidebar-full-width #page,
+.no-sidebar #page {
+	overflow: hidden;
+}
+
+.no-sidebar-full-width .alignfull,
+.no-sidebar .alignfull {
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+}
+
+.no-sidebar-full-width .alignwide,
+.no-sidebar .alignwide {
+	margin-left: -100px;
+	margin-right: -100px;
+	max-width: unset;
+}
+
+.no-sidebar-full-width .alignfull img,
+.no-sidebar .alignfull img {
+	max-width: unset;
+}
+
 /*--------------------------------------------------------------
     Blog page css
 --------------------------------------------------------------*/
@@ -3425,11 +3450,11 @@ article {
 }
 
 .author-description-wrapper {
-    margin-left: 120px;
+	margin-left: 120px;
 }
 
 .author-description-wrapper .author-name {
-    clear: none;
+	clear: none;
 }
 
 /*--------------------------------------------------------------
@@ -3690,6 +3715,13 @@ iframe#wp-custom-header-video {
 /*--------------------------------------------------------------
     Responsive css
 --------------------------------------------------------------*/
+
+@media screen and (max-width: 1500px) {
+	.no-sidebar-full-width .alignwide {
+		margin-left: -2px;
+		margin-right: -2px;
+	}
+}
 
 @media (min-width: 1200px) and (max-width: 1400px) {
 	.scroll-down {
@@ -4183,6 +4215,11 @@ iframe#wp-custom-header-video {
 		margin-left: 0;
 		width: 100%;
 	}
+
+	.no-sidebar .alignwide {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 @media (max-width: 600px) {
@@ -4355,6 +4392,11 @@ iframe#wp-custom-header-video {
 
 	.author-description-wrapper .author-name {
 		clear: both;
+	}
+
+	.no-sidebar-full-width .alignwide {
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
