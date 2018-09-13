@@ -104,7 +104,7 @@ function himalayas_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'himalayas_header_logo_placement', array(
 		'type'    => 'radio',
 		'label'   => __( 'Choose the required option', 'himalayas' ),
-		'section' => 'himalayas_header_title_logo',
+		'section' => 'title_tagline',
 		'choices' => array(
 			'header_logo_only' => __( 'Header Logo Only', 'himalayas' ),
 			'header_text_only' => __( 'Header Text Only', 'himalayas' ),
