@@ -51,6 +51,9 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Remove - Backward compatible for header logo
+
 = Version 1.1.6 - 2018-09-05 =
 * Update - Upsell link
 
