@@ -2,27 +2,27 @@
 /**
  * Theme Header Section for our theme.
  *
- * @package ThemeGrill
+ * @package    ThemeGrill
  * @subpackage Himalayas
- * @since Himalayas 1.0
+ * @since      Himalayas 1.0
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<?php
-/**
- * This hook is important for wordpress plugins and other many things
- */
-wp_head();
-?>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<?php
+	/**
+	 * This hook is important for wordpress plugins and other many things
+	 */
+	wp_head();
+	?>
 </head>
 
 <body <?php body_class(); ?>>
-<?php	do_action( 'himalayas_before' ); ?>
+<?php do_action( 'himalayas_before' ); ?>
 <div id="page" class="hfeed site">
 	<?php do_action( 'himalayas_before_header' ); ?>
 
@@ -30,20 +30,16 @@ wp_head();
 		<div class="header-wrapper clearfix">
 			<div class="tg-container">
 
-				<?php if( ( get_theme_mod( 'himalayas_header_logo_placement', 'header_text_only' ) == 'show_both' || get_theme_mod( 'himalayas_header_logo_placement', 'header_text_only' ) == 'header_logo_only' ) ) {	?>
+				<?php if ( ( get_theme_mod( 'himalayas_header_logo_placement', 'header_text_only' ) == 'show_both' || get_theme_mod( 'himalayas_header_logo_placement', 'header_text_only' ) == 'header_logo_only' ) ) { ?>
 
 					<div class="logo">
 
-						<?php if ( get_theme_mod('himalayas_logo', '') != '') { ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo esc_url( get_theme_mod( 'himalayas_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
-						<?php } ?>
-
-						<?php if (function_exists('the_custom_logo') && has_custom_logo( $blog_id = 0 )) {
+						<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
 							himalayas_the_custom_logo();
 						} ?>
 
 					</div> <!-- logo-end -->
-				<?php	}
+				<?php }
 
 				$screen_reader = '';
 				if ( ( get_theme_mod( 'himalayas_header_logo_placement', 'header_text_only' ) == 'header_logo_only' || get_theme_mod( 'himalayas_header_logo_placement', 'header_text_only' ) == 'disable' ) ) {
@@ -51,7 +47,7 @@ wp_head();
 				}
 				?>
 				<div id="header-text" class="<?php echo $screen_reader; ?>">
-				<?php
+					<?php
 					if ( is_front_page() || is_home() ) : ?>
 						<h1 id="site-title">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
@@ -65,7 +61,7 @@ wp_head();
 					if ( $description || is_customize_preview() ) : ?>
 						<p id="site-description"><?php echo $description; ?></p>
 					<?php endif;
-				?>
+					?>
 				</div><!-- #header-text -->
 
 				<div class="menu-search-wrapper">
@@ -77,14 +73,17 @@ wp_head();
 						</div>
 
 						<div class="search-box">
-							<div class="close"> &times; </div>
+							<div class="close"> &times;</div>
 							<?php get_search_form(); ?>
 						</div>
 					</div> <!-- home-search-end -->
 
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 						<p class="menu-toggle hide"></p>
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_class' => 'menu-primary-container' ) ); ?>
+						<?php wp_nav_menu( array(
+							'theme_location'  => 'primary',
+							'container_class' => 'menu-primary-container',
+						) ); ?>
 					</nav> <!-- nav-end -->
 				</div> <!-- Menu-search-wrapper end -->
 			</div><!-- tg-container -->
@@ -96,18 +95,20 @@ wp_head();
 		else :
 			if ( get_theme_mod( 'himalayas_slide_on_off' ) == 0 ) {
 				$header_image = get_header_image();
-			?>
-				<div class="header-image-wrap"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+				?>
+				<div class="header-image-wrap">
+					<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 				</div>
-			<?php
+				<?php
 			}
 
 		endif; ?>
 
-		<?php if( get_theme_mod( 'himalayas_slide_on_off' ) == 1 && is_front_page() ) {				himalayas_featured_image_slider();
+		<?php if ( get_theme_mod( 'himalayas_slide_on_off' ) == 1 && is_front_page() ) {
+			himalayas_featured_image_slider();
 
-      } ?>
+		} ?>
 	</header>
 
-   <?php do_action( 'himalayas_after_header' ); ?>
-   <?php do_action( 'himalayas_before_main' ); ?>
+	<?php do_action( 'himalayas_after_header' ); ?>
+	<?php do_action( 'himalayas_before_main' ); ?>
