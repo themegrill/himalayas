@@ -188,7 +188,13 @@ class himalayas_our_team_widget extends WP_Widget {
 
 												<div class="team-img">
 													<?php if ( has_post_thumbnail() ) {
-														the_post_thumbnail( 'himalayas-portfolio-image' );
+														$thumb_id = get_post_thumbnail_id( get_the_ID() );
+														$img_altr = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+														$img_alt = ! empty( $img_altr ) ? $img_altr : $title_attribute;
+														$post_thumbnail_attr = array(
+															'alt'   => esc_attr( $img_alt ),
+														);
+														the_post_thumbnail( 'himalayas-portfolio-image', $post_thumbnail_attr );
 													} else {
 														echo '<img src="' . get_template_directory_uri() . '/images/placeholder-team.jpg' . '">';
 													} ?>
