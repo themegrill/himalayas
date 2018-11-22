@@ -52,6 +52,8 @@ If you want to translate this theme to your language, refer to: https://translat
 
 == Changelog ==
 = TBD =
+* Added - Gutenberg compatibility
+* Tweak - Add alt attributes to missed img tags
 * Remove - Backward compatible for header logo
 
 = Version 1.1.6 - 2018-09-05 =
