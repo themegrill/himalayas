@@ -152,8 +152,15 @@ class himalayas_service_widget extends WP_Widget {
 											$services_top     = '<i class="fa ' . esc_attr( $himalayas_icon ) . '"></i>';
 										}
 										if ( has_post_thumbnail() ) {
-											$icon_image_class = 'service_image_class';
-											$services_top     = get_the_post_thumbnail( $post->ID, 'himalayas-services' );
+											$icon_image_class    = 'service_image_class';
+											$title_attribute     = get_the_title( $post->ID );
+											$thumb_id            = get_post_thumbnail_id( get_the_ID() );
+											$img_altr            = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+											$img_alt             = ! empty( $img_altr ) ? $img_altr : $title_attribute;
+											$post_thumbnail_attr = array(
+												'alt'   => esc_attr( $img_alt ),
+											);
+											$services_top        = get_the_post_thumbnail( $post->ID, 'himalayas-services', $post_thumbnail_attr );
 										}
 
 										if ( has_post_thumbnail() || ! empty( $himalayas_icon ) ) {
