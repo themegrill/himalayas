@@ -51,6 +51,9 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Fix - Gallery padding for Gutenberg
+
 = Version 1.1.7 - 2018-11-22 =
 * Added - Gutenberg compatibility
 * Tweak - Add alt attributes to missed img tags
