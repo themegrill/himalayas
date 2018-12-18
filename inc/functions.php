@@ -57,7 +57,7 @@ function himalayas_scripts() {
 	}
 
 	// Magific popup setting
-	wp_enqueue_script( 'himalayas-featured-image-popup-setting', HIMALAYAS_JS_URL . '/magnific-popup/image-popup-setting.js', array( 'himalayas-featured-image-popup' ), '1.0.0', true );
+	wp_enqueue_script( 'himalayas-featured-image-popup' );
 
 	$himalayas_user_agent = strtolower( $_SERVER['HTTP_USER_AGENT'] );
 	if ( preg_match( '/(?i)msie [1-8]/', $himalayas_user_agent ) ) {

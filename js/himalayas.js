@@ -95,6 +95,11 @@ jQuery( document ).ready( function () {
 		jQuery( this ).children( '.fa-angle-right' ).first().toggleClass( 'fa-angle-down' );
 	} );
 
+	// For Image popup
+	if ( typeof jQuery.fn.magnificPopup !== 'undefined' ) {
+		jQuery( '.image-popup' ).magnificPopup( { type : 'image' } );
+	}
+
 	//********************* bx-slider call *********************//
 	if ( typeof jQuery.fn.bxSlider !== 'undefined' ) {
 		jQuery( '.bxslider' ).bxSlider( {
