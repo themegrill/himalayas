@@ -44,7 +44,7 @@ function himalayas_scripts() {
 	}
 
 	if ( ( $slider > 1 ) && get_theme_mod( 'himalayas_slide_on_off', 0 ) == 1 && is_front_page() ) {
-		wp_enqueue_script( 'himalayas-bxslider');
+		wp_enqueue_script( 'himalayas-bxslider' );
 	}
 	// For smooth scrolling
 	wp_enqueue_script( 'himalayas-onepagenav', HIMALAYAS_JS_URL . '/jquery.nav.js', array( 'jquery' ), '3.0.0', true );
@@ -53,7 +53,7 @@ function himalayas_scripts() {
 	wp_register_script( 'himalayas-parallax', HIMALAYAS_JS_URL . '/jquery.parallax-1.1.3.js', array( 'jquery' ), '1.1.3', true );
 
 	if ( is_front_page() ) {
-		wp_enqueue_script( 'himalayas-background-parallax', HIMALAYAS_JS_URL . '/parallax-setting.js', array( 'himalayas-parallax' ), false, true );
+		wp_enqueue_script( 'himalayas-parallax' );
 	}
 
 	// Magific popup setting
