@@ -94,4 +94,42 @@ jQuery( document ).ready( function () {
 		jQuery( this ).parent( '.menu-item-has-children' ).children( 'ul.sub-menu' ).first().slideToggle( '1000' );
 		jQuery( this ).children( '.fa-angle-right' ).first().toggleClass( 'fa-angle-down' );
 	} );
+
+	// For Image popup
+	if ( typeof jQuery.fn.magnificPopup !== 'undefined' ) {
+		jQuery( '.image-popup' ).magnificPopup( { type : 'image' } );
+	}
+
+	//********************* bx-slider call *********************//
+	if ( typeof jQuery.fn.bxSlider !== 'undefined' ) {
+		jQuery( '.bxslider' ).bxSlider( {
+			auto           : true,
+			pager          : false,
+			mode           : 'fade',
+			speed          : 900,
+			pause          : 5000,
+			adaptiveHeight : true,
+			autoHover      : true
+		} );
+	}
+
+
+	// For parallax setting.
+	if ( typeof jQuery.fn.parallax !== 'undefined' ) {
+		var width = Math.max( window.innerWidth, document.documentElement.clientWidth );
+
+		if ( width && width >= 768 ) {
+			jQuery( '.parallax-section' ).each( function () {
+				jQuery( this ).parallax( 'center', 0.2, true );
+			} );
+		}
+
+		jQuery( window ).scroll( function () {
+			if ( jQuery( this ).scrollTop() > 100 ) {
+				jQuery( '.scrollup' ).fadeIn();
+			} else {
+				jQuery( '.scrollup' ).fadeOut();
+			}
+		} );
+	}
 } );
