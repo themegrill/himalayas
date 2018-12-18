@@ -44,7 +44,7 @@ function himalayas_scripts() {
 	}
 
 	if ( ( $slider > 1 ) && get_theme_mod( 'himalayas_slide_on_off', 0 ) == 1 && is_front_page() ) {
-		wp_enqueue_script( 'himalayas-slider', HIMALAYAS_JS_URL . '/slider-setting.js', array( 'himalayas-bxslider' ), false, true );
+		wp_enqueue_script( 'himalayas-bxslider');
 	}
 	// For smooth scrolling
 	wp_enqueue_script( 'himalayas-onepagenav', HIMALAYAS_JS_URL . '/jquery.nav.js', array( 'jquery' ), '3.0.0', true );
