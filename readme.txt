@@ -53,6 +53,7 @@ If you want to translate this theme to your language, refer to: https://translat
 == Changelog ==
 = Version TBD =
 * Fix - Gallery padding for Gutenberg
+* Tweak - Utilize single custom JS file for required theme JS settings.
 
 = Version 1.1.7 - 2018-11-22 =
 * Added - Gutenberg compatibility
