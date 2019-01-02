@@ -3260,6 +3260,7 @@ Video background css
 .no-sidebar .alignfull {
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
+	max-width: unset;
 }
 
 .no-sidebar-full-width .alignwide,
