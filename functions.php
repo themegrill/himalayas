@@ -3,13 +3,14 @@
  * Himalayas functions related to defining constants, adding files and WordPress core functionality.
  *
  * Defining some constants, loading all the required files and Adding some core functionality.
- * @uses add_theme_support() To add support for post thumbnails and automatic feed links.
- * @uses register_nav_menu() To add support for navigation menu.
- * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * @package ThemeGrill
+ * @uses       add_theme_support() To add support for post thumbnails and automatic feed links.
+ * @uses       register_nav_menu() To add support for navigation menu.
+ * @uses       set_post_thumbnail_size() To set a custom post thumbnail size.
+ *
+ * @package    ThemeGrill
  * @subpackage Himalayas
- * @since Himalayas 1.0
+ * @since      Himalayas 1.0
  */
 
 add_action( 'after_setup_theme', 'himalayas_setup' );
@@ -18,72 +19,77 @@ add_action( 'after_setup_theme', 'himalayas_setup' );
  *
  * @since 1.0
  */
-if( !function_exists( 'himalayas_setup' ) ) :
-function himalayas_setup() {
+if ( ! function_exists( 'himalayas_setup' ) ) :
+	function himalayas_setup() {
 
-	/**
-	 * Set the content width based on the theme's design and stylesheet.
-	 */
-	global $content_width;
-	if ( ! isset( $content_width ) )
-		$content_width = 783;
+		/**
+		 * Set the content width based on the theme's design and stylesheet.
+		 */
+		global $content_width;
+		if ( ! isset( $content_width ) ) {
+			$content_width = 783;
+		}
 
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 */
-	load_theme_textdomain( 'himalayas', get_template_directory() . '/languages' );
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 */
+		load_theme_textdomain( 'himalayas', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head
-	add_theme_support( 'automatic-feed-links' );
+		// Add default posts and comments RSS feed links to head
+		add_theme_support( 'automatic-feed-links' );
 
-	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page.
-	add_theme_support( 'post-thumbnails' );
+		// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page.
+		add_theme_support( 'post-thumbnails' );
 
-	// Registering navigation menu.
-	register_nav_menu( 'primary', __( 'Primary Menu', 'himalayas' ) );
-	register_nav_menu( 'footer', __( 'Footer Menu', 'himalayas' ) );
+		// Registering navigation menu.
+		register_nav_menu( 'primary', __( 'Primary Menu', 'himalayas' ) );
+		register_nav_menu( 'footer', __( 'Footer Menu', 'himalayas' ) );
 
-	// Cropping the images to different sizes to be used in the theme
-   add_image_size( 'himalayas-featured-post', 781, 512, true );
-   add_image_size( 'himalayas-portfolio-image', 400, 350, true );
-   add_image_size( 'himalayas-featured-image', 319, 142, true );
-   add_image_size( 'himalayas-services', 470, 280, true );
+		// Cropping the images to different sizes to be used in the theme
+		add_image_size( 'himalayas-featured-post', 781, 512, true );
+		add_image_size( 'himalayas-portfolio-image', 400, 350, true );
+		add_image_size( 'himalayas-featured-image', 319, 142, true );
+		add_image_size( 'himalayas-services', 470, 280, true );
 
-	/*
-    * Let WordPress manage the document title.
-    * By adding theme support, we declare that this theme does not use a
-    * hard-coded <title> tag in the document head, and expect WordPress to
-    * provide it for us.
-    */
-   add_theme_support('title-tag');
+		/*
+		* Let WordPress manage the document title.
+		* By adding theme support, we declare that this theme does not use a
+		* hard-coded <title> tag in the document head, and expect WordPress to
+		* provide it for us.
+		*/
+		add_theme_support( 'title-tag' );
 
-	// Gutenberg layout support.
-	add_theme_support( 'align-wide' );
+		// Gutenberg layout support.
+		add_theme_support( 'align-wide' );
 
-	// Adding excerpt option box for pages as well
-	add_post_type_support( 'page', 'excerpt' );
+		// Adding excerpt option box for pages as well
+		add_post_type_support( 'page', 'excerpt' );
 
-	// Adds the support for the Custom Logo introduced in WordPress 4.5
-	add_theme_support( 'custom-logo', array(
-		'flex-width' => true,
-		'flex-height' => true,
-	));
+		// Adds the support for the Custom Logo introduced in WordPress 4.5
+		add_theme_support( 'custom-logo', array(
+			'flex-width'  => true,
+			'flex-height' => true,
+		) );
 
-	/*
-    * Switch default core markup for search form, comment form, and comments
-    * to output valid HTML5.
-    */
-   add_theme_support('html5', array(
-      'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
-   ));
+		/*
+		* Switch default core markup for search form, comment form, and comments
+		* to output valid HTML5.
+		*/
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
 
-   // Added WooCommerce support.
-  add_theme_support( 'woocommerce' );
-  add_theme_support( 'wc-product-gallery-zoom' );
-  add_theme_support( 'wc-product-gallery-lightbox' );
-  add_theme_support( 'wc-product-gallery-slider' );
-}
+		// Added WooCommerce support.
+		add_theme_support( 'woocommerce' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-slider' );
+	}
 endif;
 
 /**
@@ -92,7 +98,7 @@ endif;
 define( 'HIMALAYAS_PARENT_DIR', get_template_directory() );
 define( 'HIMALAYAS_CHILD_DIR', get_stylesheet_directory() );
 
-define( 'HIMALAYAS_INCLUDES_DIR', HIMALAYAS_PARENT_DIR. '/inc' );
+define( 'HIMALAYAS_INCLUDES_DIR', HIMALAYAS_PARENT_DIR . '/inc' );
 define( 'HIMALAYAS_CSS_DIR', HIMALAYAS_PARENT_DIR . '/css' );
 define( 'HIMALAYAS_JS_DIR', HIMALAYAS_PARENT_DIR . '/js' );
 define( 'HIMALAYAS_LANGUAGES_DIR', HIMALAYAS_PARENT_DIR . '/languages' );
@@ -108,7 +114,7 @@ define( 'HIMALAYAS_ADMIN_IMAGES_DIR', HIMALAYAS_ADMIN_DIR . '/images' );
 define( 'HIMALAYAS_PARENT_URL', get_template_directory_uri() );
 define( 'HIMALAYAS_CHILD_URL', get_stylesheet_directory_uri() );
 
-define( 'HIMALAYAS_INCLUDES_URL', HIMALAYAS_PARENT_URL. '/inc' );
+define( 'HIMALAYAS_INCLUDES_URL', HIMALAYAS_PARENT_URL . '/inc' );
 define( 'HIMALAYAS_CSS_URL', HIMALAYAS_PARENT_URL . '/css' );
 define( 'HIMALAYAS_JS_URL', HIMALAYAS_PARENT_URL . '/js' );
 define( 'HIMALAYAS_LANGUAGES_URL', HIMALAYAS_PARENT_URL . '/languages' );
@@ -137,12 +143,15 @@ if ( class_exists( 'TG_Demo_Importer' ) ) {
 /**
  * Assign the Himalayas version to a variable.
  */
-$theme            = wp_get_theme( 'himalayas' );
+$theme             = wp_get_theme( 'himalayas' );
 $himalayas_version = $theme['Version'];
 
-/* Calling in the admin area for the Welcome Page */
+/**
+ * Calling in the admin area for the Welcome Page as well as for the new theme notice too.
+ */
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-himalayas-admin.php';
+	require get_template_directory() . '/inc/admin/class-himalayas-new-theme-notice.php';
 }
 
 /**
