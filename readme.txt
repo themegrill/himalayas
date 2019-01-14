@@ -51,7 +51,7 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.1.8 - 2019-01-14 =
 * Fix - Gallery padding for Gutenberg
 * Tweak - Utilize single custom JS file for required theme JS settings.
 * Recommend - Zakra theme
