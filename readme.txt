@@ -53,8 +53,6 @@ If you want to translate this theme to your language, refer to: https://translat
 == Changelog ==
 = TBD =
 * Update - Magnific Popup library to 1.1.0
-
-= Version 1.1.8 - 2019-01-14 =
 * Fix - Gallery padding for Gutenberg
 * Tweak - Utilize single custom JS file for required theme JS settings.
 * Recommend - Zakra theme
