@@ -8,6 +8,11 @@
  */
 
 function himalayas_customize_register( $wp_customize ) {
+
+	require HIMALAYAS_INCLUDES_DIR . '/customize-controls/class-himalayas-image-radio-control.php';
+	require HIMALAYAS_INCLUDES_DIR . '/customize-controls/class-himalayas-custom-css-control.php';
+	require HIMALAYAS_INCLUDES_DIR . '/customize-controls/class-himalayas-upsell-section.php';
+
 	// Transport postMessage variable set
 	$customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
 
@@ -165,72 +170,6 @@ function himalayas_customize_register( $wp_customize ) {
 		'title'       => __( 'Himalayas Design Options', 'himalayas' ),
 	) );
 
-	class HIMALAYAS_Image_Radio_Control extends WP_Customize_Control {
-
-		public function render_content() {
-
-			if ( empty( $this->choices ) ) {
-				return;
-			}
-
-			$name = '_customize-radio-' . $this->id;
-
-			?>
-			<style>
-				#himalayas-img-container .himalayas-radio-img-img {
-					border: 3px solid #DEDEDE;
-					margin: 0 5px 5px 0;
-					cursor: pointer;
-					border-radius: 3px;
-					-moz-border-radius: 3px;
-					-webkit-border-radius: 3px;
-				}
-
-				#himalayas-img-container .himalayas-radio-img-selected {
-					border: 3px solid #AAA;
-					border-radius: 3px;
-					-moz-border-radius: 3px;
-					-webkit-border-radius: 3px;
-				}
-
-				input[type=checkbox]:before {
-					content: '';
-					margin: -3px 0 0 -4px;
-				}
-			</style>
-			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-			<ul class="controls" id='himalayas-img-container'>
-				<?php
-				foreach ( $this->choices as $value => $label ) :
-					$class = ( $this->value() == $value ) ? 'himalayas-radio-img-selected himalayas-radio-img-img' : 'himalayas-radio-img-img';
-					?>
-					<li style="display: inline;">
-						<label>
-							<input <?php $this->link(); ?>style='display:none' type="radio" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( $name ); ?>" <?php $this->link();
-							checked( $this->value(), $value ); ?> />
-							<img src='<?php echo esc_html( $label ); ?>' class='<?php echo $class; ?>' />
-						</label>
-					</li>
-				<?php
-				endforeach;
-				?>
-			</ul>
-			<script type="text/javascript">
-
-				jQuery( document ).ready( function ( $ ) {
-					$( '.controls#himalayas-img-container li img' ).click( function () {
-						$( '.controls#himalayas-img-container li' ).each( function () {
-							$( this ).find( 'img' ).removeClass( 'himalayas-radio-img-selected' );
-						} );
-						$( this ).addClass( 'himalayas-radio-img-selected' );
-					} );
-				} );
-
-			</script>
-			<?php
-		}
-	}
-
 	// default layout setting
 	$wp_customize->add_section( 'himalayas_default_layout_setting', array(
 		'priority' => 520,
@@ -358,19 +297,6 @@ function himalayas_customize_register( $wp_customize ) {
 
 	// Custom CSS setting
 	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
-		class HIMALAYAS_Custom_CSS_Control extends WP_Customize_Control {
-
-			public $type = 'custom_css';
-
-			public function render_content() {
-				?>
-				<label>
-					<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-					<textarea rows="5" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
-				</label>
-				<?php
-			}
-		}
 
 		$wp_customize->add_section( 'himalayas_custom_css_setting', array(
 			'priority' => 550,
@@ -501,42 +427,7 @@ function himalayas_customize_register( $wp_customize ) {
 			'show_excerpt'           => __( 'Show excerpt', 'himalayas' ),
 		),
 	) );
-	// End of the Additional Options
-
-	/**
-	 * Class to include upsell link campaign for theme.
-	 *
-	 * Class HIMALAYAS_Upsell_Section
-	 */
-	class HIMALAYAS_Upsell_Section extends WP_Customize_Section {
-		public $type = 'himalayas-upsell-section';
-		public $url  = '';
-		public $id   = '';
-
-		/**
-		 * Gather the parameters passed to client JavaScript via JSON.
-		 *
-		 * @return array The array to be exported to the client as JSON.
-		 */
-		public function json() {
-			$json        = parent::json();
-			$json['url'] = esc_url( $this->url );
-			$json['id']  = $this->id;
-
-			return $json;
-		}
-
-		/**
-		 * An Underscore (JS) template for rendering this section.
-		 */
-		protected function render_template() {
-			?>
-			<li id="accordion-section-{{ data.id }}" class="himalayas-upsell-accordion-section control-section-{{ data.type }} cannot-expand accordion-section">
-				<h3 class="accordion-section-title"><a href="{{{ data.url }}}" target="_blank">{{ data.title }}</a></h3>
-			</li>
-			<?php
-		}
-	}
+	// End of the Additional Options.
 
 // Register `HIMALAYAS_Upsell_Section` type section.
 	$wp_customize->register_section_type( 'HIMALAYAS_Upsell_Section' );
