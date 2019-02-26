@@ -53,6 +53,7 @@ If you want to translate this theme to your language, refer to: https://translat
 == Changelog ==
 = TBD =
 * Tweak - Modify pingback url autodiscovery for single posts, pages, or attachments.
+* Tweak - separate customize control class via different file
 
 = Version 1.1.8 - 2019-01-16 =
 * Update - Magnific Popup library to 1.1.0
