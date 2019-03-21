@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License, version 3 (GPLv3).
 msgid ""
 msgstr ""
-"Project-Id-Version: Himalayas 1.1.8\n"
+"Project-Id-Version: Himalayas 1.1.9\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2019-01-14 09:29:59+00:00\n"
+"POT-Creation-Date: 2019-03-21 09:08:18+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -108,7 +108,7 @@ msgid "View Demo"
 msgstr ""
 
 #: inc/admin/class-himalayas-admin.php:138
-#: inc/admin/class-himalayas-admin.php:232 inc/customizer.php:548
+#: inc/admin/class-himalayas-admin.php:232 inc/customizer.php:439
 msgid "View PRO version"
 msgstr ""
 
@@ -279,7 +279,7 @@ msgstr ""
 msgid "Parallax Scrolling"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:406 inc/customizer.php:150
+#: inc/admin/class-himalayas-admin.php:406 inc/customizer.php:155
 msgid "Slider"
 msgstr ""
 
@@ -291,7 +291,7 @@ msgstr ""
 msgid "Unlimited Slides"
 msgstr ""
 
-#: inc/admin/class-himalayas-admin.php:411 inc/customizer.php:113
+#: inc/admin/class-himalayas-admin.php:411 inc/customizer.php:118
 msgid "Slider Settings"
 msgstr ""
 
@@ -484,227 +484,227 @@ msgstr ""
 msgid "Show designation in Our Team Widget. </br>"
 msgstr ""
 
-#: inc/customizer.php:32
+#: inc/customizer.php:37
 msgid "Contain all the Header related options"
 msgstr ""
 
-#: inc/customizer.php:34
+#: inc/customizer.php:39
 msgid "Himalayas Header Options"
 msgstr ""
 
-#: inc/customizer.php:40
+#: inc/customizer.php:45
 msgid "Header Sticky/non-sticky"
 msgstr ""
 
-#: inc/customizer.php:41
+#: inc/customizer.php:46
 msgid "Header is sticky by default."
 msgstr ""
 
-#: inc/customizer.php:52
+#: inc/customizer.php:57
 msgid "Check to make header non-sticky"
 msgstr ""
 
-#: inc/customizer.php:59
+#: inc/customizer.php:64
 msgid "Header Transparency"
 msgstr ""
 
-#: inc/customizer.php:60
+#: inc/customizer.php:65
 msgid "By default Header is transparent when slider is used."
 msgstr ""
 
-#: inc/customizer.php:71
+#: inc/customizer.php:76
 msgid "Make header non transparent."
 msgstr ""
 
-#: inc/customizer.php:77
+#: inc/customizer.php:82
 msgid "Header Title/Tagline and Logo"
 msgstr ""
 
-#: inc/customizer.php:89
+#: inc/customizer.php:94
 msgid "Choose the required option"
 msgstr ""
 
-#: inc/customizer.php:92
+#: inc/customizer.php:97
 msgid "Header Logo Only"
 msgstr ""
 
-#: inc/customizer.php:93
+#: inc/customizer.php:98
 msgid "Header Text Only"
 msgstr ""
 
-#: inc/customizer.php:94
+#: inc/customizer.php:99
 msgid "Show Both"
 msgstr ""
 
-#: inc/customizer.php:95
+#: inc/customizer.php:100
 msgid "Disable"
 msgstr ""
 
-#: inc/customizer.php:107
+#: inc/customizer.php:112
 msgid "Contain all the slider related options"
 msgstr ""
 
-#: inc/customizer.php:108
+#: inc/customizer.php:113
 msgid "Himalayas Slider Options"
 msgstr ""
 
-#: inc/customizer.php:115
+#: inc/customizer.php:120
 msgid "Note"
 msgstr ""
 
-#: inc/customizer.php:115
+#: inc/customizer.php:120
 msgid ""
 "1. To display the Slider first check Enable the slider below. Now create "
 "the page for each slider and enter title, text and featured image. Choose "
 "that pages in the dropdown options."
 msgstr ""
 
-#: inc/customizer.php:115
+#: inc/customizer.php:120
 msgid ""
 "2. The recommended size for the slider image is 1600 x 780 pixels. For "
 "better functioning of slider use equal size images for each slide."
 msgstr ""
 
-#: inc/customizer.php:115
+#: inc/customizer.php:120
 msgid ""
 "3. If page do not have featured Image than that page will not included in "
 "slider show."
 msgstr ""
 
-#: inc/customizer.php:128
+#: inc/customizer.php:133
 msgid "Enable the slider"
 msgstr ""
 
-#: inc/customizer.php:164
+#: inc/customizer.php:169
 msgid "Contain all the Design related options"
 msgstr ""
 
-#: inc/customizer.php:165
+#: inc/customizer.php:170
 msgid "Himalayas Design Options"
 msgstr ""
 
-#: inc/customizer.php:237
+#: inc/customizer.php:176
 msgid "Default layout"
 msgstr ""
 
-#: inc/customizer.php:249
+#: inc/customizer.php:188
 msgid ""
 "Select default layout. This layout will be reflected in whole site "
 "archives, categories, search page etc. The layout for a single post and "
 "page can be controlled from below options"
 msgstr ""
 
-#: inc/customizer.php:264
+#: inc/customizer.php:203
 msgid "Default layout for pages only"
 msgstr ""
 
-#: inc/customizer.php:276
+#: inc/customizer.php:215
 msgid ""
 "Select default layout for pages. This layout will be reflected in all pages "
 "unless unique layout is set for specific page"
 msgstr ""
 
-#: inc/customizer.php:291
+#: inc/customizer.php:230
 msgid "Default layout for single posts only"
 msgstr ""
 
-#: inc/customizer.php:303
+#: inc/customizer.php:242
 msgid ""
 "Select default layout for single posts. This layout will be reflected in "
 "all single posts unless unique layout is set for specific post"
 msgstr ""
 
-#: inc/customizer.php:319
+#: inc/customizer.php:258
 msgid "Primary color option"
 msgstr ""
 
-#: inc/customizer.php:331
+#: inc/customizer.php:270
 msgid ""
 "This will reflect in links, buttons and many others. Choose a color to "
 "match your site"
 msgstr ""
 
-#: inc/customizer.php:339
+#: inc/customizer.php:278
 msgid "Footer Layout Options"
 msgstr ""
 
-#: inc/customizer.php:350
+#: inc/customizer.php:289
 msgid "Select the Footer Layout"
 msgstr ""
 
-#: inc/customizer.php:354
+#: inc/customizer.php:293
 msgid "Choose Footer Layout One"
 msgstr ""
 
-#: inc/customizer.php:355
+#: inc/customizer.php:294
 msgid "Choose Footer Layout Two"
 msgstr ""
 
-#: inc/customizer.php:377
+#: inc/customizer.php:303
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:389
+#: inc/customizer.php:315
 msgid "Write your Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:402
+#: inc/customizer.php:328
 msgid "Contain additional options"
 msgstr ""
 
-#: inc/customizer.php:404
+#: inc/customizer.php:330
 msgid "Himalayas Additional Options"
 msgstr ""
 
-#: inc/customizer.php:410
+#: inc/customizer.php:336
 msgid "Hide Blog posts from the front page"
 msgstr ""
 
-#: inc/customizer.php:421
+#: inc/customizer.php:347
 msgid "Check to hide blog posts/static page on front page"
 msgstr ""
 
-#: inc/customizer.php:428
+#: inc/customizer.php:354
 msgid "Author Bio Option"
 msgstr ""
 
-#: inc/customizer.php:440
+#: inc/customizer.php:366
 msgid "Check to activate author bio display."
 msgstr ""
 
-#: inc/customizer.php:448
+#: inc/customizer.php:374
 msgid "Related Posts"
 msgstr ""
 
-#: inc/customizer.php:460
+#: inc/customizer.php:386
 msgid "Check to activate the related posts"
 msgstr ""
 
-#: inc/customizer.php:473
+#: inc/customizer.php:399
 msgid "Related Posts Must Be Shown As:"
 msgstr ""
 
-#: inc/customizer.php:477
+#: inc/customizer.php:403
 msgid "Related Posts By Categories"
 msgstr ""
 
-#: inc/customizer.php:478
+#: inc/customizer.php:404
 msgid "Related Posts By Tags"
 msgstr ""
 
-#: inc/customizer.php:485
+#: inc/customizer.php:411
 msgid "Excerpts or Full Posts option"
 msgstr ""
 
-#: inc/customizer.php:496
+#: inc/customizer.php:422
 msgid "Toggle between displaying excerpts and full posts on your blog and archives."
 msgstr ""
 
-#: inc/customizer.php:500
+#: inc/customizer.php:426
 msgid "Show full post content"
 msgstr ""
 
-#: inc/customizer.php:501
+#: inc/customizer.php:427
 msgid "Show excerpt"
 msgstr ""
 
