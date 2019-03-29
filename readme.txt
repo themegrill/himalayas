@@ -51,6 +51,9 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweak - Deprecate jQuery Parallax for Jarallax.
+
 = Version 1.1.9 - 2019-03-21 =
 * Tweak - Modify pingback url autodiscovery for single posts, pages, or attachments.
 * Tweak - separate customize control class via different file
