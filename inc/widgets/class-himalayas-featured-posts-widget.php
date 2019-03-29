@@ -184,9 +184,11 @@ class himalayas_featured_posts_widget extends WP_Widget {
 			) );
 		}
 
+		$jarallax_data = '';
 		if ( ! empty( $background_image ) ) {
 			$bg_image_style = 'background-image:url(' . $background_image . ');background-repeat:no-repeat;background-size:cover;background-attachment:fixed;';
 			$bg_image_class = 'parallax-section';
+			$jarallax_data  = 'data-jarallax data-img-position="center 0%" data-speed="0.2"';
 		} else {
 			$bg_image_style = 'background-color:' . $background_color . ';';
 			$bg_image_class = 'no-bg-image';
@@ -199,7 +201,7 @@ class himalayas_featured_posts_widget extends WP_Widget {
 
 		echo $before_widget; ?>
 
-		<div <?php echo $section_id; ?> class="<?php echo $bg_image_class ?>" style="<?php echo $bg_image_style; ?>">
+		<div <?php echo $section_id; ?> class="<?php echo $bg_image_class ?>" style="<?php echo $bg_image_style; ?>" <?php echo $jarallax_data; ?>>
 			<div class="parallax-overlay"></div>
 			<div class="section-wrapper">
 				<div class="tg-container">

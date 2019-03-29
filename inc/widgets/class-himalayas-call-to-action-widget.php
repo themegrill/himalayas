@@ -151,11 +151,11 @@ class himalayas_call_to_action_widget extends WP_Widget {
 		$bg_image_style = '';
 		$jarallax_data  = '';
 		if ( ! empty( $background_image ) ) {
-			$bg_image_style .= 'background-image:url(' . $background_image . ');background-repeat:no-repeat;background-size:cover;background-attachment:fixed;';
+			$bg_image_style = 'background-image:url(' . $background_image . ');background-repeat:no-repeat;background-size:cover;background-attachment:fixed;';
 			$bg_image_class = 'parallax-section';
 			$jarallax_data  = 'data-jarallax data-img-position="center 0%" data-speed="0.2"';
 		} else {
-			$bg_image_style .= 'background-color:' . $background_color . ';';
+			$bg_image_style = 'background-color:' . $background_color . ';';
 			$bg_image_class = 'no-bg-image';
 		} ?>
 		<div class="<?php echo $bg_image_class . ' ' . $select; ?> clearfix" style="<?php echo $bg_image_style; ?>" <?php echo $jarallax_data; ?>>
