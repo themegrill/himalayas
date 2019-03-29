@@ -20,7 +20,6 @@ Resources packed within the theme.
 * HTML5 Shiv @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 * Magnific-Popup by Dmitry Semenov | MIT Licensed
 * jQuery-One-Page-Nav by Trevor Davis | MIT/GPL Licensed
-* jQuery Parallax by Ian Lunn | MIT/GPL Licensed
 * Bxslider by Steven Wanderski released under the MIT license
 * TGM-Plugin-Activation by Thomas Griffin, Gary Jones, Juliette Reinders Folmer | GPL v2 Licensed
 * Jarallax by Nikita | MIT Licensed
