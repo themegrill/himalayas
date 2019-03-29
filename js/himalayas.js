@@ -60,6 +60,13 @@ jQuery( document ).ready( function () {
 		return false;
 	} );
 
+	jQuery( window ).scroll( function () {
+		if ( jQuery( this ).scrollTop() > 100 ) {
+			jQuery( '.scrollup' ).fadeIn();
+		} else {
+			jQuery( '.scrollup' ).fadeOut();
+		}
+	} );
 
 	jQuery( '.map-btn' ).click( function () {
 		jQuery( '#map iframe' ).slideToggle( 'slow' );
@@ -110,26 +117,6 @@ jQuery( document ).ready( function () {
 			pause          : 5000,
 			adaptiveHeight : true,
 			autoHover      : true
-		} );
-	}
-
-
-	// For parallax setting.
-	if ( typeof jQuery.fn.parallax !== 'undefined' ) {
-		var width = Math.max( window.innerWidth, document.documentElement.clientWidth );
-
-		if ( width && width >= 768 ) {
-			jQuery( '.parallax-section' ).each( function () {
-				jQuery( this ).parallax( 'center', 0.2, true );
-			} );
-		}
-
-		jQuery( window ).scroll( function () {
-			if ( jQuery( this ).scrollTop() > 100 ) {
-				jQuery( '.scrollup' ).fadeIn();
-			} else {
-				jQuery( '.scrollup' ).fadeOut();
-			}
 		} );
 	}
 } );
