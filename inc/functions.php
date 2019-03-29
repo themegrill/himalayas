@@ -52,6 +52,9 @@ function himalayas_scripts() {
 	// Parallax effect
 	wp_register_script( 'himalayas-parallax', HIMALAYAS_JS_URL . '/jquery.parallax-1.1.3.js', array( 'jquery' ), '1.1.3', true );
 
+	// Jarallax.
+	wp_enqueue_script( 'jarallax', HIMALAYAS_JS_URL . '/jarallax/jarallax.min.js', array(), '1.10.7', true );
+
 	if ( is_front_page() ) {
 		wp_enqueue_script( 'himalayas-parallax' );
 	}
