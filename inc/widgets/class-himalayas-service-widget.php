@@ -5,9 +5,10 @@
 
 class himalayas_service_widget extends WP_Widget {
 	function __construct() {
-		$widget_ops  = array(
-			'classname'   => 'widget_service_block',
-			'description' => __( 'Display some pages as services.', 'himalayas' ),
+		$widget_ops = array(
+			'classname'                   => 'widget_service_block',
+			'description'                 => __( 'Display some pages as services.', 'himalayas' ),
+			'customize_selective_refresh' => true,
 		);
 		$control_ops = array( 'width' => 200, 'height' => 250 );
 		parent::__construct( false, $name = __( 'TG: Service Widget', 'himalayas' ), $widget_ops, $control_ops );

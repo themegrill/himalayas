@@ -7,8 +7,9 @@ class himalayas_featured_posts_widget extends WP_Widget {
 
 	function __construct() {
 		$widget_ops  = array(
-			'classname'   => 'widget_featured_posts_block',
-			'description' => __( 'Display latest posts or posts of specific category', 'himalayas' ),
+			'classname'                   => 'widget_featured_posts_block',
+			'description'                 => __( 'Display latest posts or posts of specific category', 'himalayas' ),
+			'customize_selective_refresh' => true,
 		);
 		$control_ops = array( 'width' => 200, 'height' => 250 );
 		parent::__construct( false, $name = __( 'TG: Featured Posts', 'himalayas' ), $widget_ops );

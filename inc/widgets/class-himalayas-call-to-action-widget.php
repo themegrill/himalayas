@@ -6,8 +6,9 @@
 class himalayas_call_to_action_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops  = array(
-			'classname'   => 'widget_call_to_action_block',
-			'description' => __( 'Use this widget to show the call to action section.', 'himalayas' ),
+			'classname'                   => 'widget_call_to_action_block',
+			'description'                 => __( 'Use this widget to show the call to action section.', 'himalayas' ),
+			'customize_selective_refresh' => true,
 		);
 		$control_ops = array( 'width' => 200, 'height' => 250 );
 		parent::__construct( false, $name = __( 'TG: Call To Action Widget', 'himalayas' ), $widget_ops, $control_ops );
