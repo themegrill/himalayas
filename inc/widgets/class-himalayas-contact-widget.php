@@ -6,8 +6,9 @@
 class himalayas_contact_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops  = array(
-			'classname'   => 'widget_contact_block',
-			'description' => __( 'Show your Contact page.', 'himalayas' ),
+			'classname'                   => 'widget_contact_block',
+			'description'                 => __( 'Show your Contact page.', 'himalayas' ),
+			'customize_selective_refresh' => true,
 		);
 		$control_ops = array( 'width' => 200, 'height' => 250 );
 		parent::__construct( false, $name = __( 'TG: Contact Us Widget', 'himalayas' ), $widget_ops, $control_ops );

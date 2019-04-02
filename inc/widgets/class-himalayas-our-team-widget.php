@@ -6,8 +6,9 @@
 class himalayas_our_team_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops  = array(
-			'classname'   => 'widget_our_team_block',
-			'description' => __( 'Show your Team Members.', 'himalayas' ),
+			'classname'                   => 'widget_our_team_block',
+			'description'                 => __( 'Show your Team Members.', 'himalayas' ),
+			'customize_selective_refresh' => true,
 		);
 		$control_ops = array( 'width' => 200, 'height' => 250 );
 		parent::__construct( false, $name = __( 'TG: Our Team Widget', 'himalayas' ), $widget_ops, $control_ops );
