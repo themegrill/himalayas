@@ -51,7 +51,7 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.2.0 - 2019-04-11 =
 * Tweak - Deprecate jQuery Parallax for Jarallax.
 * Tweak - Support for customize selective refresh widgets
 
