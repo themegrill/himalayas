@@ -76,7 +76,7 @@ module.exports = function( grunt ){
 		// Compress files and folders.
 		compress: {
 			options: {
-				archive: 'himalayas.zip'
+				archive: 'dist/himalayas.zip'
 			},
 			files: {
 				src: [
