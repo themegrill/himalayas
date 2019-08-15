@@ -54,6 +54,7 @@ If you want to translate this theme to your language, refer to: https://translat
 = Version TBD =
 * Tweak - Update `screen-reader-text` CSS.
 * Tweak - Added `skip-link` to content area.
+* Tweak - Modify menu CSS for keyboard accessibility.
 
 = Version 1.2.1 - 2019-07-12 =
 * Remove - Removed dashboard message to align with the theme review guidelines
