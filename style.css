@@ -1395,14 +1395,18 @@ Menu css
 }
 
 #site-navigation ul li:hover > ul.sub-menu,
-.home #site-navigation ul li:hover > ul.sub-menu {
+.home #site-navigation ul li:hover > ul.sub-menu,
+#site-navigation ul li.focus > ul.sub-menu,
+.home #site-navigation ul li.focus > ul.sub-menu {
 	opacity: 1;
 	visibility: visible;
 	top: 120%;
 }
 
 .header-wrapper.stick #site-navigation ul li:hover > ul.sub-menu,
-.home .stick #site-navigation ul li:hover > ul.sub-menu {
+.home .stick #site-navigation ul li:hover > ul.sub-menu,
+.header-wrapper.stick #site-navigation ul li.focus > ul.sub-menu,
+.home .stick #site-navigation ul li.focus > ul.sub-menu {
 	opacity: 1;
 	visibility: visible;
 	top: 100%;
@@ -1417,7 +1421,11 @@ Menu css
 .home #site-navigation ul ul.sub-menu li:hover > ul,
 #site-navigation ul ul.sub-menu li:hover > ul,
 .home .stick #site-navigation ul ul.sub-menu li:hover > ul,
-.header-wrapper.stick #site-navigation ul ul.sub-menu li:hover > ul {
+.header-wrapper.stick #site-navigation ul ul.sub-menu li:hover > ul,
+.home #site-navigation ul ul.sub-menu li.focus > ul,
+#site-navigation ul ul.sub-menu li.focus > ul,
+.home .stick #site-navigation ul ul.sub-menu li.focus > ul,
+.header-wrapper.stick #site-navigation ul ul.sub-menu li.focus > ul{
 	left: 100%;
 	top: 0;
 }
