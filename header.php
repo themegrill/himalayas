@@ -30,6 +30,8 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 <?php do_action( 'himalayas_before' ); ?>
 <div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'himalayas' ); ?></a>
+
 	<?php do_action( 'himalayas_before_header' ); ?>
 
 	<header id="masthead" class="site-header clearfix" role="banner">
