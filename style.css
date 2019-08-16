@@ -460,6 +460,10 @@ a:active {
 	color: #28a8b3;
 }
 
+a:focus {
+	outline: thin dotted;
+}
+
 /*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
@@ -467,19 +471,27 @@ Accessibility
 /* Text meant only for screen readers */
 
 .screen-reader-text {
+	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
 	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
-.screen-reader-text:hover,
-.screen-reader-text:active,
 .screen-reader-text:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
+	clip-path: none;
 	color: #21759b;
 	display: block;
+	font-size: 0.875rem;
 	font-size: 14px;
 	font-weight: bold;
 	height: auto;
@@ -489,8 +501,12 @@ Accessibility
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000;
-	/* Above WP toolbar */
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1379,14 +1395,18 @@ Menu css
 }
 
 #site-navigation ul li:hover > ul.sub-menu,
-.home #site-navigation ul li:hover > ul.sub-menu {
+.home #site-navigation ul li:hover > ul.sub-menu,
+#site-navigation ul li.focus > ul.sub-menu,
+.home #site-navigation ul li.focus > ul.sub-menu {
 	opacity: 1;
 	visibility: visible;
 	top: 120%;
 }
 
 .header-wrapper.stick #site-navigation ul li:hover > ul.sub-menu,
-.home .stick #site-navigation ul li:hover > ul.sub-menu {
+.home .stick #site-navigation ul li:hover > ul.sub-menu,
+.header-wrapper.stick #site-navigation ul li.focus > ul.sub-menu,
+.home .stick #site-navigation ul li.focus > ul.sub-menu {
 	opacity: 1;
 	visibility: visible;
 	top: 100%;
@@ -1401,7 +1421,11 @@ Menu css
 .home #site-navigation ul ul.sub-menu li:hover > ul,
 #site-navigation ul ul.sub-menu li:hover > ul,
 .home .stick #site-navigation ul ul.sub-menu li:hover > ul,
-.header-wrapper.stick #site-navigation ul ul.sub-menu li:hover > ul {
+.header-wrapper.stick #site-navigation ul ul.sub-menu li:hover > ul,
+.home #site-navigation ul ul.sub-menu li.focus > ul,
+#site-navigation ul ul.sub-menu li.focus > ul,
+.home .stick #site-navigation ul ul.sub-menu li.focus > ul,
+.header-wrapper.stick #site-navigation ul ul.sub-menu li.focus > ul{
 	left: 100%;
 	top: 0;
 }

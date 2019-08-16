@@ -64,6 +64,9 @@ function himalayas_scripts() {
 		wp_enqueue_script( 'html5', HIMALAYAS_JS_URL . '/html5shiv.min.js', true );
 	}
 
+	// Skip link focus fix JS enqueue.
+	wp_enqueue_script( 'himalayas-skip-link-focus-fix', HIMALAYAS_JS_URL . '/skip-link-focus-fix.js', array(), false, true );
+
 	// Register Custom Script
 	wp_enqueue_script( 'himalayas-custom', HIMALAYAS_JS_URL . '/himalayas.js', array( 'jquery' ), false, true );
 }
