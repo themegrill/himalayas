@@ -1,14 +1,14 @@
-# Copyright (C) 2019 ThemeGrill
+# Copyright (C) 2020 ThemeGrill
 # This file is distributed under the GNU General Public License, version 3 (GPLv3).
 msgid ""
 msgstr ""
-"Project-Id-Version: Himalayas 1.2.0\n"
+"Project-Id-Version: Himalayas 1.2.2\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2019-07-12 15:28:10+00:00\n"
+"POT-Creation-Date: 2020-02-20 11:29:12+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
@@ -70,6 +70,10 @@ msgstr ""
 
 #: functions.php:47
 msgid "Footer Menu"
+msgstr ""
+
+#: header.php:33
+msgid "Skip to content"
 msgstr ""
 
 #: inc/admin/class-himalayas-admin.php:36
@@ -414,6 +418,35 @@ msgstr ""
 msgid "View Pro"
 msgstr ""
 
+#: inc/admin/class-himalayas-tdi-notice.php:40
+#. Translators: 1: Notice text 2: Plugin Name 3. CTA
+msgid ""
+"%1$s: Please update \"%2$s\" plugin to latest version to make sure your "
+"site is all secure. We released a security patch in the latest version of "
+"this plugin. %3$s"
+msgstr ""
+
+#: inc/admin/class-himalayas-tdi-notice.php:41
+msgid "Action Required"
+msgstr ""
+
+#: inc/admin/class-himalayas-tdi-notice.php:42
+#: inc/admin/class-himalayas-tdi-notice.php:54
+msgid "ThemeGrill Demo Importer"
+msgstr ""
+
+#: inc/admin/class-himalayas-tdi-notice.php:47
+#. Translators: 1: CTA link 2: CTA text
+msgid "Update Now"
+msgstr ""
+
+#: inc/admin/class-himalayas-tdi-notice.php:53
+#. Translators: 1: Plugin name
+msgid ""
+"Also, if the purpose of importing the demo via \"%1$s\" plugin is "
+"fulfilled, you can simply delete this plugin now."
+msgstr ""
+
 #: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
 msgid "Select Layout"
 msgstr ""
@@ -692,53 +725,53 @@ msgstr ""
 msgid "Show excerpt"
 msgstr ""
 
-#: inc/functions.php:250 inc/related-posts.php:51
+#: inc/functions.php:253 inc/related-posts.php:51
 msgid ""
 "<span class=\"posted-on\"><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"> "
 "%3$s</a></span>"
 msgstr ""
 
-#: inc/functions.php:260
+#: inc/functions.php:263
 msgid "0 Comment"
 msgstr ""
 
-#: inc/functions.php:260
+#: inc/functions.php:263
 msgid "1 Comment"
 msgstr ""
 
-#: inc/functions.php:260
+#: inc/functions.php:263
 msgid " % Comments"
 msgstr ""
 
-#: inc/functions.php:272
+#: inc/functions.php:275
 msgid "Edit"
 msgstr ""
 
-#: inc/functions.php:417
+#: inc/functions.php:420
 msgid "Pingback:"
 msgstr ""
 
-#: inc/functions.php:417
+#: inc/functions.php:420
 msgid "(Edit)"
 msgstr ""
 
-#: inc/functions.php:432
+#: inc/functions.php:435
 msgid "Post author"
 msgstr ""
 
-#: inc/functions.php:435
+#: inc/functions.php:438
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/functions.php:443
+#: inc/functions.php:446
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/functions.php:449
+#: inc/functions.php:452
 msgid "Reply"
 msgstr ""
 
-#: inc/functions.php:473
+#: inc/functions.php:476
 msgid "WordPress"
 msgstr ""
 
@@ -746,52 +779,52 @@ msgstr ""
 msgid "ThemeGrill"
 msgstr ""
 
-#: inc/functions.php:477
+#: inc/functions.php:480
 msgid "Copyright &copy; %1$s %2$s."
 msgstr ""
 
-#: inc/functions.php:477
+#: inc/functions.php:480
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: inc/functions.php:477
+#: inc/functions.php:480
 msgid "Powered by %s."
 msgstr ""
 
-#: inc/functions.php:570
+#: inc/functions.php:573
 msgid "Category: %s"
 msgstr ""
 
-#: inc/functions.php:572
+#: inc/functions.php:575
 msgid "Tag: %s"
 msgstr ""
 
-#: inc/functions.php:574
+#: inc/functions.php:577
 msgid "Author: %s"
 msgstr ""
 
-#: inc/functions.php:576
+#: inc/functions.php:579
 msgid "Year: %s"
 msgstr ""
 
-#: inc/functions.php:578
+#: inc/functions.php:581
 msgid "Month: %s"
 msgstr ""
 
-#: inc/functions.php:580
+#: inc/functions.php:583
 msgid "Day: %s"
 msgstr ""
 
-#: inc/functions.php:602
+#: inc/functions.php:605
 msgid "Archives: %s"
 msgstr ""
 
-#: inc/functions.php:606
+#: inc/functions.php:609
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
 msgid "%1$s: %2$s"
 msgstr ""
 
-#: inc/functions.php:608
+#: inc/functions.php:611
 msgid "Archives"
 msgstr ""
 
@@ -1572,62 +1605,62 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/functions.php:576
+#: inc/functions.php:579
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: inc/functions.php:578
+#: inc/functions.php:581
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: inc/functions.php:580
+#: inc/functions.php:583
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: inc/functions.php:583
+#: inc/functions.php:586
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: inc/functions.php:585
+#: inc/functions.php:588
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: inc/functions.php:587
+#: inc/functions.php:590
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: inc/functions.php:589
+#: inc/functions.php:592
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: inc/functions.php:591
+#: inc/functions.php:594
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: inc/functions.php:593
+#: inc/functions.php:596
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: inc/functions.php:595
+#: inc/functions.php:598
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: inc/functions.php:597
+#: inc/functions.php:600
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: inc/functions.php:599
+#: inc/functions.php:602
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""
