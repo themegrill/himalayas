@@ -127,6 +127,10 @@ define( 'HIMALAYAS_WIDGETS_URL', HIMALAYAS_INCLUDES_URL . '/widgets' );
 
 define( 'HIMALAYAS_ADMIN_IMAGES_URL', HIMALAYAS_ADMIN_URL . '/images' );
 
+// Theme version.
+$himalayas_theme = wp_get_theme();
+define( 'HIMALAYAS_THEME_VERSION', $himalayas_theme->get( 'Version' ) );
+
 // Load functions
 require_once( HIMALAYAS_INCLUDES_DIR . '/functions.php' );
 require_once( HIMALAYAS_INCLUDES_DIR . '/header-functions.php' );
@@ -153,7 +157,7 @@ $himalayas_version = $theme['Version'];
  * Calling in the admin area for the Welcome Page as well as for the new theme notice too.
  */
 if ( is_admin() ) {
-	require get_template_directory() . '/inc/admin/class-himalayas-admin.php';
+	// require get_template_directory() . '/inc/admin/class-himalayas-admin.php';
 	require get_template_directory() . '/inc/admin/class-himalayas-tdi-notice.php';
 	require get_template_directory() . '/inc/admin/class-himalayas-dashboard.php';
 }
