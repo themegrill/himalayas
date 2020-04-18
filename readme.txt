@@ -52,7 +52,7 @@ If you want to translate this theme to your language, refer to: https://translat
 
 == Changelog ==
 = Version 1.2.3 - TBD =
-* Fix - Hamburger menu dropdown in mobile view.
+* Fix - Mobile hamburger menu dropdown not working.
 
 = Version 1.2.2 - 2020-02-20 =
 * Tweak - Update `screen-reader-text` CSS.
