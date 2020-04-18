@@ -89,8 +89,8 @@ jQuery( document ).ready( function () {
 		var width = Math.max( window.innerWidth, document.documentElement.clientWidth );
 
 		if ( width && width <= 768 ) {
-			jQuery( '.menu-toggle,#site-navigation a' ).click( function () {
-				jQuery( '#site-navigation .menu-primary-container,#site-navigation div.menu' ).slideToggle();
+			jQuery( '.menu-toggle, #site-navigation a' ).click( function () {
+				jQuery( '#site-navigation .menu-primary-container, #site-navigation .menu' ).slideToggle();
 			} );
 		}
 	} );
