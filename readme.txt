@@ -52,7 +52,9 @@ If you want to translate this theme to your language, refer to: https://translat
 
 == Changelog ==
 = Version 1.2.3 - TBD =
-* Fix - Mobile hamburger menu dropdown not working.
+* Fix   - Mobile hamburger menu dropdown not working.
+* Tweak - Remove unnecessary !important CSS declaration applied on input button.
+* Tweak - Add review notice message.
 
 = Version 1.2.2 - 2020-02-20 =
 * Tweak - Update `screen-reader-text` CSS.
