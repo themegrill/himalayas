@@ -1,18 +1,16 @@
+/* Theme review notice CSS */
+.notice.updated.theme-review-notice {
+	padding-right: 40px;
+}
+
 .theme-review-notice .links {
-	margin: 10px 0;
+	margin: 0.5em 0;
 }
 
 .theme-review-notice .links a {
-	height: auto;
-	padding: 3px 15px;
-	margin-left: 10px;
-	text-transform: uppercase;
+	margin: 2px;
 }
 
-.theme-review-notice .links a .dashicons {
-	line-height: 1.2;
-}
-
-.theme-review-notice .links a.button-primary {
-	margin-left: 0;
+.theme-review-notice .links .dashicons {
+	line-height: 30px;
 }
