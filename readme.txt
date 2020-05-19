@@ -51,6 +51,9 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Add - Required header fields: `Tested up to` and `Requires PHP` in style.css.
+
 = Version 1.2.3 - TBD =
 * Fix   - Mobile hamburger menu dropdown not working.
 * Tweak - Remove unnecessary !important CSS declaration applied on input button.
