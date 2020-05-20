@@ -156,6 +156,7 @@ define( 'HIMALAYAS_THEME_VERSION', $himalayas_theme->get( 'Version' ) );
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-himalayas-admin.php';
 	require get_template_directory() . '/inc/admin/class-himalayas-tdi-notice.php';
+	require get_template_directory() . '/inc/admin/class-himalayas-admin.php';
 	require get_template_directory() . '/inc/admin/class-himalayas-welcome-notice.php';
 	require get_template_directory() . '/inc/admin/class-himalayas-theme-review-notice.php';
 }
