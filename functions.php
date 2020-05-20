@@ -146,7 +146,7 @@ if ( class_exists( 'TG_Demo_Importer' ) ) {
 /**
  * Assign the Himalayas version to a variable.
  */
-$himalayas_theme = wp_get_theme( 'radiate' );
+$himalayas_theme = wp_get_theme( 'himalayas' );
 
 define( 'HIMALAYAS_THEME_VERSION', $himalayas_theme->get( 'Version' ) );
 
