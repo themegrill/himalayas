@@ -23,8 +23,6 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 		 */
 		public function __construct() {
 			add_action( 'admin_menu', array( $this, 'admin_menu' ) );
-			add_action( 'wp_loaded', array( __CLASS__, 'hide_notices' ) );
-			add_action( 'load-themes.php', array( $this, 'admin_notice' ) );
 		}
 
 		/**
@@ -33,10 +31,16 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 		public function admin_menu() {
 			$theme = wp_get_theme( get_template() );
 
-			$page = add_theme_page( esc_html__( 'About', 'himalayas' ) . ' ' . $theme->display( 'Name' ), esc_html__( 'About', 'himalayas' ) . ' ' . $theme->display( 'Name' ), 'activate_plugins', 'himalayas-welcome', array(
-				$this,
-				'welcome_screen',
-			) );
+			$page = add_theme_page(
+				esc_html__( 'About', 'himalayas' ) . ' ' . $theme->display( 'Name' ),
+				esc_html__( 'About', 'himalayas' ) . ' ' . $theme->display( 'Name' ),
+				'activate_plugins',
+				'himalayas-welcome',
+				array(
+					$this,
+					'welcome_screen',
+				)
+			);
 			add_action( 'admin_print_styles-' . $page, array( $this, 'enqueue_styles' ) );
 		}
 
@@ -47,58 +51,6 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 			global $himalayas_version;
 
 			wp_enqueue_style( 'himalayas-welcome', get_template_directory_uri() . '/css/admin/welcome.css', array(), $himalayas_version );
-		}
-
-		/**
-		 * Add admin notice.
-		 */
-		public function admin_notice() {
-			global $himalayas_version, $pagenow;
-
-			wp_enqueue_style( 'himalayas-message', get_template_directory_uri() . '/css/admin/message.css', array(), $himalayas_version );
-
-			// Let's bail on theme activation.
-			if ( 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
-				add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
-				update_option( 'himalayas_admin_notice_welcome', 1 );
-
-				// No option? Let run the notice wizard again..
-			} elseif ( ! get_option( 'himalayas_admin_notice_welcome' ) ) {
-				add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
-			}
-		}
-
-		/**
-		 * Hide a notice if the GET variable is set.
-		 */
-		public static function hide_notices() {
-			if ( isset( $_GET['himalayas-hide-notice'] ) && isset( $_GET['_himalayas_notice_nonce'] ) ) {
-				if ( ! wp_verify_nonce( $_GET['_himalayas_notice_nonce'], 'himalayas_hide_notices_nonce' ) ) {
-					wp_die( __( 'Action failed. Please refresh the page and retry.', 'himalayas' ) );
-				}
-
-				if ( ! current_user_can( 'manage_options' ) ) {
-					wp_die( __( 'Cheatin&#8217; huh?', 'himalayas' ) );
-				}
-
-				$hide_notice = sanitize_text_field( $_GET['himalayas-hide-notice'] );
-				update_option( 'himalayas_admin_notice_' . $hide_notice, 1 );
-			}
-		}
-
-		/**
-		 * Show welcome notice.
-		 */
-		public function welcome_notice() {
-			?>
-			<div id="message" class="updated himalayas-message">
-				<a class="himalayas-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'himalayas-hide-notice', 'welcome' ) ), 'himalayas_hide_notices_nonce', '_himalayas_notice_nonce' ) ); ?>"><?php _e( 'Dismiss', 'himalayas' ); ?></a>
-				<p><?php printf( esc_html__( 'Welcome! Thank you for choosing Himalayas! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'himalayas' ), '<a href="' . esc_url( admin_url( 'themes.php?page=himalayas-welcome' ) ) . '">', '</a>' ); ?></p>
-				<p class="submit">
-					<a class="button-secondary" href="<?php echo esc_url( admin_url( 'themes.php?page=himalayas-welcome' ) ); ?>"><?php esc_html_e( 'Get started with Himalayas', 'himalayas' ); ?></a>
-				</p>
-			</div>
-			<?php
 		}
 
 		/**
@@ -141,33 +93,82 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 			</p>
 
 			<h2 class="nav-tab-wrapper">
-				<a class="nav-tab <?php if ( empty( $_GET['tab'] ) && $_GET['page'] == 'himalayas-welcome' ) {
+				<a class="nav-tab 
+				<?php
+				if ( empty( $_GET['tab'] ) && $_GET['page'] == 'himalayas-welcome' ) {
 					echo 'nav-tab-active';
-				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'himalayas-welcome' ), 'themes.php' ) ) ); ?>">
+				}
+				?>
+				" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'himalayas-welcome' ), 'themes.php' ) ) ); ?>">
 					<?php echo $theme->display( 'Name' ); ?>
 				</a>
-				<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'supported_plugins' ) {
+				<a class="nav-tab 
+				<?php
+				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'supported_plugins' ) {
 					echo 'nav-tab-active';
-				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array(
-					'page' => 'himalayas-welcome',
-					'tab'  => 'supported_plugins',
-				), 'themes.php' ) ) ); ?>">
+				}
+				?>
+				" href="
+				<?php
+				echo esc_url(
+					admin_url(
+						add_query_arg(
+							array(
+								'page' => 'himalayas-welcome',
+								'tab'  => 'supported_plugins',
+							),
+							'themes.php'
+						)
+					)
+				);
+				?>
+				">
 					<?php esc_html_e( 'Supported Plugins', 'himalayas' ); ?>
 				</a>
-				<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'free_vs_pro' ) {
+				<a class="nav-tab 
+				<?php
+				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'free_vs_pro' ) {
 					echo 'nav-tab-active';
-				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array(
-					'page' => 'himalayas-welcome',
-					'tab'  => 'free_vs_pro',
-				), 'themes.php' ) ) ); ?>">
+				}
+				?>
+				" href="
+				<?php
+				echo esc_url(
+					admin_url(
+						add_query_arg(
+							array(
+								'page' => 'himalayas-welcome',
+								'tab'  => 'free_vs_pro',
+							),
+							'themes.php'
+						)
+					)
+				);
+				?>
+				">
 					<?php esc_html_e( 'Free Vs Pro', 'himalayas' ); ?>
 				</a>
-				<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'changelog' ) {
+				<a class="nav-tab 
+				<?php
+				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'changelog' ) {
 					echo 'nav-tab-active';
-				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array(
-					'page' => 'himalayas-welcome',
-					'tab'  => 'changelog',
-				), 'themes.php' ) ) ); ?>">
+				}
+				?>
+				" href="
+				<?php
+				echo esc_url(
+					admin_url(
+						add_query_arg(
+							array(
+								'page' => 'himalayas-welcome',
+								'tab'  => 'changelog',
+							),
+							'themes.php'
+						)
+					)
+				);
+				?>
+				">
 					<?php esc_html_e( 'Changelog', 'himalayas' ); ?>
 				</a>
 			</h2>
@@ -203,7 +204,7 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 					<div class="under-the-hood two-col">
 						<div class="col">
 							<h3><?php esc_html_e( 'Theme Customizer', 'himalayas' ); ?></h3>
-							<p><?php esc_html_e( 'All Theme Options are available via Customize screen.', 'himalayas' ) ?></p>
+							<p><?php esc_html_e( 'All Theme Options are available via Customize screen.', 'himalayas' ); ?></p>
 							<p>
 								<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-secondary"><?php esc_html_e( 'Customize', 'himalayas' ); ?></a>
 							</p>
@@ -211,7 +212,7 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 
 						<div class="col">
 							<h3><?php esc_html_e( 'Documentation', 'himalayas' ); ?></h3>
-							<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'himalayas' ) ?></p>
+							<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'himalayas' ); ?></p>
 							<p>
 								<a href="<?php echo esc_url( 'https://docs.themegrill.com/himalayas/?utm_source=himalayas-about&utm_medium=documentation-link&utm_campaign=documentation' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Documentation', 'himalayas' ); ?></a>
 							</p>
@@ -219,7 +220,7 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 
 						<div class="col">
 							<h3><?php esc_html_e( 'Got theme support question?', 'himalayas' ); ?></h3>
-							<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'himalayas' ) ?></p>
+							<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'himalayas' ); ?></p>
 							<p>
 								<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/?utm_source=himalayas-about&utm_medium=support-forum-link&utm_campaign=support-forum' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Support', 'himalayas' ); ?></a>
 							</p>
@@ -227,7 +228,7 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 
 						<div class="col">
 							<h3><?php esc_html_e( 'Need more features?', 'himalayas' ); ?></h3>
-							<p><?php esc_html_e( 'Upgrade to PRO version for more exciting features.', 'himalayas' ) ?></p>
+							<p><?php esc_html_e( 'Upgrade to PRO version for more exciting features.', 'himalayas' ); ?></p>
 							<p>
 								<a href="<?php echo esc_url( 'https://themegrill.com/themes/himalayas/?utm_source=himalayas-about&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'View PRO version', 'himalayas' ); ?></a>
 							</p>
@@ -235,7 +236,7 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 
 						<div class="col">
 							<h3><?php esc_html_e( 'Got sales related question?', 'himalayas' ); ?></h3>
-							<p><?php esc_html_e( 'Please send it via our sales contact page.', 'himalayas' ) ?></p>
+							<p><?php esc_html_e( 'Please send it via our sales contact page.', 'himalayas' ); ?></p>
 							<p>
 								<a href="<?php echo esc_url( 'https://themegrill.com/contact/?utm_source=himalayas-about&utm_medium=contact-page-link&utm_campaign=contact-page' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Contact Page', 'himalayas' ); ?></a>
 							</p>
@@ -248,7 +249,7 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 								echo ' ' . $theme->display( 'Name' );
 								?>
 							</h3>
-							<p><?php esc_html_e( 'Click below to translate this theme into your own language.', 'himalayas' ) ?></p>
+							<p><?php esc_html_e( 'Click below to translate this theme into your own language.', 'himalayas' ); ?></p>
 							<p>
 								<a href="<?php echo esc_url( 'http://translate.wordpress.org/projects/wp-themes/himalayas' ); ?>" class="button button-secondary">
 									<?php
