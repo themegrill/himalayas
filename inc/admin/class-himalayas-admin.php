@@ -30,9 +30,9 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 		 * Localize array for import button AJAX request.
 		 */
 		public function enqueue_scripts() {
-			wp_enqueue_style( 'himalayas-admin-style', get_template_directory_uri() . '/inc/admin/css/admin.css', array(), RADIATE_THEME_VERSION );
+			wp_enqueue_style( 'himalayas-admin-style', get_template_directory_uri() . '/inc/admin/css/admin.css', array(), HIMALAYAS_THEME_VERSION );
 
-			wp_enqueue_script( 'himalayas-plugin-install-helper', get_template_directory_uri() . '/inc/admin/js/plugin-handle.js', array( 'jquery' ), RADIATE_THEME_VERSION, true );
+			wp_enqueue_script( 'himalayas-plugin-install-helper', get_template_directory_uri() . '/inc/admin/js/plugin-handle.js', array( 'jquery' ), HIMALAYAS_THEME_VERSION, true );
 
 			$welcome_data = array(
 				'uri'      => esc_url( admin_url( '/themes.php?page=demo-importer&browse=all&himalayas-hide-notice=welcome' ) ),
