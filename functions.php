@@ -146,8 +146,9 @@ if ( class_exists( 'TG_Demo_Importer' ) ) {
 /**
  * Assign the Himalayas version to a variable.
  */
-$theme             = wp_get_theme( 'himalayas' );
-$himalayas_version = $theme['Version'];
+$himalayas_theme = wp_get_theme( 'radiate' );
+
+define( 'HIMALAYAS_THEME_VERSION', $himalayas_theme->get( 'Version' ) );
 
 /**
  * Calling in the admin area for the Welcome Page as well as for the new theme notice too.
