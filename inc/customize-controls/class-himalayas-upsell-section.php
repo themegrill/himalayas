@@ -1,38 +1,56 @@
 <?php
-/**
- * Class to include upsell link campaign for theme.
- *
- * Class HIMALAYAS_Upsell_Section
- *
- * @since 1.1.9
- */
 
-class HIMALAYAS_Upsell_Section extends WP_Customize_Section {
-	public $type = 'himalayas-upsell-section';
-	public $url  = '';
-	public $id   = '';
+class Himalayas_Upsell_Custom_Control extends WP_Customize_Control {
 
-	/**
-	 * Gather the parameters passed to client JavaScript via JSON.
-	 *
-	 * @return array The array to be exported to the client as JSON.
-	 */
-	public function json() {
-		$json        = parent::json();
-		$json['url'] = esc_url( $this->url );
-		$json['id']  = $this->id;
+	public $type = "himalayas-upsell-control";
 
-		return $json;
+	public function enqueue() {
+		wp_enqueue_style( 'himalayas-customizer', get_template_directory_uri() . '/inc/customize-controls/assets/css/customizer-upsell.css', array(), HIMALAYAS_THEME_VERSION   );
 	}
 
-	/**
-	 * An Underscore (JS) template for rendering this section.
-	 */
-	protected function render_template() {
+	public function render_content() {
 		?>
-		<li id="accordion-section-{{ data.id }}" class="himalayas-upsell-accordion-section control-section-{{ data.type }} cannot-expand accordion-section">
-			<h3 class="accordion-section-title"><a href="{{{ data.url }}}" target="_blank">{{ data.title }}</a></h3>
-		</li>
+		<div class="himalayas-upsell-wrapper">
+			<ul class="upsell-features">
+				<h3 class="upsell-heading"><?php esc_html_e( 'More Awesome Features', 'himalayas' ); ?></h3>
+				<li class="upsell-feature"><span
+						class="dashicons dashicons-yes"></span><?php esc_html_e( 'Advanced Header Options', 'himalayas' ); ?>
+				</li>
+				<li class="upsell-feature"><span
+						class="dashicons dashicons-yes"></span><?php esc_html_e( 'Advanced Footer Options', 'himalayas' ); ?>
+				</li>
+				<li class="upsell-feature"><span
+						class="dashicons dashicons-yes"></span><?php esc_html_e( 'More Blog Layouts', 'himalayas' ); ?>
+				</li>
+				<li class="upsell-feature"><span
+						class="dashicons dashicons-yes"></span><?php esc_html_e( 'More WooCommerce ', 'himalayas' ); ?>
+				</li>
+				<li class="upsell-feature"><span
+						class="dashicons dashicons-yes"></span><?php esc_html_e( 'More Customizer Options', 'himalayas' ); ?>
+				</li>
+				<li class="upsell-feature"><span
+						class="dashicons dashicons-yes"></span><?php esc_html_e( 'Advanced Typography Options', 'himalayas' ); ?>
+				</li>
+				<li class="upsell-feature"><span
+						class="dashicons dashicons-yes"></span><?php esc_html_e( 'More Page Settings', 'himalayas' ); ?>
+				</li>
+			</ul>
+
+			<div class="launch-offer">
+				<?php
+				printf(
+				/* translators: %1$s discount coupon code., %2$s discount percentage */
+					esc_html__( 'Use the coupon code %1$s to get %2$s discount (limited time offer). Enjoy!', 'himalayas' ),
+					'<span class="coupon-code">save10</span>',
+					'10%'
+				);
+				?>
+			</div>
+		</div> <!-- /.himalayas-upsell-wrapper -->
+
+		<a class="upsell-cta" target="_blank"
+		   href="<?php echo esc_url( 'https://themegrill.com/himalayas-pricing/?utm_source=himalayas-customizer&utm_medium=view-pricing-link&utm_campaign=upgrade' ); ?>"><?php esc_html_e( 'View Pricing', 'himalayas' ); ?></a>
 		<?php
 	}
+
 }
