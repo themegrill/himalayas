@@ -1,0 +1,101 @@
+li#accordion-section-himalayas_upsell_section h3.accordion-section-title {
+	background-color: #32C4D1 !important;
+	border-left-color: #25a4b1;
+	color: #fff !important;
+}
+
+#accordion-section-himalayas_upsell_section h3 a:after {
+	color: #fff;
+}
+
+li#accordion-section-himalayas_upsell_section h3.accordion-section-title a {
+	color: #fff;
+}
+
+li#accordion-section-himalayas_upsell_section h3.accordion-section-title:after {
+	color: #fff !important;
+}
+
+li.customize-control-himalayas-upsell-control .himalayas-upsell-wrapper {
+	background-color: #fff;
+	margin-left: -12px;
+	margin-right: -12px;
+	color: #464646;
+}
+
+li.customize-control-himalayas-upsell-control .upsell-features,
+li.customize-control-himalayas-upsell-control .launch-offer {
+	padding: 25px;
+}
+
+
+li.customize-control-himalayas-upsell-control .upsell-heading {
+	font-size: 16px !important;
+	text-transform: uppercase;
+	margin: 0 0 15px 0;
+	line-height: 1.5;
+	color: #464646;
+	font-weight: bold;
+}
+
+li.customize-control-himalayas-upsell-control .upsell-features {
+	font-size: 14px;
+}
+
+li.customize-control-himalayas-upsell-control .upsell-feature .dashicons {
+	color: #32c4d1;
+	margin-right: 8px;
+	width: 14px;
+}
+
+li.customize-control-himalayas-upsell-control .upsell-feature {
+	padding: 0 0 8px 0;
+	margin: 0 0 8px 0;
+}
+
+li.customize-control-himalayas-upsell-control .upsell-feature:last-child {
+	margin: 0;
+	padding: 0;
+}
+
+li.customize-control-himalayas-upsell-control .launch-offer {
+	color: #0C5460;
+	background-color: #D1ECF1;
+	padding: 15px 25px;
+	font-size: 14px;
+	line-height: 1.8;
+}
+
+li.customize-control-himalayas-upsell-control .launch-offer strong {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+li.customize-control-himalayas-upsell-control .coupon-code {
+	display: inline-block;
+}
+
+li.customize-control-himalayas-upsell-control .upsell-cta {
+	background-color: #32c4d1;
+	color: #fff;
+	padding: 14px;
+	margin: 30px 0;
+	border-radius: 4px;
+	text-decoration: none;
+	display: block;
+	font-size: 16px;
+	transition: 0.3s all;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+li.customize-control-himalayas-upsell-control .upsell-cta:hover {
+	background-color: #46c9be;
+	box-shadow: 0 2px 10px 5px #46464633;
+}
+
+li#accordion-section-himalayas_upsell_section h3.accordion-section-title:hover {
+	background-color: rgba(50, 196, 209, 0.78) !important;
+	border-left-color: rgba(37, 164, 177, 0.78) !important;
+}
+
