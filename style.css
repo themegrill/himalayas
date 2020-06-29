@@ -3300,8 +3300,8 @@ Video background css
 
 .no-sidebar-full-width #primary .entry-content > .alignwide,
 .no-sidebar #primary .entry-content > .alignwide {
-	margin-left: -100px;
-	margin-right: -100px;
+	margin-left: -30px;
+	margin-right: -30px;
 	max-width: unset;
 	width: unset;
 }
@@ -3769,8 +3769,8 @@ iframe#wp-custom-header-video {
 		margin-right: -50px;
 	}
 	.no-sidebar #primary .entry-content > .alignfull {
-		margin-left: -100px;
-		margin-right: -100px;
+		margin-left: -30px;
+		margin-right: -30px;
 	}
 
 	.scroll-down {
