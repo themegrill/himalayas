@@ -73,6 +73,13 @@ function himalayas_scripts() {
 
 /**************************************************************************************/
 
+function himalayas_block_editor_styles() {
+	wp_enqueue_style( 'himalayas-editor-googlefonts', '//fonts.googleapis.com/css?family=Crimson+Text:700|Roboto:400,700,900,300' );
+	wp_enqueue_style( 'himalayas-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
+}
+
+add_action( 'enqueue_block_editor_assets', 'himalayas_block_editor_styles', 1, 1 );
+
 /**
  * Add admin scripts
  */
