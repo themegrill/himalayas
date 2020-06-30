@@ -3753,16 +3753,12 @@ iframe#wp-custom-header-video {
 --------------------------------------------------------------*/
 @media (min-width: 1200px) and (max-width: 1400px) {
 	.no-sidebar-full-width #primary .entry-content > .alignwide {
-		margin-left: -30px;
-		margin-right: -30px;
+		margin-left: -50px;
+		margin-right: -50px;
 	}
 	.no-sidebar #primary .entry-content > .alignwide {
 		margin-left: -50px;
 		margin-right: -50px;
-	}
-	.no-sidebar #primary .entry-content > .alignfull {
-		margin-left: -30px;
-		margin-right: -30px;
 	}
 
 	.scroll-down {
@@ -3808,6 +3804,16 @@ iframe#wp-custom-header-video {
 /* Large desktop */
 
 @media (max-width: 1200px) {
+	.no-sidebar-full-width #primary .entry-content > .alignwide {
+		margin-left: -30px;
+		margin-right: -30px;
+	}
+
+	.no-sidebar #primary .entry-content > .alignwide {
+		margin-left: -30px;
+		margin-right: -30px;
+	}
+
 	.tg-container {
 		width: 99%;
 		padding: 0 1%;
