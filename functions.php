@@ -63,6 +63,12 @@ if ( ! function_exists( 'himalayas_setup' ) ) :
 		// Gutenberg layout support.
 		add_theme_support( 'align-wide' );
 
+		// Gutenberg block layout support.
+		add_theme_support( 'wp-block-styles' );
+
+		// Gutenberg editor support.
+		add_theme_support( 'responsive-embeds' );
+
 		// Adding excerpt option box for pages as well
 		add_post_type_support( 'page', 'excerpt' );
 
