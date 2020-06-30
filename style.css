@@ -3300,8 +3300,8 @@ Video background css
 
 .no-sidebar-full-width #primary .entry-content > .alignwide,
 .no-sidebar #primary .entry-content > .alignwide {
-	margin-left: -30px;
-	margin-right: -30px;
+	margin-left: -100px;
+	margin-right: -100px;
 	max-width: unset;
 	width: unset;
 }
@@ -3751,14 +3751,6 @@ iframe#wp-custom-header-video {
 /*--------------------------------------------------------------
     Responsive css
 --------------------------------------------------------------*/
-
-@media screen and (max-width: 1500px) {
-	.no-sidebar-full-width .alignwide {
-		margin-left: -2px;
-		margin-right: -2px;
-	}
-}
-
 @media (min-width: 1200px) and (max-width: 1400px) {
 	.no-sidebar-full-width #primary .entry-content > .alignwide {
 		margin-left: -30px;
