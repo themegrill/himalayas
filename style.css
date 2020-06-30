@@ -3970,11 +3970,6 @@ iframe#wp-custom-header-video {
 		margin-right: -10px;
 	}
 
-	.no-sidebar #primary .entry-content > .alignfull {
-		margin-left: -10px;
-		margin-right: -10px;
-	}
-
 	.logged-in.customize-support .header-wrapper.stick,
 	.home.logged-in.customize-support .header-wrapper {
 		top: 46px;
