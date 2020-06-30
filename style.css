@@ -3761,8 +3761,8 @@ iframe#wp-custom-header-video {
 
 @media (min-width: 1200px) and (max-width: 1400px) {
 	.no-sidebar-full-width #primary .entry-content > .alignwide {
-		margin-left: -20px;
-		margin-right: -20px;
+		margin-left: -30px;
+		margin-right: -30px;
 	}
 	.no-sidebar #primary .entry-content > .alignwide {
 		margin-left: -50px;
@@ -4575,4 +4575,14 @@ iframe#wp-custom-header-video {
 
 .search .page-header {
 	display: none;
+}
+
+/*--------------------------------------------------------------
+Gutenberg Blocks Layout.
+--------------------------------------------------------------*/
+.wp-block-gallery.alignleft, .wp-block-gallery.alignright, .wp-block-gallery.aligncenter,
+.wp-block-social-links.alignleft,
+.wp-block-social-links.alignright,
+.wp-block-social-links.aligncenter {
+	display: flex;
 }

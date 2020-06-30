@@ -498,7 +498,8 @@ endif;
  * Source: https://css-tricks.com/snippets/php/convert-hex-to-rgb/#comment-1052011
  */
 function himalayas_hex2rgb( $hexstr ) {
-	$int = hexdec( $hexstr );
+	$int = hexdec( str_replace( '#', '', $hexstr ) );
+
 	$rgb = array( "red" => 0xFF & ( $int >> 0x10 ), "green" => 0xFF & ( $int >> 0x8 ), "blue" => 0xFF & $int );
 	$r   = $rgb['red'];
 	$g   = $rgb['green'];
