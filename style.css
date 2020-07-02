@@ -181,7 +181,6 @@ blockquote,
 	font-style: italic;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
-	border-left: 0;
 }
 
 address {
@@ -3756,6 +3755,7 @@ iframe#wp-custom-header-video {
 		margin-left: -50px;
 		margin-right: -50px;
 	}
+
 	.no-sidebar #primary .entry-content > .alignwide {
 		margin-left: -50px;
 		margin-right: -50px;
