@@ -52,6 +52,7 @@ If you want to translate this theme to your language, refer to: https://translat
 
 == Changelog ==
 = Version TBD =
+* Add   - Required header fields: `Tested up to` and `Requires PHP` in style.css.
 * Enhancement - Gutenberg compatibility.
 * Fix   - Mobile hamburger menu dropdown not working.
 * Tweak - Remove unnecessary !important CSS declaration applied on input button.
