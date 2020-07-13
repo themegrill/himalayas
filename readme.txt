@@ -50,6 +50,9 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Fix - Mobile hamburger menu dropdown issue.
+
 = Version 1.2.3 - 2020-07-02 =
 * Add   - Required header fields: `Tested up to` and `Requires PHP` in style.css.
 * Enhancement - Gutenberg compatibility.
