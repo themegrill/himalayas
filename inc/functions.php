@@ -73,6 +73,13 @@ function himalayas_scripts() {
 
 /**************************************************************************************/
 
+function himalayas_block_editor_styles() {
+	wp_enqueue_style( 'himalayas-editor-googlefonts', '//fonts.googleapis.com/css?family=Crimson+Text:700|Roboto:400,700,900,300' );
+	wp_enqueue_style( 'himalayas-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
+}
+
+add_action( 'enqueue_block_editor_assets', 'himalayas_block_editor_styles', 1, 1 );
+
 /**
  * Add admin scripts
  */
@@ -491,7 +498,8 @@ endif;
  * Source: https://css-tricks.com/snippets/php/convert-hex-to-rgb/#comment-1052011
  */
 function himalayas_hex2rgb( $hexstr ) {
-	$int = hexdec( $hexstr );
+	$int = hexdec( str_replace( '#', '', $hexstr ) );
+
 	$rgb = array( "red" => 0xFF & ( $int >> 0x10 ), "green" => 0xFF & ( $int >> 0x8 ), "blue" => 0xFF & $int );
 	$r   = $rgb['red'];
 	$g   = $rgb['green'];

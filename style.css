@@ -4,8 +4,8 @@ Theme URI: https://themegrill.com/themes/himalayas/
 Author: ThemeGrill
 Author URI: https://themegrill.com
 Description: Himalayas is modern style free one page parallax responsive WordPress theme. Inform your visitors all they need to know right from your home page without requiring to go to the other pages. Himalayas can be used for business, portfolio, corporate, agency, photography, freelancers and almost any kind of sites. Get free support at https://themegrill.com/support-forum/ and check the demo at https://demo.themegrill.com/himalayas/
-Version: 1.2.2
-Tested up to: 5.4.1
+Version: 1.2.3
+Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License, version 3 (GPLv3)
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
@@ -225,7 +225,10 @@ i {
 	font-style: italic;
 }
 
-blockquote {
+blockquote,
+.wp-block-quote,
+.wp-block-quote.is-style-large,
+.wp-block-quote.has-text-align-right{
 	margin: 0 15px;
 	font-size: 20px;
 	font-style: italic;
@@ -241,7 +244,6 @@ pre {
 	background: #eeeeee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
-	font-size: 1.5rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -321,7 +323,8 @@ h6 {
 Elements
 --------------------------------------------------------------*/
 
-hr {
+hr,
+.wp-block-separator {
 	background-color: #cccccc;
 	border: 0;
 	height: 1px;
@@ -375,11 +378,10 @@ table {
 
 th {
 	font-weight: bold;
-	border: 1px solid #cccccc;
-	padding: 5px 10px;
 }
 
-td {
+td, th,
+.wp-block-table th, .wp-block-table td {
 	border: 1px solid #cccccc;
 	padding: 5px 10px;
 }
@@ -582,6 +584,7 @@ Alignments
 	clear: both;
 	display: block;
 	margin: 0 auto;
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -3339,23 +3342,26 @@ Video background css
 	overflow: hidden;
 }
 
-.no-sidebar-full-width .alignfull,
-.no-sidebar .alignfull {
+/* Gutenberg Alignment */
+.no-sidebar-full-width #primary .entry-content > .alignfull,
+.no-sidebar #primary .entry-content > .alignfull {
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
 	max-width: unset;
 }
 
-.no-sidebar-full-width .alignwide,
-.no-sidebar .alignwide {
+.no-sidebar-full-width #primary .entry-content > .alignfull.wp-block-cover, .no-sidebar-full-width #primary .entry-content > .alignfull.wp-block-cover-image,
+.no-sidebar #primary .entry-content > .alignfull.wp-block-cover,
+.no-sidebar #primary .entry-content > .alignfull.wp-block-cover-image {
+	width: unset;
+}
+
+.no-sidebar-full-width #primary .entry-content > .alignwide,
+.no-sidebar #primary .entry-content > .alignwide {
 	margin-left: -100px;
 	margin-right: -100px;
 	max-width: unset;
-}
-
-.no-sidebar-full-width .alignfull img,
-.no-sidebar .alignfull img {
-	max-width: unset;
+	width: unset;
 }
 
 /*--------------------------------------------------------------
@@ -3803,15 +3809,17 @@ iframe#wp-custom-header-video {
 /*--------------------------------------------------------------
     Responsive css
 --------------------------------------------------------------*/
-
-@media screen and (max-width: 1500px) {
-	.no-sidebar-full-width .alignwide {
-		margin-left: -2px;
-		margin-right: -2px;
-	}
-}
-
 @media (min-width: 1200px) and (max-width: 1400px) {
+	.no-sidebar-full-width #primary .entry-content > .alignwide {
+		margin-left: -50px;
+		margin-right: -50px;
+	}
+
+	.no-sidebar #primary .entry-content > .alignwide {
+		margin-left: -50px;
+		margin-right: -50px;
+	}
+
 	.scroll-down {
 		bottom: 20px;
 	}
@@ -3855,6 +3863,16 @@ iframe#wp-custom-header-video {
 /* Large desktop */
 
 @media (max-width: 1200px) {
+	.no-sidebar-full-width #primary .entry-content > .alignwide {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	.no-sidebar #primary .entry-content > .alignwide {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
 	.tg-container {
 		width: 99%;
 		padding: 0 1%;
@@ -4004,6 +4022,13 @@ iframe#wp-custom-header-video {
 /* Landscape phone to portrait tablet */
 
 @media (max-width: 768px) {
+
+	.no-sidebar-full-width #primary .entry-content > .alignwide,
+	.no-sidebar #primary .entry-content > .alignwide {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
 	.logged-in.customize-support .header-wrapper.stick,
 	.home.logged-in.customize-support .header-wrapper {
 		top: 46px;
@@ -4304,11 +4329,6 @@ iframe#wp-custom-header-video {
 		margin-left: 0;
 		width: 100%;
 	}
-
-	.no-sidebar .alignwide {
-		margin-left: 0;
-		margin-right: 0;
-	}
 }
 
 @media (max-width: 600px) {
@@ -4608,4 +4628,14 @@ iframe#wp-custom-header-video {
 
 .search .page-header {
 	display: none;
+}
+
+/*--------------------------------------------------------------
+Gutenberg Blocks Layout.
+--------------------------------------------------------------*/
+.wp-block-gallery.alignleft, .wp-block-gallery.alignright, .wp-block-gallery.aligncenter,
+.wp-block-social-links.alignleft,
+.wp-block-social-links.alignright,
+.wp-block-social-links.aligncenter {
+	display: flex;
 }
