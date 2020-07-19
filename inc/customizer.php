@@ -429,20 +429,25 @@ function himalayas_customize_register( $wp_customize ) {
 	) );
 	// End of the Additional Options.
 
-// Register `HIMALAYAS_Upsell_Section` type section.
-	$wp_customize->register_section_type( 'HIMALAYAS_Upsell_Section' );
+	/**
+	 * Upsell.
+	 */
+	$wp_customize->add_section( 'himalayas_upsell_section', array(
+		'priority' => 1,
+		'title'    => __( 'View Pro Version', 'himalayas' ),
+	) );
 
-// Add `HIMALAYAS_Upsell_Section` to display pro link.
-	$wp_customize->add_section(
-		new HIMALAYAS_Upsell_Section( $wp_customize, 'himalayas_upsell_section',
-			array(
-				'title'      => esc_html__( 'View PRO version', 'himalayas' ),
-				'url'        => 'https://themegrill.com/themes/himalayas/?utm_source=himalayas-customizer&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro',
-				'capability' => 'edit_theme_options',
-				'priority'   => 1,
-			)
-		)
-	);
+	$wp_customize->add_setting( 'himalayas_upsell', array(
+		'default'           => '',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'himalayas_false_sanitize',
+	) );
+
+	$wp_customize->add_control( new Himalayas_Upsell_Custom_Control( $wp_customize, 'himalayas_upsell', array(
+		'section' => 'himalayas_upsell_section',
+		'setting' => 'himalayas_upsell',
+	) ) );
+
 	/**************************************************************************************/
 
 	function himalayas_sanitize_checkbox( $input ) {
