@@ -50,9 +50,10 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
-= TBD =
-* Enhancement - Update protocol to prevent not secure issue.
+= Version TBD =
+* Tweak - Change http protocol to https.
 * Fix - Mobile hamburger menu dropdown issue.
+* Remove - Unrequired deprecated demo config for theme demo lists.
 
 = Version 1.2.3 - 2020-07-02 =
 * Add   - Required header fields: `Tested up to` and `Requires PHP` in style.css.
