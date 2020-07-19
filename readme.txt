@@ -51,6 +51,8 @@ If you want to translate this theme to your language, refer to: https://translat
 
 == Changelog ==
 = Version TBD =
+* Tweak - Change http protocol to https.
+* Fix - Mobile hamburger menu dropdown issue.
 * Remove - Unrequired deprecated demo config for theme demo lists.
 
 = Version 1.2.3 - 2020-07-02 =

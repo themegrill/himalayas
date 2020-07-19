@@ -90,7 +90,7 @@ jQuery( document ).ready( function () {
 
 		if ( width && width <= 768 ) {
 			jQuery( '.menu-toggle, #site-navigation a' ).click( function () {
-				jQuery( '#site-navigation .menu-primary-container, #site-navigation .menu' ).slideToggle();
+				jQuery( '#site-navigation .menu-primary-container, #site-navigation div.menu' ).slideToggle();
 			} );
 		}
 	} );
