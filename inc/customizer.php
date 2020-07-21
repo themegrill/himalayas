@@ -437,7 +437,7 @@ function himalayas_customize_register( $wp_customize ) {
 		new HIMALAYAS_Upsell_Section( $wp_customize, 'himalayas_upsell_section',
 			array(
 				'title'      => esc_html__( 'View PRO version', 'himalayas' ),
-				'url'        => 'https://themegrill.com/themes/himalayas/?utm_source=himalayas-customizer&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro',
+				'url'        => 'https://themegrill.com/himalayas-pricing/?utm_source=himalayas-customizer&utm_medium=view-pricing-link&utm_campaign=upgrade',
 				'capability' => 'edit_theme_options',
 				'priority'   => 1,
 			)
