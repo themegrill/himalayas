@@ -161,16 +161,3 @@ if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-himalayas-upgrade-notice.php';
 	require get_template_directory() . '/inc/admin/class-himalayas-theme-review-notice.php';
 }
-
-/**
- * Load TGMPA Configs.
- */
-require_once( HIMALAYAS_INCLUDES_DIR . '/tgm-plugin-activation/class-tgm-plugin-activation.php' );
-require_once( HIMALAYAS_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-himalayas.php' );
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require_once HIMALAYAS_INCLUDES_DIR . '/jetpack.php';
-}
