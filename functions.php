@@ -160,6 +160,7 @@ if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-himalayas-upgrade-notice.php';
 	require get_template_directory() . '/inc/admin/class-himalayas-theme-review-notice.php';
 }
+
 /**
  * Load Jetpack compatibility file.
  */
