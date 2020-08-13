@@ -18,7 +18,7 @@ class Himalayas_Notice {
 	 * @param string $dismiss_url Notice permanent dismiss URL.
 	 * @param string $temporary_dismiss_url Notice temporary dismiss URL.
 	 *
-	 * @since 1.3.4
+	 * @since 1.2.5
 	 */
 	public function __construct( $name, $type, $dismiss_url, $temporary_dismiss_url ) {
 		$this->name                  = $name;
