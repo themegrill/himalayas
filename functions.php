@@ -145,23 +145,21 @@ require_once( HIMALAYAS_WIDGETS_DIR . '/widgets.php' );
 /**
  * Assign the Himalayas version to a variable.
  */
-$theme             = wp_get_theme( 'himalayas' );
-$himalayas_version = $theme['Version'];
+$himalayas_theme = wp_get_theme( 'himalayas' );
+
+define( 'HIMALAYAS_THEME_VERSION', $himalayas_theme->get( 'Version' ) );
 
 /**
  * Calling in the admin area for the Welcome Page as well as for the new theme notice too.
  */
 if ( is_admin() ) {
+	require get_template_directory() . '/inc/admin/class-himalayas-notice.php';
 	require get_template_directory() . '/inc/admin/class-himalayas-admin.php';
-	require get_template_directory() . '/inc/admin/class-himalayas-tdi-notice.php';
+	require get_template_directory() . '/inc/admin/class-himalayas-welcome-notice.php';
+	require get_template_directory() . '/inc/admin/class-himalayas-dashboard.php';
+	require get_template_directory() . '/inc/admin/class-himalayas-upgrade-notice.php';
 	require get_template_directory() . '/inc/admin/class-himalayas-theme-review-notice.php';
 }
-
-/**
- * Load TGMPA Configs.
- */
-require_once( HIMALAYAS_INCLUDES_DIR . '/tgm-plugin-activation/class-tgm-plugin-activation.php' );
-require_once( HIMALAYAS_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-himalayas.php' );
 
 /**
  * Load Jetpack compatibility file.

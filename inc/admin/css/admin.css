@@ -1,0 +1,213 @@
+pre.changelog {
+	font-size: 12px;
+	background-color: #f5f5f5;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #f5f5f5), color-stop(50%, #e6e6e6));
+	background-image: -webkit-linear-gradient(#f5f5f5 50%, #e6e6e6 50%);
+	background-image: linear-gradient(#f5f5f5 50%,#e6e6e6 50%);
+	background-size: 38px 38px;
+	border: 1px solid #d4d4d4;
+	display: block;
+	line-height: 19px;
+	margin-bottom: 10px;
+	overflow: visible;
+	overflow-y: hidden;
+	padding: 0 0 0 4px;
+}
+
+pre.changelog span {
+	font-weight: 700;
+}
+.return-to-dashboard.himalayas {
+	clear: both;
+}
+
+p.himalayas-actions a.skip {
+	opacity: .5;
+}
+
+p.himalayas-actions a.docs:focus,
+p.himalayas-actions a.docs:hover,
+p.himalayas-actions a.skip:focus,
+p.himalayas-actions a.skip:hover {
+	opacity: 1;
+}
+
+p.himalayas-actions a.button-primary,
+p.himalayas-actions a.button-secondary {
+	text-decoration: none!important;
+}
+
+.about-wrap {
+	max-width: 100%;
+}
+
+.about-wrap h1 {
+	display: block;
+	text-align: center;
+	width: 100%;
+	font-size: 38px;
+	font-weight: 600;
+}
+
+.welcome-description-wrap {
+	display: inline-block;
+	width: 100%;
+	margin: 20px 0;
+}
+
+.about-wrap .about-text,
+.himalayas-screenshot {
+	margin: 20px 10px;
+	width: 47%;
+	float: left;
+}
+
+@media (max-width: 1400px) {
+	.about-wrap h1 {
+		font-size: 30px;
+	}
+	.about-wrap .about-text {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.about-wrap .about-text {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 980px) {
+	.about-wrap h1 {
+		font-size: 25px;
+	}
+	.about-wrap .about-text,
+	.himalayas-screenshot {
+		float: none;
+		width: 100%;
+	}
+}
+
+/**
+ * Notices.
+ */
+.himalayas-notice {
+	position: relative;
+	padding: 6px 40px 6px 12px;
+}
+
+.himalayas-notice .links {
+	margin: 0.5em 0;
+}
+
+.himalayas-notice .links a {
+	margin: 2px;
+}
+
+.himalayas-notice .links a > span {
+	vertical-align: middle;
+}
+
+.himalayas-notice .notice-text .coupon-code {
+	display: inline-block;
+}
+
+.himalayas-notice .notice-dismiss {
+	text-decoration: none;
+}
+
+/**
+ * Welcome notice.
+ */
+.himalayas-message__content {
+	display: flex;
+	align-items: center;
+}
+
+.himalayas-message__content .himalayas-message__image {
+	flex: 0 0 160px;
+	min-height: 100px;
+	margin-right: 12px;
+	padding-right: 12px;
+	border-right: 1px solid #FCFCFD;
+}
+
+.himalayas-message__content .himalayas-message__image .himalayas-screenshot {
+	width: 100%;
+	box-shadow: 0 0 1px 0 #ccd0d4;
+	margin: 0;
+	float: none;
+}
+
+.himalayas-message__content .himalayas-message__heading {
+	margin-top: 0;
+	margin-bottom: 12px;
+	line-height: 1.4;
+}
+
+.himalayas-message__content .himalayas-message__cta {
+	display: flex;
+	align-items: center;
+}
+
+.himalayas-message__content .himalayas-message__cta .plugin-install-notice {
+	margin-left: 15px;
+	line-height: 1.4;
+}
+
+.himalayas-message__content .himalayas-message__cta a:before {
+	margin: 5px;
+	vertical-align: middle;
+}
+
+a.himalayas-message-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 10px 15px 10px 21px;
+	font-size: 13px;
+	line-height: 1.23076923;
+	text-decoration: none;
+}
+
+a.himalayas-message-close:before {
+	position: absolute;
+	top: 8px;
+	left: 0;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+}
+
+@media screen and (max-width: 782px) {
+	.himalayas-message__image {
+		display: none;
+	}
+}
+
+/**
+ * Dashboard page.
+ */
+.wrap .himalayas-header {
+	background-color: #fff;
+	padding: 12px 20px;
+	border-bottom: 1px solid #ccd0d4;
+	margin-left: -20px;
+	margin-right: -20px;
+}
+
+.appearance_page_himalayas-options .wrap {
+	margin-top: 0;
+}
+
+/**
+ * Responsive.
+ */
+@media (max-width: 600px) {
+	.himalayas-message__content .himalayas-screenshot {
+		display: none;
+	}
+	.himalayas-message__content .himalayas-message__text {
+		padding: 0;
+		width: 100%;
+	}
+}

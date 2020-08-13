@@ -50,6 +50,10 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweak  - Add and improve theme-related notices.
+* Remove - TGMPA library to recommend plugins
+
 = Version 1.2.4 - 2020-07-23 =
 * Fix - Mobile hamburger menu dropdown issue.
 * Remove - Unrequired deprecated demo config for theme demo lists.
