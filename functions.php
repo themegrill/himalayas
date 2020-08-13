@@ -157,6 +157,7 @@ if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-himalayas-notice.php';
 	require get_template_directory() . '/inc/admin/class-himalayas-admin.php';
 	require get_template_directory() . '/inc/admin/class-himalayas-welcome-notice.php';
+	require get_template_directory() . '/inc/admin/class-himalayas-dashboard.php';
 	require get_template_directory() . '/inc/admin/class-himalayas-upgrade-notice.php';
 	require get_template_directory() . '/inc/admin/class-himalayas-theme-review-notice.php';
 }
