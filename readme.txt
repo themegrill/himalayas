@@ -50,11 +50,11 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version TBD =
 * Tweak  - Add and improve theme-related notices.
 * Remove - TGMPA library to recommend plugins
 
-= Version 1.2.3 - TBD =
+= Version 1.2.4 - 2020-07-23 =
 * Fix - Mobile hamburger menu dropdown issue.
 * Remove - Unrequired deprecated demo config for theme demo lists.
 * Tweak - Change http protocol to https.
@@ -64,7 +64,7 @@ If you want to translate this theme to your language, refer to: https://translat
 * Enhancement - Gutenberg compatibility.
 * Fix   - Mobile hamburger menu dropdown not working.
 * Tweak - Remove unnecessary !important CSS declaration applied on input button.
-* Tweak - Add and improve theme-related notices.
+* Tweak - Add review notice message.
 
 = Version 1.2.2 - 2020-02-20 =
 * Tweak - Update `screen-reader-text` CSS.
