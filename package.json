@@ -1,7 +1,7 @@
 {
   "name": "himalayas",
   "title": "Himalayas",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "homepage": "https://themegrill.com/themes/himalayas",
   "repository": {
     "type": "git",
@@ -16,7 +16,8 @@
     "grunt-contrib-compress": "~1.2.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-jshint": "~1.0.0",
-    "grunt-wp-i18n": "~0.5.4"
+    "grunt-wp-i18n": "~0.5.4",
+    "gulp": "^4.0.2"
   },
   "engines": {
     "node": ">=0.8.0",

@@ -4,7 +4,9 @@ Theme URI: https://themegrill.com/themes/himalayas/
 Author: ThemeGrill
 Author URI: https://themegrill.com
 Description: Himalayas is modern style free one page parallax responsive WordPress theme. Inform your visitors all they need to know right from your home page without requiring to go to the other pages. Himalayas can be used for business, portfolio, corporate, agency, photography, freelancers and almost any kind of sites. Get free support at https://themegrill.com/support-forum/ and check the demo at https://demo.themegrill.com/himalayas/
-Version: 1.2.2
+Version: 1.2.4
+Tested up to: 5.4
+Requires PHP: 5.6
 License: GNU General Public License, version 3 (GPLv3)
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 Tags: one-column, two-columns, right-sidebar, left-sidebar, custom-menu, featured-images, sticky-post, translation-ready, threaded-comments, theme-options, footer-widgets, blog, portfolio, e-commerce
@@ -19,12 +21,63 @@ and Blueprint http://www.blueprintcss.org/
 /* =Reset
 -------------------------------------------------------------- */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
-abbr, acronym, address, big, cite, code, del, dfn, em, font,
-ins, kbd, q, s, samp, small, strike, strong, sub, sup,
-tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
 	border: 0;
 	font-family: inherit;
 	font-size: 100%;
@@ -128,7 +181,7 @@ input,
 select,
 textarea {
 	color: #333333;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 15px;
 	line-height: 1.8;
 	font-weight: 400;
@@ -142,7 +195,7 @@ h5,
 h6 {
 	clear: both;
 	font-weight: normal;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	line-height: 1.3;
 	margin-bottom: 15px;
 	color: #333333;
@@ -172,11 +225,14 @@ i {
 	font-style: italic;
 }
 
-blockquote {
+blockquote,
+.wp-block-quote,
+.wp-block-quote.is-style-large,
+.wp-block-quote.has-text-align-right{
 	margin: 0 15px;
 	font-size: 20px;
 	font-style: italic;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-weight: 300;
 }
 
@@ -188,7 +244,6 @@ pre {
 	background: #eeeeee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
-	font-size: 1.5rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -229,7 +284,7 @@ sup {
 }
 
 sub {
-	top: .5ex;
+	top: 0.5ex;
 }
 
 small {
@@ -268,7 +323,8 @@ h6 {
 Elements
 --------------------------------------------------------------*/
 
-hr {
+hr,
+.wp-block-separator {
 	background-color: #cccccc;
 	border: 0;
 	height: 1px;
@@ -322,11 +378,10 @@ table {
 
 th {
 	font-weight: bold;
-	border: 1px solid #cccccc;
-	padding: 5px 10px;
 }
 
-td {
+td, th,
+.wp-block-table th, .wp-block-table td {
 	border: 1px solid #cccccc;
 	padding: 5px 10px;
 }
@@ -529,6 +584,7 @@ Alignments
 	clear: both;
 	display: block;
 	margin: 0 auto;
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -551,7 +607,7 @@ Clearings
 .site-footer:after,
 .tg-container:after,
 .tg-container:before {
-	content: '';
+	content: "";
 	display: table;
 }
 
@@ -621,7 +677,7 @@ h1.entry-title a {
 .blog-author,
 .blog-cat {
 	display: inline;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 	font-weight: 300;
 }
@@ -1200,7 +1256,7 @@ COMMON CSS
 body {
 	font-weight: 300;
 	position: relative;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	line-height: 1.5;
 }
 
@@ -1313,7 +1369,7 @@ Menu css
 	list-style: outside none none;
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 #site-navigation .menu li {
@@ -1390,7 +1446,9 @@ Menu css
 	background: rgba(239, 238, 238, 0.2) none repeat scroll 0 0;
 }
 
-.home .stick #site-navigation ul.sub-menu, .home.non-transparent #site-navigation ul.sub-menu, .home.non-stick #site-navigation ul.sub-menu {
+.home .stick #site-navigation ul.sub-menu,
+.home.non-transparent #site-navigation ul.sub-menu,
+.home.non-stick #site-navigation ul.sub-menu {
 	background: #333333;
 }
 
@@ -1425,18 +1483,20 @@ Menu css
 .home #site-navigation ul ul.sub-menu li.focus > ul,
 #site-navigation ul ul.sub-menu li.focus > ul,
 .home .stick #site-navigation ul ul.sub-menu li.focus > ul,
-.header-wrapper.stick #site-navigation ul ul.sub-menu li.focus > ul{
+.header-wrapper.stick #site-navigation ul ul.sub-menu li.focus > ul {
 	left: 100%;
 	top: 0;
 }
 
-#site-navigation .menu li ul.sub-menu li, .stick #site-navigation .menu li ul.sub-menu li {
+#site-navigation .menu li ul.sub-menu li,
+.stick #site-navigation .menu li ul.sub-menu li {
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
 	line-height: 30px;
 	padding: 10px 20px;
 }
 
-#site-navigation .menu li ul.sub-menu li:first-child, .stick #site-navigation .menu li ul.sub-menu li:first-child {
+#site-navigation .menu li ul.sub-menu li:first-child,
+.stick #site-navigation .menu li ul.sub-menu li:first-child {
 	border-top: none;
 }
 
@@ -1721,7 +1781,8 @@ Slider css
 }
 
 .slider-wrapper .parallax-overlay {
-	background: url(images/pattern-overlay.png) repeat scroll 0 0 rgba(0, 0, 0, 0.3);
+	background: url(images/pattern-overlay.png) repeat scroll 0 0
+		rgba(0, 0, 0, 0.3);
 }
 
 .slider-wrapper figure {
@@ -1864,7 +1925,8 @@ Slider css
 
 .slider-wrapper .bx-prev,
 .slider-wrapper .bx-next {
-	background: rgba(0, 0, 0, 0) url("images/slider-arrow.png") no-repeat scroll 0 0;
+	background: rgba(0, 0, 0, 0) url("images/slider-arrow.png") no-repeat scroll
+		0 0;
 	color: transparent;
 	font: 0px/0 a;
 	height: 48px;
@@ -2125,7 +2187,7 @@ Video background css
 	letter-spacing: 2px;
 	margin: 0 0 15px;
 	position: relative;
-	font-family: 'Crimson Text', serif;
+	font-family: "Crimson Text", serif;
 	text-transform: uppercase;
 	font-weight: 700;
 }
@@ -2158,7 +2220,7 @@ Video background css
 
 .about-title,
 .contact-title {
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-weight: 300;
 	letter-spacing: 3px;
 	line-height: 30px;
@@ -2274,7 +2336,7 @@ Video background css
 --------------------------------------------------------------*/
 
 .service-title {
-	font-family: 'roboto', sans-serif;
+	font-family: "roboto", sans-serif;
 	font-weight: 700;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -2412,7 +2474,7 @@ Video background css
 
 .cta-text-title h2 {
 	color: #ffffff;
-	font-family: 'roboto', sans-serif;
+	font-family: "roboto", sans-serif;
 	font-weight: 700;
 	letter-spacing: 2px;
 	text-shadow: 1px 3px 2px rgba(204, 204, 204, 0.7);
@@ -2613,11 +2675,11 @@ Video background css
 }
 
 .port-title-wrapper .port-title {
-	font-family: 'roboto', sans-serif;
+	font-family: "roboto", sans-serif;
 	font-weight: 700;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	margin-bottom: 10px
+	margin-bottom: 10px;
 }
 
 .port-title-wrapper .port-title a {
@@ -3280,23 +3342,26 @@ Video background css
 	overflow: hidden;
 }
 
-.no-sidebar-full-width .alignfull,
-.no-sidebar .alignfull {
+/* Gutenberg Alignment */
+.no-sidebar-full-width #primary .entry-content > .alignfull,
+.no-sidebar #primary .entry-content > .alignfull {
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
 	max-width: unset;
 }
 
-.no-sidebar-full-width .alignwide,
-.no-sidebar .alignwide {
+.no-sidebar-full-width #primary .entry-content > .alignfull.wp-block-cover, .no-sidebar-full-width #primary .entry-content > .alignfull.wp-block-cover-image,
+.no-sidebar #primary .entry-content > .alignfull.wp-block-cover,
+.no-sidebar #primary .entry-content > .alignfull.wp-block-cover-image {
+	width: unset;
+}
+
+.no-sidebar-full-width #primary .entry-content > .alignwide,
+.no-sidebar #primary .entry-content > .alignwide {
 	margin-left: -100px;
 	margin-right: -100px;
 	max-width: unset;
-}
-
-.no-sidebar-full-width .alignfull img,
-.no-sidebar .alignfull img {
-	max-width: unset;
+	width: unset;
 }
 
 /*--------------------------------------------------------------
@@ -3665,7 +3730,7 @@ article {
 .footer-nav li a[href*="plus.google.com"]::before,
 .footer-nav li a[href*="youtube.com"]::before,
 .footer-nav li a[href*="pinterest.com"]::before {
-	content: '\f09a';
+	content: "\f09a";
 	font-size: 21px;
 	line-height: 15px;
 	padding: 0;
@@ -3673,23 +3738,23 @@ article {
 }
 
 .footer-nav li a[href*="twitter.com"]::before {
-	content: '\f099';
+	content: "\f099";
 }
 
 .footer-nav li a[href*="plus.google.com"]::before {
-	content: '\f0d5';
+	content: "\f0d5";
 }
 
 .footer-nav li a[href*="youtube.com"]::before {
-	content: '\f167';
+	content: "\f167";
 }
 
 .footer-nav li a[href*="pinterest.com"]::before {
-	content: '\f0d2';
+	content: "\f0d2";
 }
 
 .footer-nav li a[href*="instagram.com"]::before {
-	content: '\f16d';
+	content: "\f16d";
 }
 
 .social-icons-lists li {
@@ -3731,28 +3796,30 @@ iframe#wp-custom-header-video {
 }
 
 .wp-custom-header-video-button:before {
-	content: '\f04b';
+	content: "\f04b";
 	display: block;
 	font-family: FontAwesome;
 	font-size: 20px;
 }
 
 .wp-custom-header-video-button.wp-custom-header-video-pause:before {
-	content: '\f04c';
+	content: "\f04c";
 }
 
 /*--------------------------------------------------------------
     Responsive css
 --------------------------------------------------------------*/
-
-@media screen and (max-width: 1500px) {
-	.no-sidebar-full-width .alignwide {
-		margin-left: -2px;
-		margin-right: -2px;
-	}
-}
-
 @media (min-width: 1200px) and (max-width: 1400px) {
+	.no-sidebar-full-width #primary .entry-content > .alignwide {
+		margin-left: -50px;
+		margin-right: -50px;
+	}
+
+	.no-sidebar #primary .entry-content > .alignwide {
+		margin-left: -50px;
+		margin-right: -50px;
+	}
+
 	.scroll-down {
 		bottom: 20px;
 	}
@@ -3796,6 +3863,16 @@ iframe#wp-custom-header-video {
 /* Large desktop */
 
 @media (max-width: 1200px) {
+	.no-sidebar-full-width #primary .entry-content > .alignwide {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	.no-sidebar #primary .entry-content > .alignwide {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
 	.tg-container {
 		width: 99%;
 		padding: 0 1%;
@@ -3945,6 +4022,13 @@ iframe#wp-custom-header-video {
 /* Landscape phone to portrait tablet */
 
 @media (max-width: 768px) {
+
+	.no-sidebar-full-width #primary .entry-content > .alignwide,
+	.no-sidebar #primary .entry-content > .alignwide {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
 	.logged-in.customize-support .header-wrapper.stick,
 	.home.logged-in.customize-support .header-wrapper {
 		top: 46px;
@@ -3959,7 +4043,8 @@ iframe#wp-custom-header-video {
 		width: 95%;
 	}
 
-	.non-stick.transparent .header-wrapper.stick, .non-stick.non-transparent .header-wrapper.stick {
+	.non-stick.transparent .header-wrapper.stick,
+	.non-stick.non-transparent .header-wrapper.stick {
 		padding: 0;
 	}
 
@@ -4000,7 +4085,7 @@ iframe#wp-custom-header-video {
 	}
 
 	.menu-toggle::before {
-		content: '\f0c9';
+		content: "\f0c9";
 		font-family: FontAwesome;
 	}
 
@@ -4243,11 +4328,6 @@ iframe#wp-custom-header-video {
 		float: none;
 		margin-left: 0;
 		width: 100%;
-	}
-
-	.no-sidebar .alignwide {
-		margin-left: 0;
-		margin-right: 0;
 	}
 }
 
@@ -4548,4 +4628,14 @@ iframe#wp-custom-header-video {
 
 .search .page-header {
 	display: none;
+}
+
+/*--------------------------------------------------------------
+Gutenberg Blocks Layout.
+--------------------------------------------------------------*/
+.wp-block-gallery.alignleft, .wp-block-gallery.alignright, .wp-block-gallery.aligncenter,
+.wp-block-social-links.alignleft,
+.wp-block-social-links.alignright,
+.wp-block-social-links.aligncenter {
+	display: flex;
 }

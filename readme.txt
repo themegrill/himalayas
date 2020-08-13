@@ -16,7 +16,6 @@ External resources linked to the theme.
 Resources packed within the theme.
 * Font Awesome by Dave Gandy http://fortawesome.github.io/Font-Awesome/
   SIL OFL 1.1 http://scripts.sil.org/OFL.
-* Images in the screenshot is from https://pixabay.com/en/norway-mountain-sky-blue-water-772991/ License: CC0
 * HTML5 Shiv @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 * Magnific-Popup by Dmitry Semenov | MIT Licensed
 * jQuery-One-Page-Nav by Trevor Davis | MIT/GPL Licensed
@@ -56,6 +55,13 @@ If you want to translate this theme to your language, refer to: https://translat
 * Remove - TGMPA library to recommend plugins
 
 = Version 1.2.4 - 2020-07-23 =
+* Fix - Mobile hamburger menu dropdown issue.
+* Remove - Unrequired deprecated demo config for theme demo lists.
+* Tweak - Change http protocol to https.
+
+= Version 1.2.3 - 2020-07-02 =
+* Add   - Required header fields: `Tested up to` and `Requires PHP` in style.css.
+* Enhancement - Gutenberg compatibility.
 * Fix   - Mobile hamburger menu dropdown not working.
 * Tweak - Remove unnecessary !important CSS declaration applied on input button.
 * Tweak - Add and improve theme-related notices.

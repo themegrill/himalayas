@@ -63,6 +63,12 @@ if ( ! function_exists( 'himalayas_setup' ) ) :
 		// Gutenberg layout support.
 		add_theme_support( 'align-wide' );
 
+		// Gutenberg block layout support.
+		add_theme_support( 'wp-block-styles' );
+
+		// Gutenberg editor support.
+		add_theme_support( 'responsive-embeds' );
+
 		// Adding excerpt option box for pages as well
 		add_post_type_support( 'page', 'excerpt' );
 
@@ -135,13 +141,6 @@ require_once( HIMALAYAS_INCLUDES_DIR . '/custom-header.php' );
 require_once( HIMALAYAS_ADMIN_DIR . '/meta-boxes.php' );
 // Load Widgets and Widgetized Area
 require_once( HIMALAYAS_WIDGETS_DIR . '/widgets.php' );
-
-/**
- * Load Demo Importer Configs.
- */
-if ( class_exists( 'TG_Demo_Importer' ) ) {
-	require get_template_directory() . '/inc/demo-config.php';
-}
 
 /**
  * Assign the Himalayas version to a variable.
