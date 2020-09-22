@@ -10,7 +10,6 @@
 function himalayas_customize_register( $wp_customize ) {
 
 	require HIMALAYAS_INCLUDES_DIR . '/customize-controls/class-himalayas-image-radio-control.php';
-	require HIMALAYAS_INCLUDES_DIR . '/customize-controls/class-himalayas-custom-css-control.php';
 	require HIMALAYAS_INCLUDES_DIR . '/customize-controls/class-himalayas-upsell-section.php';
 
 	// Transport postMessage variable set
@@ -295,32 +294,7 @@ function himalayas_customize_register( $wp_customize ) {
 		),
 	) );
 
-	// Custom CSS setting
-	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
-
-		$wp_customize->add_section( 'himalayas_custom_css_setting', array(
-			'priority' => 550,
-			'title'    => __( 'Custom CSS', 'himalayas' ),
-			'panel'    => 'himalayas_design_options',
-		) );
-
-		$wp_customize->add_setting( 'himalayas_custom_css', array(
-			'default'              => '',
-			'capability'           => 'edit_theme_options',
-			'sanitize_callback'    => 'wp_filter_nohtml_kses',
-			'sanitize_js_callback' => 'wp_filter_nohtml_kses',
-		) );
-		$wp_customize->add_control(
-			new HIMALAYAS_Custom_CSS_Control( $wp_customize, 'himalayas_custom_css', array(
-				'label'    => __( 'Write your Custom CSS', 'himalayas' ),
-				'section'  => 'himalayas_custom_css_setting',
-				'settings' => 'himalayas_custom_css',
-			) )
-		);
-	}
 	// End of the Design Options
-
-	/**************************************************************************************/
 
 	// Start of the Additional Options
 	$wp_customize->add_panel( 'himalayas_additional_options', array(
