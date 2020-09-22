@@ -50,6 +50,9 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweak - Remove deprecate Custom CSS customize option provided via theme.
+
 = Version 1.2.5 - 2020-08-14 =
 * Tweak  - Add and improve theme-related notices.
 * Remove - TGMPA library to recommend plugins
