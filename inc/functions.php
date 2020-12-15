@@ -480,11 +480,11 @@ if ( ! function_exists( 'himalayas_footer_copyright' ) ) :
 	function himalayas_footer_copyright() {
 		$site_link = '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" >' . get_bloginfo( 'name', 'display' ) . '</a>';
 
-		$wp_link = '<a href="https://wordpress.org" target="_blank" title="' . esc_attr__( 'WordPress', 'himalayas' ) . '">' . __( 'WordPress', 'himalayas' ) . '</a>';
+		$wp_link = '<a href="https://wordpress.org" target="_blank" title="' . esc_attr__( 'WordPress', 'himalayas' ) . '" rel="nofollow">' . __( 'WordPress', 'himalayas' ) . '</a>';
 
-		$tg_link = '<a href="' . 'https://themegrill.com/themes/himalayas' . '" target="_blank" title="' . esc_attr__( 'ThemeGrill', 'himalayas' ) . '" rel="author">' . __( 'ThemeGrill', 'himalayas' ) . '</a>';
+		$tg_link = '<a href="' . 'https://themegrill.com/themes/himalayas' . '" target="_blank" title="' . esc_attr__( 'Himalayas', 'himalayas' ) . '" rel="nofollow">' . __( 'Himalayas', 'himalayas' ) . '</a>';
 
-		$default_footer_value = '<span class="copyright-text">' . sprintf( __( 'Copyright &copy; %1$s %2$s.', 'himalayas' ), date( 'Y' ), $site_link ) . ' ' . sprintf( __( 'Theme: %1$s by %2$s.', 'himalayas' ), 'Himalayas', $tg_link ) . ' ' . sprintf( __( 'Powered by %s.', 'himalayas' ), $wp_link ) . '</span>';
+		$default_footer_value = '<span class="copyright-text">' . sprintf( __( 'Copyright &copy; %1$s %2$s.', 'himalayas' ), date( 'Y' ), $site_link ) . ' ' . sprintf( __( 'Theme: %1$s by %2$s.', 'himalayas' ), $tg_link, 'ThemeGrill' ) . ' ' . sprintf( __( 'Powered by %s.', 'himalayas' ), $wp_link ) . '</span>';
 
 		$himalayas_footer_copyright = '<div class="copyright">' . $default_footer_value . '</div>';
 		echo $himalayas_footer_copyright;
