@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License, version 3 (GPLv3).
 msgid ""
 msgstr ""
-"Project-Id-Version: Himalayas 1.2.5\n"
+"Project-Id-Version: Himalayas 1.2.6\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2020-08-14 07:14:18+00:00\n"
+"POT-Creation-Date: 2020-12-17 10:43:48+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -251,239 +251,231 @@ msgstr ""
 msgid "Show designation in Our Team Widget. </br>"
 msgstr ""
 
-#: inc/customizer.php:37
+#: inc/customizer.php:36
 msgid "Contain all the Header related options"
 msgstr ""
 
-#: inc/customizer.php:39
+#: inc/customizer.php:38
 msgid "Himalayas Header Options"
 msgstr ""
 
-#: inc/customizer.php:45
+#: inc/customizer.php:44
 msgid "Header Sticky/non-sticky"
 msgstr ""
 
-#: inc/customizer.php:46
+#: inc/customizer.php:45
 msgid "Header is sticky by default."
 msgstr ""
 
-#: inc/customizer.php:57
+#: inc/customizer.php:56
 msgid "Check to make header non-sticky"
 msgstr ""
 
-#: inc/customizer.php:64
+#: inc/customizer.php:63
 msgid "Header Transparency"
 msgstr ""
 
-#: inc/customizer.php:65
+#: inc/customizer.php:64
 msgid "By default Header is transparent when slider is used."
 msgstr ""
 
-#: inc/customizer.php:76
+#: inc/customizer.php:75
 msgid "Make header non transparent."
 msgstr ""
 
-#: inc/customizer.php:82
+#: inc/customizer.php:81
 msgid "Header Title/Tagline and Logo"
 msgstr ""
 
-#: inc/customizer.php:94
+#: inc/customizer.php:93
 msgid "Choose the required option"
 msgstr ""
 
-#: inc/customizer.php:97
+#: inc/customizer.php:96
 msgid "Header Logo Only"
 msgstr ""
 
-#: inc/customizer.php:98
+#: inc/customizer.php:97
 msgid "Header Text Only"
 msgstr ""
 
-#: inc/customizer.php:99
+#: inc/customizer.php:98
 msgid "Show Both"
 msgstr ""
 
-#: inc/customizer.php:100
+#: inc/customizer.php:99
 msgid "Disable"
 msgstr ""
 
-#: inc/customizer.php:112
+#: inc/customizer.php:111
 msgid "Contain all the slider related options"
 msgstr ""
 
-#: inc/customizer.php:113
+#: inc/customizer.php:112
 msgid "Himalayas Slider Options"
 msgstr ""
 
-#: inc/customizer.php:118
+#: inc/customizer.php:117
 msgid "Slider Settings"
 msgstr ""
 
-#: inc/customizer.php:120
+#: inc/customizer.php:119
 msgid "Note"
 msgstr ""
 
-#: inc/customizer.php:120
+#: inc/customizer.php:119
 msgid ""
 "1. To display the Slider first check Enable the slider below. Now create "
 "the page for each slider and enter title, text and featured image. Choose "
 "that pages in the dropdown options."
 msgstr ""
 
-#: inc/customizer.php:120
+#: inc/customizer.php:119
 msgid ""
 "2. The recommended size for the slider image is 1600 x 780 pixels. For "
 "better functioning of slider use equal size images for each slide."
 msgstr ""
 
-#: inc/customizer.php:120
+#: inc/customizer.php:119
 msgid ""
 "3. If page do not have featured Image than that page will not included in "
 "slider show."
 msgstr ""
 
-#: inc/customizer.php:133
+#: inc/customizer.php:132
 msgid "Enable the slider"
 msgstr ""
 
-#: inc/customizer.php:155
+#: inc/customizer.php:154
 msgid "Slider"
 msgstr ""
 
-#: inc/customizer.php:169
+#: inc/customizer.php:168
 msgid "Contain all the Design related options"
 msgstr ""
 
-#: inc/customizer.php:170
+#: inc/customizer.php:169
 msgid "Himalayas Design Options"
 msgstr ""
 
-#: inc/customizer.php:176
+#: inc/customizer.php:175
 msgid "Default layout"
 msgstr ""
 
-#: inc/customizer.php:188
+#: inc/customizer.php:187
 msgid ""
 "Select default layout. This layout will be reflected in whole site "
 "archives, categories, search page etc. The layout for a single post and "
 "page can be controlled from below options"
 msgstr ""
 
-#: inc/customizer.php:203
+#: inc/customizer.php:202
 msgid "Default layout for pages only"
 msgstr ""
 
-#: inc/customizer.php:215
+#: inc/customizer.php:214
 msgid ""
 "Select default layout for pages. This layout will be reflected in all pages "
 "unless unique layout is set for specific page"
 msgstr ""
 
-#: inc/customizer.php:230
+#: inc/customizer.php:229
 msgid "Default layout for single posts only"
 msgstr ""
 
-#: inc/customizer.php:242
+#: inc/customizer.php:241
 msgid ""
 "Select default layout for single posts. This layout will be reflected in "
 "all single posts unless unique layout is set for specific post"
 msgstr ""
 
-#: inc/customizer.php:258
+#: inc/customizer.php:257
 msgid "Primary color option"
 msgstr ""
 
-#: inc/customizer.php:270
+#: inc/customizer.php:269
 msgid ""
 "This will reflect in links, buttons and many others. Choose a color to "
 "match your site"
 msgstr ""
 
-#: inc/customizer.php:278
+#: inc/customizer.php:277
 msgid "Footer Layout Options"
 msgstr ""
 
-#: inc/customizer.php:289
+#: inc/customizer.php:288
 msgid "Select the Footer Layout"
 msgstr ""
 
-#: inc/customizer.php:293
+#: inc/customizer.php:292
 msgid "Choose Footer Layout One"
 msgstr ""
 
-#: inc/customizer.php:294
+#: inc/customizer.php:293
 msgid "Choose Footer Layout Two"
 msgstr ""
 
-#: inc/customizer.php:303
-msgid "Custom CSS"
-msgstr ""
-
-#: inc/customizer.php:315
-msgid "Write your Custom CSS"
-msgstr ""
-
-#: inc/customizer.php:328
+#: inc/customizer.php:302
 msgid "Contain additional options"
 msgstr ""
 
-#: inc/customizer.php:330
+#: inc/customizer.php:304
 msgid "Himalayas Additional Options"
 msgstr ""
 
-#: inc/customizer.php:336
+#: inc/customizer.php:310
 msgid "Hide Blog posts from the front page"
 msgstr ""
 
-#: inc/customizer.php:347
+#: inc/customizer.php:321
 msgid "Check to hide blog posts/static page on front page"
 msgstr ""
 
-#: inc/customizer.php:354
+#: inc/customizer.php:328
 msgid "Author Bio Option"
 msgstr ""
 
-#: inc/customizer.php:366
+#: inc/customizer.php:340
 msgid "Check to activate author bio display."
 msgstr ""
 
-#: inc/customizer.php:374
+#: inc/customizer.php:348
 msgid "Related Posts"
 msgstr ""
 
-#: inc/customizer.php:386
+#: inc/customizer.php:360
 msgid "Check to activate the related posts"
 msgstr ""
 
-#: inc/customizer.php:399
+#: inc/customizer.php:373
 msgid "Related Posts Must Be Shown As:"
 msgstr ""
 
-#: inc/customizer.php:403
+#: inc/customizer.php:377
 msgid "Related Posts By Categories"
 msgstr ""
 
-#: inc/customizer.php:404
+#: inc/customizer.php:378
 msgid "Related Posts By Tags"
 msgstr ""
 
-#: inc/customizer.php:411
+#: inc/customizer.php:385
 msgid "Excerpts or Full Posts option"
 msgstr ""
 
-#: inc/customizer.php:422
+#: inc/customizer.php:396
 msgid "Toggle between displaying excerpts and full posts on your blog and archives."
 msgstr ""
 
-#: inc/customizer.php:426
+#: inc/customizer.php:400
 msgid "Show full post content"
 msgstr ""
 
-#: inc/customizer.php:427
+#: inc/customizer.php:401
 msgid "Show excerpt"
 msgstr ""
 
-#: inc/customizer.php:439
+#: inc/customizer.php:413
 msgid "View PRO version"
 msgstr ""
 
@@ -537,10 +529,6 @@ msgstr ""
 msgid "WordPress"
 msgstr ""
 
-#. Author of the plugin/theme
-msgid "ThemeGrill"
-msgstr ""
-
 #: inc/functions.php:487
 msgid "Copyright &copy; %1$s %2$s."
 msgstr ""
@@ -553,40 +541,40 @@ msgstr ""
 msgid "Powered by %s."
 msgstr ""
 
-#: inc/functions.php:581
+#: inc/functions.php:575
 msgid "Category: %s"
 msgstr ""
 
-#: inc/functions.php:583
+#: inc/functions.php:577
 msgid "Tag: %s"
 msgstr ""
 
-#: inc/functions.php:585
+#: inc/functions.php:579
 msgid "Author: %s"
 msgstr ""
 
-#: inc/functions.php:587
+#: inc/functions.php:581
 msgid "Year: %s"
 msgstr ""
 
-#: inc/functions.php:589
+#: inc/functions.php:583
 msgid "Month: %s"
 msgstr ""
 
-#: inc/functions.php:591
+#: inc/functions.php:585
 msgid "Day: %s"
 msgstr ""
 
-#: inc/functions.php:613
+#: inc/functions.php:607
 msgid "Archives: %s"
 msgstr ""
 
-#: inc/functions.php:617
+#: inc/functions.php:611
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
 msgid "%1$s: %2$s"
 msgstr ""
 
-#: inc/functions.php:619
+#: inc/functions.php:613
 msgid "Archives"
 msgstr ""
 
@@ -1005,6 +993,10 @@ msgid ""
 "https://demo.themegrill.com/himalayas/"
 msgstr ""
 
+#. Author of the plugin/theme
+msgid "ThemeGrill"
+msgstr ""
+
 #. Author URI of the plugin/theme
 msgid "https://themegrill.com"
 msgstr ""
@@ -1028,62 +1020,62 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/functions.php:587
+#: inc/functions.php:581
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: inc/functions.php:589
+#: inc/functions.php:583
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: inc/functions.php:591
+#: inc/functions.php:585
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: inc/functions.php:594
+#: inc/functions.php:588
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: inc/functions.php:596
+#: inc/functions.php:590
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: inc/functions.php:598
+#: inc/functions.php:592
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: inc/functions.php:600
+#: inc/functions.php:594
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: inc/functions.php:602
+#: inc/functions.php:596
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: inc/functions.php:604
+#: inc/functions.php:598
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: inc/functions.php:606
+#: inc/functions.php:600
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: inc/functions.php:608
+#: inc/functions.php:602
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: inc/functions.php:610
+#: inc/functions.php:604
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""
