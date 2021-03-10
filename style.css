@@ -607,7 +607,7 @@ Clearings
 .site-footer:after,
 .tg-container:after,
 .tg-container:before {
-	content: "";
+	content: '';
 	display: table;
 }
 
@@ -4084,9 +4084,9 @@ iframe#wp-custom-header-video {
 		font-size: 22px;
 	}
 
-	.menu-toggle::before {
+	.site-header .menu-toggle::before {
 		content: "\f0c9";
-		font-family: FontAwesome;
+		font-family: fontawesome;
 	}
 
 	.menu-search-wrapper {
