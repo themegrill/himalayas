@@ -51,6 +51,9 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Fix    - jQuery deprecated message in custom JS files.
+
 = Version 1.2.6 - 2020-12-17 =
 * Tweak - Remove deprecate Custom CSS customize option provided via theme.
 * Tweak - Update footer credit link with `rel="nofollow"` attributes.
