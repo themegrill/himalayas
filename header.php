@@ -87,7 +87,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 					</div> <!-- home-search-end -->
 
 					<nav id="site-navigation" class="main-navigation" role="navigation">
-						<p class="menu-toggle hide"></p>
+						<span class="menu-toggle hide"></span>
 						<?php wp_nav_menu( array(
 							'theme_location'  => 'primary',
 							'container_class' => 'menu-primary-container',
