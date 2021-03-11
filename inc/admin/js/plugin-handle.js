@@ -3,7 +3,7 @@
  */
 jQuery( document ).ready( function ( $ ) {
 
-	$( '.btn-get-started' ).click( function ( e ) {
+	$( '.btn-get-started' ).on('click', function (e) {
 		e.preventDefault();
 
 		// Show updating gif icon and update button text.
