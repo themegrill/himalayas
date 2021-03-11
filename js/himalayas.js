@@ -14,7 +14,7 @@ jQuery( document ).ready( function () {
 
 	stickyNav();
 
-	jQuery( window ).scroll( function () {
+	jQuery( window ).on('scroll', function () {
 		stickyNav();
 	} );
 
@@ -53,14 +53,14 @@ jQuery( document ).ready( function () {
 
 	//******************************* Scroll to top *************************//
 
-	jQuery( '.scrollup' ).click( function () {
+	jQuery( '.scrollup' ).on('click', function () {
 		jQuery( 'html, body' ).animate( {
 			scrollTop : 0
 		}, 2000 );
 		return false;
 	} );
 
-	jQuery( window ).scroll( function () {
+	jQuery( window ).on('scroll', function () {
 		if ( jQuery( this ).scrollTop() > 100 ) {
 			jQuery( '.scrollup' ).fadeIn();
 		} else {
@@ -68,18 +68,18 @@ jQuery( document ).ready( function () {
 		}
 	} );
 
-	jQuery( '.map-btn' ).click( function () {
+	jQuery( '.map-btn' ).on('click', function () {
 		jQuery( '#map iframe' ).slideToggle( 'slow' );
 		jQuery( '.map-btn i' ).toggleClass( 'fa-angle-double-up' );
 		jQuery( '.map-btn i' ).toggleClass( 'fa-angle-double-down' );
 	} );
 
 
-	jQuery( '.search-icon' ).click( function () {
+	jQuery( '.search-icon' ).on('click', function () {
 		jQuery( '.search-box' ).toggleClass( 'active' );
 	} );
 
-	jQuery( '.search-box .close' ).click( function () {
+	jQuery( '.search-box .close' ).on('click', function () {
 		jQuery( '.search-box' ).removeClass( 'active' );
 	} );
 
@@ -97,7 +97,7 @@ jQuery( document ).ready( function () {
 
 	jQuery( '#site-navigation .menu-item-has-children' ).append( '<span class="sub-toggle"> <i class="fa fa-angle-right"></i> </span>' );
 
-	jQuery( '#site-navigation .sub-toggle' ).click( function () {
+	jQuery( '#site-navigation .sub-toggle' ).on('click', function () {
 		jQuery( this ).parent( '.menu-item-has-children' ).children( 'ul.sub-menu' ).first().slideToggle( '1000' );
 		jQuery( this ).children( '.fa-angle-right' ).first().toggleClass( 'fa-angle-down' );
 	} );
