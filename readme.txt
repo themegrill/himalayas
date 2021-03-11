@@ -53,6 +53,7 @@ If you want to translate this theme to your language, refer to: https://translat
 == Changelog ==
 = TBD =
 * Fix - Mobile Hamburger Menu issue caused by WP 5.7
+* Fix 	- jQuery deprecated messages from theme JS file.
 
 = Version 1.2.6 - 2020-12-17 =
 * Tweak - Remove deprecate Custom CSS customize option provided via theme.
