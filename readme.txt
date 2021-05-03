@@ -55,6 +55,7 @@ If you want to translate this theme to your language, refer to: https://translat
 == Changelog ==
 = Version TBD =
 * Feature - Added RTL support.
+* Fix - Updated the license information for the images used in the screenshot.
 
 = Version 1.2.7 - 2021-03-11 =
 * Fix 	- Mobile Hamburger Menu issue caused by WP 5.7
