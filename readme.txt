@@ -55,7 +55,7 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.2.8 - 2021-05-07 =
 * Feature - Added RTL support.
 * Tweak - Update screenshot image source link.
 
