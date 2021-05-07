@@ -14,7 +14,11 @@ External resources linked to the theme.
   SIL Open Font License, 1.1
 
 Resources packed within the theme.
-* Images on screenshot is from https://pxhere.com/ link. License: Creative Commons Zero (CC0)
+* Images used in the screenshot are licensed under Creative Commons Zero (CC0):
+
+  https://pxhere.com/en/photo/728990
+  https://pxhere.com/en/photo/956879
+  
 * Font Awesome by Dave Gandy http://fortawesome.github.io/Font-Awesome/
   SIL OFL 1.1 http://scripts.sil.org/OFL.
 * HTML5 Shiv @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
@@ -53,6 +57,7 @@ If you want to translate this theme to your language, refer to: https://translat
 == Changelog ==
 = Version TBD =
 * Feature - Added RTL support.
+* Tweak - Update screenshot image source link.
 
 = Version 1.2.7 - 2021-03-11 =
 * Fix 	- Mobile Hamburger Menu issue caused by WP 5.7
