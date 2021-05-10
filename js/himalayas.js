@@ -86,13 +86,9 @@ jQuery( document ).ready( function () {
 	//menu toggle
 	jQuery( window ).on( 'load', function () {
 
-		var width = Math.max( window.innerWidth, document.documentElement.clientWidth );
-
-		if ( width && width <= 768 ) {
-			jQuery( '.menu-toggle, #site-navigation a' ).click( function () {
-				jQuery( '#site-navigation .menu-primary-container, #site-navigation div.menu' ).slideToggle();
-			} );
-		}
+		jQuery( '.menu-toggle,#site-navigation a' ).on('click', function () {
+			jQuery( '#site-navigation .menu-primary-container,#site-navigation div.menu' ).slideToggle();
+		} );
 	} );
 
 	jQuery( '#site-navigation .menu-item-has-children' ).append( '<span class="sub-toggle"> <i class="fa fa-angle-right"></i> </span>' );
