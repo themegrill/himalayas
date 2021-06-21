@@ -13,7 +13,7 @@ add_action( 'wp_enqueue_scripts', 'himalayas_scripts' );
  */
 function himalayas_scripts() {
 	// Load Google fonts
-	wp_enqueue_style( 'himalayas-google-fonts', '//fonts.googleapis.com/css?family=Crimson+Text:700|Roboto:400,700,900,300' );
+	wp_enqueue_style( 'himalayas-google-fonts', '//fonts.googleapis.com/css?family=Crimson+Text:700|Roboto:400,700,900,300&display=swap' );
 
 	// Load fontawesome
 	wp_enqueue_style( 'himalayas-fontawesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
