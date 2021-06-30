@@ -86,7 +86,7 @@ jQuery( document ).ready( function () {
 	//menu toggle
 	jQuery( window ).on( 'load', function () {
 
-		jQuery( '.menu-toggle,#site-navigation a' ).on('click', function () {
+		jQuery( '.menu-toggle, #site-navigation a' ).on('click', function () {
 			jQuery( '#site-navigation .menu-primary-container,#site-navigation div.menu' ).slideToggle();
 		} );
 	} );
