@@ -989,8 +989,8 @@ msgid ""
 "without requiring to go to the other pages. Himalayas can be used for "
 "business, portfolio, corporate, agency, photography, freelancers and almost "
 "any kind of sites. Get free support at "
-"https://themegrill.com/support-forum/ and check the demo at "
-"https://demo.themegrill.com/himalayas/"
+"https://themegrill.com/contact/ and check the demo at "
+"https://themegrilldemos.com/himalayas/"
 msgstr ""
 
 #. Author of the plugin/theme
