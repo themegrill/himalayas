@@ -56,7 +56,7 @@ If you want to translate this theme to your language, refer to: https://translat
 
 == Changelog ==
 = Version TBD =
-* Fix - Font display swap property and value for google fonts.
+* Enhancement - Added CSS font-display property and swap value for better performance.
 
 = Version 1.2.8 - 2021-05-07 =
 * Feature - Added RTL support.
