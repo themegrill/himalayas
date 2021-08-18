@@ -55,7 +55,7 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.2.9 - 2021-08-18 =
 * Enhancement - Added CSS font-display property and swap value for better performance.
 
 = Version 1.2.8 - 2021-05-07 =
