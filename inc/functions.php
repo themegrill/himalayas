@@ -263,7 +263,7 @@ if ( ! function_exists( 'himalayas_entry_meta' ) ) :
 				$time_string
 			); ?>
 
-			<span class="byline author vcard"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo get_the_author(); ?>"><?php echo esc_html( get_the_author() ); ?></a></span>
+			<span class="byline author vcard"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>"><?php echo esc_html( get_the_author() ); ?></a></span>
 
 			<?php
 			if ( ! post_password_required() && comments_open() ) { ?>
@@ -576,7 +576,7 @@ if ( ! function_exists( 'himalayas_archive_title' ) ) :
 		} elseif ( is_tag() ) {
 			$title = sprintf( esc_html__( 'Tag: %s', 'himalayas' ), single_tag_title( '', false ) );
 		} elseif ( is_author() ) {
-			$title = sprintf( esc_html__( 'Author: %s', 'himalayas' ), '<span class="vcard">' . get_the_author() . '</span>' );
+			$title = sprintf( esc_html__( 'Author: %s', 'himalayas' ), '<span class="vcard">' . esc_html( get_the_author() ) . '</span>' );
 		} elseif ( is_year() ) {
 			$title = sprintf( esc_html__( 'Year: %s', 'himalayas' ), get_the_date( esc_html_x( 'Y', 'yearly archives date format', 'himalayas' ) ) );
 		} elseif ( is_month() ) {
