@@ -51,8 +51,13 @@ class himalayas_featured_posts_widget extends WP_Widget
 			<label
 				for="<?php echo esc_attr( $this->get_field_id( 'featured_menu_id' ) ); ?>"><?php esc_html_e( 'Featured Post Section ID:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'featured_menu_id' ) ); ?>"
+<<<<<<< HEAD
 				   name="<?php echo esc_attr( $this->get_field_name( 'featured_menu_id' ) ); ?>" type="text"
 				   value="<?php echo esc_attr( $featured_menu_id ); ?>"/>
+=======
+					name="<?php echo esc_attr( $this->get_field_name( 'featured_menu_id' ) ); ?>" type="text"
+					value="<?php echo esc_attr( $featured_menu_id ); ?>" />
+>>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 		</p>
 
 		<p>
@@ -60,9 +65,15 @@ class himalayas_featured_posts_widget extends WP_Widget
 			<label
 				for="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"><?php esc_html_e( 'Background Color:', 'himalayas' ); ?></label><br/>
 			<input class="my-color-picker" type="text" data-default-color="#f1f1f1"
+<<<<<<< HEAD
 				   id="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"
 				   name="<?php echo esc_attr( $this->get_field_name( 'background_color' ) ); ?>"
 				   value="<?php echo esc_attr( $background_color ); ?>"/>
+=======
+					id="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'background_color' ) ); ?>"
+					value="<?php echo esc_attr( $background_color ); ?>" />
+>>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 		</p>
 
 		<p>
@@ -73,6 +84,7 @@ class himalayas_featured_posts_widget extends WP_Widget
 			<div class="custom_media_preview">
 				<?php if ( $background_image != '' ) : ?>
 					<img class="custom_media_preview_default"
+<<<<<<< HEAD
 						 src="<?php echo esc_url( $background_image ); ?>" style="max-width:100%;"/>
 				<?php endif; ?>
 			</div>
@@ -80,6 +92,15 @@ class himalayas_featured_posts_widget extends WP_Widget
 				   id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
 				   name="<?php echo esc_attr( $this->get_field_name( 'background_image' ) ); ?>"
 				   value="<?php echo esc_url( $instance[ 'background_image' ] ); ?>" style="margin-top:5px;"/>
+=======
+						src="<?php echo esc_url( $background_image ); ?>" style="max-width:100%;" />
+				<?php endif; ?>
+			</div>
+			<input type="text" class="widefat custom_media_input"
+					id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'background_image' ) ); ?>"
+					value="<?php echo esc_url( $instance['background_image'] ); ?>" style="margin-top:5px;" />
+>>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 			<button class="custom_media_upload button button-secondary button-large"
 					id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
 					data-choose="<?php esc_attr_e( 'Choose an image', 'himalayas' ); ?>"
@@ -92,6 +113,7 @@ class himalayas_featured_posts_widget extends WP_Widget
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
+<<<<<<< HEAD
 				<?php
 				esc_html_e( 'Title:', 'himalayas' );
 				?>
@@ -125,6 +147,37 @@ class himalayas_featured_posts_widget extends WP_Widget
 				   id="<?php echo esc_attr( $this->get_field_id( 'type' ) ); ?>"
 				   name="<?php echo esc_attr( $this->get_field_name( 'type' ) ); ?>"
 				   value="category"/><?php esc_html_e( 'Show posts from a category', 'himalayas' ); ?><br/>
+=======
+									<?php
+									esc_html_e( 'Title:', 'himalayas' );
+									?>
+			</label>
+			<input id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+		</p>
+		<?php esc_html_e( 'Description:', 'himalayas' ); ?>
+		<textarea class="widefat" rows="6" cols="20" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo esc_textarea( $text ); ?></textarea>
+
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>">
+									<?php
+									esc_html_e( 'Number of posts to display:', 'himalayas' );
+									?>
+			</label>
+			<input id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text" value="<?php echo $number; ?>"
+					size="3" />
+		</p>
+
+		<p>
+			<input type="radio" <?php checked( $type, 'latest' ); ?> id="<?php echo esc_attr( $this->get_field_id( 'type' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'type' ) ); ?>"
+					value="latest" /><?php esc_html_e( 'Show latest Posts', 'himalayas' ); ?><br />
+			<input type="radio" <?php checked( $type, 'category' ); ?> id="<?php echo esc_attr( $this->get_field_id( 'type' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'type' ) ); ?>"
+					value="category" /><?php esc_html_e( 'Show posts from a category', 'himalayas' ); ?><br />
+>>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 		</p>
 
 		<p>
@@ -146,6 +199,7 @@ class himalayas_featured_posts_widget extends WP_Widget
 			<label
 				for="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>"><?php esc_html_e( 'Button Text:', 'himalayas' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'button_text' ) ); ?>"
+<<<<<<< HEAD
 				   name="<?php echo esc_attr( $this->get_field_name( 'button_text' ) ); ?>" type="text"
 				   value="<?php echo $button_text; ?>"/>
 		</p>
@@ -158,6 +212,20 @@ class himalayas_featured_posts_widget extends WP_Widget
 			<input id="<?php echo esc_attr( $this->get_field_id( 'button_url' ) ); ?>"
 				   name="<?php echo esc_attr( $this->get_field_name( 'button_url' ) ); ?>" type="text"
 				   value="<?php echo $button_url; ?>"/>
+=======
+					name="<?php echo esc_attr( $this->get_field_name( 'button_text' ) ); ?>" type="text"
+					value="<?php echo $button_text; ?>" />
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'button_url' ) ); ?>">
+									<?php
+									esc_html_e( 'Button Redirect Link:', 'himalayas' );
+									?>
+			</label>
+			<input id="<?php echo esc_attr( $this->get_field_id( 'button_url' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'button_url' ) ); ?>" type="text"
+					value="<?php echo $button_url; ?>" />
+>>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 		</p>
 		<?php
 	}
@@ -237,8 +305,12 @@ class himalayas_featured_posts_widget extends WP_Widget
 		echo $before_widget;
 		?>
 
+<<<<<<< HEAD
 		<div <?php echo $section_id; ?> class="<?php echo $bg_image_class; ?>"
 										style="<?php echo $bg_image_style; ?>" <?php echo $jarallax_data; ?>>
+=======
+		<div <?php echo $section_id; ?> class="<?php echo $bg_image_class; ?>" style="<?php echo $bg_image_style; ?>" <?php echo $jarallax_data; ?>>
+>>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 			<div class="parallax-overlay"></div>
 			<div class="section-wrapper">
 				<div class="tg-container">
@@ -290,7 +362,11 @@ class himalayas_featured_posts_widget extends WP_Widget
 										<div class="blog-content-wrapper">
 
 											<h5 class="blog-title"><a href="<?php the_permalink(); ?>"
+<<<<<<< HEAD
 																	  title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+=======
+																		title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+>>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 											</h5>
 
 											<div class="posted-date">
@@ -306,11 +382,16 @@ class himalayas_featured_posts_widget extends WP_Widget
 												<span>
 								<?php esc_html_e( 'by ', 'himalayas' ); ?>
 													<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"
+<<<<<<< HEAD
 													   title="<?php echo esc_attr( get_the_author() ); ?>"><?php echo esc_html( get_the_author() ); ?></a>
+=======
+														title="<?php echo esc_attr( get_the_author() ); ?>"><?php echo esc_html( get_the_author() ); ?></a>
+>>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 								</span>
 
 												<span>
 								<?php
+<<<<<<< HEAD
 								esc_html_e( 'on ', 'himalayas' );
 
 								$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -320,6 +401,17 @@ class himalayas_featured_posts_widget extends WP_Widget
 									esc_attr( get_the_date( 'c' ) ),
 									esc_html( get_the_date() )
 								);
+=======
+									esc_html_e( 'on ', 'himalayas' );
+
+									$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+
+									$time_string = sprintf(
+										$time_string,
+										esc_attr( get_the_date( 'c' ) ),
+										esc_html( get_the_date() )
+									);
+>>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 								printf(
 									__( '<span><a href="%1$s" title="%2$s" rel="bookmark"> %3$s</a></span>', 'himalayas' ),
 									esc_url( get_permalink() ),
@@ -335,7 +427,11 @@ class himalayas_featured_posts_widget extends WP_Widget
 											</div>
 
 											<a class="blog-readmore" href="<?php the_permalink(); ?>"
+<<<<<<< HEAD
 											   title="<?php the_title_attribute(); ?>"> <?php echo __( 'Read more', 'himalayas' ); ?>
+=======
+												title="<?php the_title_attribute(); ?>"> <?php echo __( 'Read more', 'himalayas' ); ?>
+>>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 												<i class="fa fa-angle-double-right"> </i> </a>
 										</div>
 
@@ -351,7 +447,7 @@ class himalayas_featured_posts_widget extends WP_Widget
 								<div class="clearfix"></div>
 
 								<a class="blog-view" href="<?php echo $button_url; ?>"
-								   title="<?php echo esc_attr( $button_text ); ?>"><?php echo esc_html( $button_text ); ?></a>
+									title="<?php echo esc_attr( $button_text ); ?>"><?php echo esc_html( $button_text ); ?></a>
 							<?php } ?>
 
 						</div><!-- .tg-column-wrapper -->
