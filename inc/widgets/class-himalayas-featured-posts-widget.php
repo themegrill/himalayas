@@ -362,11 +362,7 @@ class himalayas_featured_posts_widget extends WP_Widget
 										<div class="blog-content-wrapper">
 
 											<h5 class="blog-title"><a href="<?php the_permalink(); ?>"
-<<<<<<< HEAD
 																	  title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-=======
-																		title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
->>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 											</h5>
 
 											<div class="posted-date">
