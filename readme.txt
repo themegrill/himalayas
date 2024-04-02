@@ -55,7 +55,7 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.3.1 - 2024-04-02 =
 * Enhancement - General security measures.
 
 = Version 1.3.0 - 2023-09-18 =
