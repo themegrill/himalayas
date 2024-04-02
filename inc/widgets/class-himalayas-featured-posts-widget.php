@@ -84,7 +84,6 @@ class himalayas_featured_posts_widget extends WP_Widget
 			<div class="custom_media_preview">
 				<?php if ( $background_image != '' ) : ?>
 					<img class="custom_media_preview_default"
-<<<<<<< HEAD
 						 src="<?php echo esc_url( $background_image ); ?>" style="max-width:100%;"/>
 				<?php endif; ?>
 			</div>
@@ -92,15 +91,6 @@ class himalayas_featured_posts_widget extends WP_Widget
 				   id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
 				   name="<?php echo esc_attr( $this->get_field_name( 'background_image' ) ); ?>"
 				   value="<?php echo esc_url( $instance[ 'background_image' ] ); ?>" style="margin-top:5px;"/>
-=======
-						src="<?php echo esc_url( $background_image ); ?>" style="max-width:100%;" />
-				<?php endif; ?>
-			</div>
-			<input type="text" class="widefat custom_media_input"
-					id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'background_image' ) ); ?>"
-					value="<?php echo esc_url( $instance['background_image'] ); ?>" style="margin-top:5px;" />
->>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 			<button class="custom_media_upload button button-secondary button-large"
 					id="<?php echo esc_attr( $this->get_field_id( 'background_image' ) ); ?>"
 					data-choose="<?php esc_attr_e( 'Choose an image', 'himalayas' ); ?>"
@@ -378,16 +368,12 @@ class himalayas_featured_posts_widget extends WP_Widget
 												<span>
 								<?php esc_html_e( 'by ', 'himalayas' ); ?>
 													<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"
-<<<<<<< HEAD
 													   title="<?php echo esc_attr( get_the_author() ); ?>"><?php echo esc_html( get_the_author() ); ?></a>
-=======
-														title="<?php echo esc_attr( get_the_author() ); ?>"><?php echo esc_html( get_the_author() ); ?></a>
->>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 								</span>
 
 												<span>
 								<?php
-<<<<<<< HEAD
+
 								esc_html_e( 'on ', 'himalayas' );
 
 								$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -397,17 +383,6 @@ class himalayas_featured_posts_widget extends WP_Widget
 									esc_attr( get_the_date( 'c' ) ),
 									esc_html( get_the_date() )
 								);
-=======
-									esc_html_e( 'on ', 'himalayas' );
-
-									$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-
-									$time_string = sprintf(
-										$time_string,
-										esc_attr( get_the_date( 'c' ) ),
-										esc_html( get_the_date() )
-									);
->>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 								printf(
 									__( '<span><a href="%1$s" title="%2$s" rel="bookmark"> %3$s</a></span>', 'himalayas' ),
 									esc_url( get_permalink() ),
@@ -423,11 +398,7 @@ class himalayas_featured_posts_widget extends WP_Widget
 											</div>
 
 											<a class="blog-readmore" href="<?php the_permalink(); ?>"
-<<<<<<< HEAD
 											   title="<?php the_title_attribute(); ?>"> <?php echo __( 'Read more', 'himalayas' ); ?>
-=======
-												title="<?php the_title_attribute(); ?>"> <?php echo __( 'Read more', 'himalayas' ); ?>
->>>>>>> 530c84ef227e936128054038cbd62e4b76c9141f
 												<i class="fa fa-angle-double-right"> </i> </a>
 										</div>
 
