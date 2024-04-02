@@ -366,5 +366,4 @@ class himalayas_featured_posts_widget extends WP_Widget
 		wp_reset_query();
 		echo $after_widget;
 	}
-	}
 }
