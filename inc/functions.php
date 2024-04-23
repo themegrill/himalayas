@@ -36,10 +36,10 @@ function himalayas_scripts() {
 	wp_register_script( 'himalayas-bxslider', HIMALAYAS_JS_URL . '/jquery.bxslider/jquery.bxslider.min.js', array( 'jquery' ), '4.2.12', true );
 
 	$slider = 0;
-	for ( $i = 1; $i <= 4; $i ++ ) {
+	for ( $i = 1; $i <= 4; $i++ ) {
 		$page_id = get_theme_mod( 'himalayas_slide' . $i );
-		if ( ! empty ( $page_id ) ) {
-			$slider ++;
+		if ( ! empty( $page_id ) ) {
+			++$slider;
 		}
 	}
 
@@ -59,7 +59,7 @@ function himalayas_scripts() {
 	// Magific popup setting
 	wp_enqueue_script( 'himalayas-featured-image-popup' );
 
-	$himalayas_user_agent = strtolower( $_SERVER['HTTP_USER_AGENT'] );
+	$himalayas_user_agent = strtolower( isset( $_SERVER['HTTP_USER_AGENT'] ) ? $_SERVER['HTTP_USER_AGENT'] : '' );
 	if ( preg_match( '/(?i)msie [1-8]/', $himalayas_user_agent ) ) {
 		wp_enqueue_script( 'html5', HIMALAYAS_JS_URL . '/html5shiv.min.js', true );
 	}
@@ -178,9 +178,9 @@ if ( ! function_exists( 'himalayas_excerpt' ) ) :
 		$excerpt = explode( ' ', get_the_excerpt(), $limit );
 		if ( count( $excerpt ) >= $limit ) {
 			array_pop( $excerpt );
-			$excerpt = implode( " ", $excerpt ) . '...';
+			$excerpt = implode( ' ', $excerpt ) . '...';
 		} else {
-			$excerpt = implode( " ", $excerpt );
+			$excerpt = implode( ' ', $excerpt );
 		}
 		$excerpt = preg_replace( '`\[[^\]]*\]`', '', $excerpt );
 
@@ -191,7 +191,7 @@ endif;
 /****************************************************************************************/
 
 /**
- * Removing the default style of wordpress gallery
+ * Removing the default style of WordPress gallery
  */
 add_filter( 'use_default_gallery_style', '__return_false' );
 
@@ -199,9 +199,12 @@ add_filter( 'use_default_gallery_style', '__return_false' );
  * Filtering the size to be medium from thumbnail to be used in WordPress gallery as a default size
  */
 function himalayas_gallery_atts( $out, $pairs, $atts ) {
-	$atts = shortcode_atts( array(
-		'size' => 'medium',
-	), $atts );
+	$atts = shortcode_atts(
+		array(
+			'size' => 'medium',
+		),
+		$atts
+	);
 
 	$out['size'] = $atts['size'];
 
@@ -251,13 +254,15 @@ if ( ! function_exists( 'himalayas_entry_meta' ) ) :
 			if ( ( 'U' ) !== get_the_modified_time( 'U' ) ) {
 				$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
 			}
-			$time_string = sprintf( $time_string,
+			$time_string = sprintf(
+				$time_string,
 				esc_attr( get_the_date( 'c' ) ),
 				esc_html( get_the_date() ),
 				esc_attr( get_the_modified_date( 'c' ) ),
 				esc_html( get_the_modified_date() )
 			);
-			printf( __( '<span class="posted-on"><a href="%1$s" title="%2$s" rel="bookmark"> %3$s</a></span>', 'himalayas' ),
+			printf(
+				__( '<span class="posted-on"><a href="%1$s" title="%2$s" rel="bookmark"> %3$s</a></span>', 'himalayas' ),
 				esc_url( get_permalink() ),
 				esc_attr( get_the_time() ),
 				$time_string
@@ -266,13 +271,17 @@ if ( ! function_exists( 'himalayas_entry_meta' ) ) :
 			<span class="byline author vcard"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>"><?php echo esc_html( get_the_author() ); ?></a></span>
 
 			<?php
-			if ( ! post_password_required() && comments_open() ) { ?>
+			if ( ! post_password_required() && comments_open() ) {
+				?>
 				<span class="comments-link"><?php comments_popup_link( __( '0 Comment', 'himalayas' ), __( '1 Comment', 'himalayas' ), __( ' % Comments', 'himalayas' ) ); ?></span>
-			<?php }
+				<?php
+			}
 
-			if ( has_category() ) { ?>
+			if ( has_category() ) {
+				?>
 				<span class="cat-links"><?php the_category( ', ' ); ?></span>
-			<?php }
+				<?php
+			}
 
 			$tags_list = get_the_tag_list( '<span class="tag-links">', ', ', '</span>' );
 			if ( $tags_list ) {
@@ -419,15 +428,15 @@ if ( ! function_exists( 'himalayas_comment' ) ) :
 	function himalayas_comment( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
 		switch ( $comment->comment_type ) :
-			case 'pingback' :
-			case 'trackback' :
+			case 'pingback':
+			case 'trackback':
 				// Display trackbacks differently than normal comments.
 				?>
 				<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
 				<p><?php _e( 'Pingback:', 'himalayas' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'himalayas' ), '<span class="edit-link">', '</span>' ); ?></p>
 				<?php
 				break;
-			default :
+			default:
 				// Proceed with normal comments.
 				global $post;
 				?>
@@ -436,12 +445,14 @@ if ( ! function_exists( 'himalayas_comment' ) ) :
 					<header class="comment-meta comment-author vcard">
 						<?php
 						echo get_avatar( $comment, 74 );
-						printf( '<div class="comment-author-link"><i class="fa fa-user"></i>%1$s%2$s</div>',
+						printf(
+							'<div class="comment-author-link"><i class="fa fa-user"></i>%1$s%2$s</div>',
 							get_comment_author_link(),
 							// If current post author is also comment author, make it known visually.
 							( $comment->user_id === $post->post_author ) ? '<span>' . __( 'Post author', 'himalayas' ) . '</span>' : ''
 						);
-						printf( '<div class="comment-date-time"><i class="fa fa-calendar-o"></i>%1$s</div>',
+						printf(
+							'<div class="comment-date-time"><i class="fa fa-calendar-o"></i>%1$s</div>',
 							sprintf( __( '%1$s at %2$s', 'himalayas' ), get_comment_date(), get_comment_time() )
 						);
 						printf( '<a class="comment-permalink" href="%1$s"><i class="fa fa-link"></i>Permalink</a>', esc_url( get_comment_link( $comment->comment_ID ) ) );
@@ -455,12 +466,19 @@ if ( ! function_exists( 'himalayas_comment' ) ) :
 
 					<section class="comment-content comment">
 						<?php comment_text(); ?>
-						<?php comment_reply_link( array_merge( $args, array(
-							'reply_text' => __( 'Reply', 'himalayas' ),
-							'after'      => '',
-							'depth'      => $depth,
-							'max_depth'  => $args['max_depth'],
-						) ) ); ?>
+						<?php
+						comment_reply_link(
+							array_merge(
+								$args,
+								array(
+									'reply_text' => __( 'Reply', 'himalayas' ),
+									'after'      => '',
+									'depth'      => $depth,
+									'max_depth'  => $args['max_depth'],
+								)
+							)
+						);
+						?>
 					</section><!-- .comment-content -->
 
 				</article><!-- #comment-## -->
@@ -500,7 +518,11 @@ endif;
 function himalayas_hex2rgb( $hexstr ) {
 	$int = hexdec( str_replace( '#', '', $hexstr ) );
 
-	$rgb = array( "red" => 0xFF & ( $int >> 0x10 ), "green" => 0xFF & ( $int >> 0x8 ), "blue" => 0xFF & $int );
+	$rgb = array(
+		'red'   => 0xFF & ( $int >> 0x10 ),
+		'green' => 0xFF & ( $int >> 0x8 ),
+		'blue'  => 0xFF & $int,
+	);
 	$r   = $rgb['red'];
 	$g   = $rgb['green'];
 	$b   = $rgb['blue'];
@@ -527,8 +549,8 @@ function himalayas_darkcolor( $hex, $steps ) {
 	$return      = '#';
 
 	foreach ( $color_parts as $color ) {
-		$color  = hexdec( $color ); // Convert to decimal
-		$color  = max( 0, min( 255, $color + $steps ) ); // Adjust color
+		$color   = hexdec( $color ); // Convert to decimal
+		$color   = max( 0, min( 255, $color + $steps ) ); // Adjust color
 		$return .= str_pad( dechex( $color ), 2, '0', STR_PAD_LEFT ); // Make two char hex code
 	}
 
@@ -554,7 +576,6 @@ function himalayas_custom_css() {
 		<style type="text/css"><?php echo $himalayas_internal_css; ?></style>
 		<?php
 	}
-
 }
 
 /**************************************************************************************/
