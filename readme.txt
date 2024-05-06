@@ -55,6 +55,9 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Fix - PHP error.
+
 = Version 1.3.1 - 2024-04-02 =
 * Enhancement - General security measures.
 
