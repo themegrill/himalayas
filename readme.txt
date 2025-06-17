@@ -55,6 +55,9 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= Version 1.3.3 - 2025-06-17 =
+* Update - Font awesome update to 6.7.2.
+
 = Version 1.3.2 - 2024-05-06 =
 * Fix - PHP error.
 
