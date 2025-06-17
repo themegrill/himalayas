@@ -73,22 +73,28 @@ if ( ! function_exists( 'himalayas_setup' ) ) :
 		add_post_type_support( 'page', 'excerpt' );
 
 		// Adds the support for the Custom Logo introduced in WordPress 4.5
-		add_theme_support( 'custom-logo', array(
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+		add_theme_support(
+			'custom-logo',
+			array(
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
 
 		/*
 		* Switch default core markup for search form, comment form, and comments
 		* to output valid HTML5.
 		*/
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Added WooCommerce support.
 		add_theme_support( 'woocommerce' );
@@ -134,13 +140,18 @@ define( 'HIMALAYAS_WIDGETS_URL', HIMALAYAS_INCLUDES_URL . '/widgets' );
 define( 'HIMALAYAS_ADMIN_IMAGES_URL', HIMALAYAS_ADMIN_URL . '/images' );
 
 // Load functions
-require_once( HIMALAYAS_INCLUDES_DIR . '/functions.php' );
-require_once( HIMALAYAS_INCLUDES_DIR . '/header-functions.php' );
-require_once( HIMALAYAS_INCLUDES_DIR . '/customizer.php' );
-require_once( HIMALAYAS_INCLUDES_DIR . '/custom-header.php' );
-require_once( HIMALAYAS_ADMIN_DIR . '/meta-boxes.php' );
+require_once HIMALAYAS_INCLUDES_DIR . '/functions.php';
+require_once HIMALAYAS_INCLUDES_DIR . '/header-functions.php';
+require_once HIMALAYAS_INCLUDES_DIR . '/customizer.php';
+require_once HIMALAYAS_INCLUDES_DIR . '/custom-header.php';
+add_action(
+	'init',
+	function () {
+		require_once HIMALAYAS_ADMIN_DIR . '/meta-boxes.php';
+	}
+);
 // Load Widgets and Widgetized Area
-require_once( HIMALAYAS_WIDGETS_DIR . '/widgets.php' );
+require_once HIMALAYAS_WIDGETS_DIR . '/widgets.php';
 
 /**
  * Assign the Himalayas version to a variable.
