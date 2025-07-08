@@ -111,8 +111,13 @@ class himalayas_contact_widget extends WP_Widget {
 		}
 
 		echo $before_widget;
+
 		?>
-		<div <?php echo esc_attr( $section_id ); ?>>
+		<div 
+		<?php
+		if ( ! empty( $section_id ) ) :
+			?>
+			id="<?php echo esc_attr( $contact_menu_id ); ?>"<?php endif; ?>>
 			<div class="section-wrapper">
 				<div class="tg-container">
 
