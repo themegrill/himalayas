@@ -36,8 +36,13 @@ if ( ! class_exists( 'Himalayas_Admin' ) ) :
 			$welcome_data = array(
 				'uri'      => esc_url( admin_url( '/themes.php?page=demo-importer&browse=all&himalayas-hide-notice=welcome' ) ),
 				'btn_text' => esc_html__( 'Processing...', 'himalayas' ),
-				'nonce'    => wp_create_nonce( 'himalayas_demo_import_nonce' ),
 			);
+
+			// Only add nonce and ajaxurl if user has appropriate capabilities
+			if ( current_user_can( 'manage_options' ) ) {
+				$welcome_data['nonce']   = wp_create_nonce( 'himalayas_demo_import_nonce' );
+				$welcome_data['ajaxurl'] = admin_url( 'admin-ajax.php' );
+			}
 
 			wp_localize_script( 'himalayas-plugin-install-helper', 'himalayasRedirectDemoPage', $welcome_data );
 		}

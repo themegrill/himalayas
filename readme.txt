@@ -55,6 +55,9 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= Version 1.3.5 - 2025-08-12 =
+* Update    - General security measure.
+
 = Version 1.3.4 - 2025-07-08 =
 * Fix - One page menu issue.
 
