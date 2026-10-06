@@ -58,6 +58,7 @@ If you want to translate this theme to your language, refer to: https://translat
 = Version 1.3.6 - 2026-10-06 =
 * Update - Minimum PHP version is now 7.4 and minimum WordPress version is 5.3; tested up to WordPress 7.1.
 * Fix - Welcome notice link now opens the theme page.
+* Update - Welcome notice now names the Starter Templates & Sites Pack by ThemeGrill plugin.
 
 = Version 1.3.5 - 2025-08-12 =
 * Update    - General security measure.
