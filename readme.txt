@@ -55,6 +55,10 @@ If you want to translate this theme to your language, refer to: https://translat
 /**********************************************************/
 
 == Changelog ==
+= Version 1.3.6 - 2026-10-06 =
+* Update - Minimum PHP version is now 7.4 and minimum WordPress version is 5.3; tested up to WordPress 7.1.
+* Fix - Welcome notice link now opens the theme page.
+
 = Version 1.3.5 - 2025-08-12 =
 * Update    - General security measure.
 
