@@ -486,7 +486,7 @@ add_action( 'customize_register', 'himalayas_customize_register' );
  * @since himalayas 1.1.2
  */
 function himalayas_customize_preview_js() {
-	wp_enqueue_script( 'himalayas-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), false, true );
+	wp_enqueue_script( 'himalayas-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), wp_get_theme( get_template() )->get( 'Version' ), true );
 }
 
 add_action( 'customize_preview_init', 'himalayas_customize_preview_js' );

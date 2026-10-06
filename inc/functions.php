@@ -12,6 +12,7 @@ add_action( 'wp_enqueue_scripts', 'himalayas_scripts' );
  * Enqueue scripts and styles.
  */
 function himalayas_scripts() {
+	$theme_version = wp_get_theme( get_template() )->get( 'Version' );
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	// Load Google fonts
 	wp_enqueue_style( 'himalayas-google-fonts', '//fonts.googleapis.com/css?family=Crimson+Text:700|Roboto:400,700,900,300&display=swap' );
@@ -104,10 +105,10 @@ function himalayas_scripts() {
 	}
 
 	// Skip link focus fix JS enqueue.
-	wp_enqueue_script( 'himalayas-skip-link-focus-fix', HIMALAYAS_JS_URL . '/skip-link-focus-fix.js', array(), false, true );
+	wp_enqueue_script( 'himalayas-skip-link-focus-fix', HIMALAYAS_JS_URL . '/skip-link-focus-fix.js', array(), $theme_version, true );
 
 	// Register Custom Script
-	wp_enqueue_script( 'himalayas-custom', HIMALAYAS_JS_URL . '/himalayas.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'himalayas-custom', HIMALAYAS_JS_URL . '/himalayas.js', array( 'jquery' ), $theme_version, true );
 }
 
 /**************************************************************************************/
@@ -134,7 +135,7 @@ function himalayas_image_uploader( $hook ) {
 
 		//For Color Picker
 		wp_enqueue_style( 'wp-color-picker' );
-		wp_enqueue_script( 'himalayas-color-picker', HIMALAYAS_JS_URL . '/color-picker.js', array( 'wp-color-picker' ), false );
+		wp_enqueue_script( 'himalayas-color-picker', HIMALAYAS_JS_URL . '/color-picker.js', array( 'wp-color-picker' ), wp_get_theme( get_template() )->get( 'Version' ) );
 	}
 	if ( $post_type == 'page' ) {
 		wp_enqueue_script( 'himalayas-meta-toggle', HIMALAYAS_JS_URL . '/metabox-toggle.js', false, '1.0', true );

@@ -146,8 +146,8 @@ jQuery( document ).ready( function () {
 	function toggleFocus() {
 		var self = this;
 
-		// Move up through the ancestors of the current link until we hit .nav-menu.
-		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
+		// Move up through the ancestors of the current link until we hit the menu list.
+		while ( self && self !== menu ) {
 			// On li elements toggle the class .focus.
 			if ( 'li' === self.tagName.toLowerCase() ) {
 				if ( -1 !== self.className.indexOf( 'focus' ) ) {
