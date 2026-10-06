@@ -64,7 +64,7 @@ class Himalayas_Welcome_Notice {
 
 					<div class="himalayas-message__cta">
 						<?php echo $this->import_button_html(); ?>
-						<span class="plugin-install-notice"><?php esc_html_e( 'Clicking the button will install and activate the ThemeGrill demo importer plugin.', 'himalayas' ); ?></span>
+						<span class="plugin-install-notice"><?php esc_html_e( 'Clicking the button will install and activate the Starter Templates & Sites Pack by ThemeGrill plugin.', 'himalayas' ); ?></span>
 					</div>
 				</div>
 			</div>
