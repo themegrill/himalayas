@@ -28,7 +28,7 @@ add_action( 'after_setup_theme', 'himalayas_custom_header_setup' );
 function himalayas_header_image_markup( $html, $header, $attr ) {
 	$output = '';
 
-	if ( ( get_theme_mod( 'himalayas_slide_on_off', '' ) == 0 ) || ( ( get_theme_mod( 'himalayas_slide_on_off', '' ) == 1 ) && ! is_front_page() ) ) {
+	if ( ! get_theme_mod( 'himalayas_slide_on_off', '' ) || ( ( get_theme_mod( 'himalayas_slide_on_off', '' ) == 1 ) && ! is_front_page() ) ) {
 		$header_image = get_header_image();
 
 		if ( ! empty( $header_image ) ) {
